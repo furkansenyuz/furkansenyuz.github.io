@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Furkan Senyuz | Civil Engineer & AI Solutions Developer</title>
     <meta name="description" content="Civil Engineer & AI Solutions Developer bridging construction with Python, Machine Learning, and Primavera P6. Portfolio with Gemini AI integration.">
@@ -58,7 +58,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     
     <style>
         /* v60 GOLD MASTER CSS */
@@ -229,7 +229,7 @@
 
     <main id="main-content">
         <section class="hero">
-            <img src="profile.jpg" class="avt anim d2" alt="Furkan Senyuz" loading="lazy">
+            <img src="profile.jpg" class="avt anim d2" alt="Furkan Senyuz" width="160" height="160" fetchpriority="high">
             <h1 class="anim d3">Furkan Senyuz</h1>
             <p class="sub anim d4" data-t="heroTitle"></p>
             <div class="slogan anim d5" data-t="heroSlogan"></div>
@@ -312,9 +312,8 @@
     <button class="bub" id="bub" onclick="App.chat()" aria-label="Open Chatbot"><i class="fa-solid fa-robot"></i></button>
     <div class="win" id="win" role="dialog" aria-label="Chatbot Window">
         <div class="chat-h"><h4><i class="fa-solid fa-brain"></i> FS AI</h4><button class="cls" onclick="App.chat()" aria-label="Close Chat" style="position:static;font-size:1.2rem"><i class="fa-solid fa-xmark"></i></button></div>
-        <div class="msgs" id="msgs" role="log" aria-live="polite"><div class="msg bot">Hello! I'm Furkan's AI. Ask me anything about my projects or experience!</div></div>
+        <div class="msgs" id="msgs" role="log" aria-live="polite"><div class="msg bot" data-t="chatGreet">Hello! I'm Furkan's AI. Ask me anything about my projects or experience!</div></div>
         <div class="c-inp">
-            <label for="f-up" style="cursor:pointer" aria-label="Upload File"><i class="fa-solid fa-paperclip"></i></label><input type="file" id="f-up" style="display:none">
             <input type="text" id="inp" class="inp" placeholder="Ask something..." onkeypress="App.key(event)">
             <button class="snd" onclick="App.send()" aria-label="Send Message"><i class="fa-solid fa-paper-plane"></i></button>
         </div>
@@ -388,6 +387,8 @@
                     
                     const pObs=new IntersectionObserver(e=>{e.forEach(i=>{if(i.isIntersecting){i.target.classList.add('visible-item');pObs.unobserve(i.target)}})});
                     document.querySelectorAll('.card').forEach(c=>pObs.observe(c));
+
+                    if(localStorage.getItem(C.CONSENT)===null) document.getElementById('cook').classList.add('shw');
                 } catch(e) {
                     document.getElementById('loader').innerHTML = `<p style="color:var(--gold);margin-bottom:15px">⚠️ Connection Failed</p><button class="f-btn" onclick="location.reload()">Retry</button>`;
                 }
@@ -395,6 +396,7 @@
             
             function render(lg){
                 const tr = DATA.translations[lg];
+                document.documentElement.lang = lg;
                 document.querySelectorAll('[data-t]').forEach(e => e.innerHTML = tr[e.dataset.t] || e.innerHTML);
                 document.querySelectorAll('[data-tip]').forEach(e => e.setAttribute('data-tooltip', tr[e.dataset.tip]));
                 ['name','email','msg'].forEach(i => document.getElementById(i).placeholder = tr[i==='msg'?'formMsg':(i==='name'?'formName':'formEmail')]);
@@ -530,8 +532,7 @@
                 },
                 
                 cont:e=>{e.preventDefault();openM(DATA.translations[l].contactBtn,'',true)},
-                repo:(e,n)=>{e.preventDefault();openM('Repo',DATA.repos && DATA.repos[n] && DATA.repos[n].ready ? DATA.translations[l].repoTextPublic : DATA.translations[l].repoTextPrivate)},
-                cons:g=>{localStorage.setItem(C.CONSENT,g);gtag('consent','update',{'ad_storage':g?'granted':'denied'});App.hCook()},
+                cons:g=>{localStorage.setItem(C.CONSENT,g);gtag('consent','update',{'analytics_storage':g?'granted':'denied','ad_storage':g?'granted':'denied','ad_user_data':g?'granted':'denied','ad_personalization':g?'granted':'denied'});App.hCook()},
                 hCook:()=>document.getElementById('cook').classList.remove('shw')
             };
         })();

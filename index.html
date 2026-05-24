@@ -136,6 +136,7 @@
         .pt { font-size:0.8rem; background:var(--brd); padding:6px 12px; border-radius:6px; color: var(--txt); }
         .card p { flex-grow: 1; color: var(--mut); margin-bottom: 20px; }
         .plnk { color:var(--txt); text-decoration:none; font-size:1rem; display:inline-flex; align-items:center; gap:8px; font-weight: 600; } .plnk:hover { color:var(--gold); }
+        .soon { color:var(--txt); opacity:0.55; font-size:1rem; display:inline-flex; align-items:center; gap:8px; font-weight:600; cursor:default; }
 
         .bub { position: fixed; bottom: 30px; right: 30px; background: var(--gold); color: #000; width: 65px; height: 65px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.8rem; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.4); z-index: 2500; transition: transform 0.3s; } 
         .bub:hover { transform: scale(1.1); }
@@ -279,22 +280,28 @@
             <h3 class="title" style="justify-content: center;"><i class="fa-solid fa-laptop-code"></i> <span data-t="projTitle"></span></h3>
             <div class="p-grid" id="projs">
                 <div class="card item-box visible-item" data-cat="ai">
+                    <h4><i class="fa-solid fa-robot"></i> DCC RAG AI Assistant</h4>
+                    <div class="ptags"><span class="pt">RAG</span><span class="pt">LangChain</span><span class="pt">LLM</span></div>
+                    <p data-t="proj3Desc"></p>
+                    <a href="https://github.com/fsenyuz/dcc-intelligence-hub-hv1" target="_blank" rel="noopener noreferrer" class="plnk" aria-label="View Code for DCC RAG AI Assistant"><i class="fa-brands fa-github"></i> <span data-t="viewCode"></span></a>
+                </div>
+                <div class="card item-box visible-item" data-cat="ai">
+                    <h4><i class="fa-solid fa-file-contract"></i> Tender Documentation Analysis</h4>
+                    <div class="ptags"><span class="pt">NLP</span><span class="pt">Python</span></div>
+                    <p data-t="proj4Desc"></p>
+                    <span class="soon"><i class="fa-solid fa-clock"></i> <span data-t="comingSoon"></span></span>
+                </div>
+                <div class="card item-box visible-item" data-cat="ai">
                     <h4><i class="fa-solid fa-chart-line"></i> Construction Claim Predictor</h4>
                     <div class="ptags"><span class="pt">Python</span><span class="pt">Random Forest</span></div>
                     <p data-t="proj1Desc"></p>
-                    <a href="https://github.com/fsenyuz/construction-claim-predictor" target="_blank" rel="noopener noreferrer" class="plnk" onclick="App.repo(event,'Construction Claim Predictor')" aria-label="View Code for Claim Predictor"><i class="fa-brands fa-github"></i> <span data-t="viewCode"></span></a>
+                    <span class="soon"><i class="fa-solid fa-clock"></i> <span data-t="comingSoon"></span></span>
                 </div>
                 <div class="card item-box visible-item" data-cat="civil">
                     <h4><i class="fa-solid fa-file-invoice-dollar"></i> Tender Cost Optimizer</h4>
                     <div class="ptags"><span class="pt">Python</span><span class="pt">Automation</span></div>
                     <p data-t="proj2Desc"></p>
-                    <a href="https://github.com/fsenyuz/tender-cost-optimizer" target="_blank" rel="noopener noreferrer" class="plnk" onclick="App.repo(event,'Tender Cost Optimizer')" aria-label="View Code for Cost Optimizer"><i class="fa-brands fa-github"></i> <span data-t="viewCode"></span></a>
-                </div>
-                <div class="card item-box visible-item" data-cat="ai">
-                    <h4><i class="fa-solid fa-hard-hat"></i> Site Safety Vision</h4>
-                    <div class="ptags"><span class="pt">YOLO</span><span class="pt">OpenCV</span></div>
-                    <p data-t="proj3Desc"></p>
-                    <a href="https://github.com/fsenyuz/site-safety-vision" target="_blank" rel="noopener noreferrer" class="plnk" onclick="App.repo(event,'Site Safety Vision')" aria-label="View Code for Site Safety"><i class="fa-brands fa-github"></i> <span data-t="viewCode"></span></a>
+                    <span class="soon"><i class="fa-solid fa-clock"></i> <span data-t="comingSoon"></span></span>
                 </div>
             </div>
         </div>

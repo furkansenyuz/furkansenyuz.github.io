@@ -214,7 +214,8 @@
     </style>
 </head>
 <body>
-    <div id="loader"><div class="loader-spin"></div><p style="margin-top:20px;color:var(--gold);font-weight:bold;">Loading Profile...</p></div>
+    <div id="loader"><div class="loader-spin"></div><p id="ldr-txt" style="margin-top:20px;color:var(--gold);font-weight:bold;">Loading Profile...</p></div>
+    <script>(function(){var l=(navigator.language||'').toLowerCase();var t=l.indexOf('tr')===0?'Profil Yükleniyor...':(l.indexOf('sr')===0?'Učitavanje profila...':null);if(t)document.getElementById('ldr-txt').textContent=t;})();</script>
     <a href="#main-content" class="skip-link">Skip to content</a>
 
     <header class="anim d1">
@@ -222,9 +223,9 @@
             <a href="#" class="logo">f<span>senyuz</span></a>
             <nav class="act" aria-label="Main Navigation">
                 <button class="i-btn" id="lang-btn" aria-label="Switch Language" onclick="App.lang()">TR</button>
-                <button class="i-btn" aria-label="Toggle Theme" onclick="App.theme()"><i class="fa-solid fa-sun"></i></button>
-                <a href="CV_FS_2026.pdf" class="b-cv" target="_blank" aria-label="Download CV"><i class="fa-solid fa-download"></i> CV</a>
-                <a href="#" class="b-con" onclick="App.cont(event)" aria-label="Contact Me"><i class="fa-regular fa-envelope"></i> <span data-t="contactBtn"></span></a>
+                <button class="i-btn" aria-label="Toggle Theme" onclick="App.theme()"><i class="fa-solid fa-sun" aria-hidden="true"></i></button>
+                <a href="CV_FS_2026.pdf" class="b-cv" target="_blank" aria-label="Download CV"><i class="fa-solid fa-download" aria-hidden="true"></i> CV</a>
+                <a href="#" class="b-con" onclick="App.cont(event)" aria-label="Contact Me"><i class="fa-regular fa-envelope" aria-hidden="true"></i> <span data-t="contactBtn"></span></a>
             </nav>
         </div>
     </header>
@@ -236,9 +237,9 @@
             <p class="sub anim d4" data-t="heroTitle"></p>
             <div class="slogan anim d5" data-t="heroSlogan"></div>
             <div class="socials anim d5">
-                <a href="https://www.linkedin.com/in/fsenyuz" class="soc" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/fsenyuz" class="soc" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="https://kaggle.com/fsenyuz" class="soc" target="_blank" rel="noopener noreferrer" aria-label="Kaggle"><i class="fa-brands fa-kaggle"></i></a>
+                <a href="https://www.linkedin.com/in/fsenyuz" class="soc" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://github.com/fsenyuz" class="soc" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                <a href="https://kaggle.com/fsenyuz" class="soc" target="_blank" rel="noopener noreferrer" aria-label="Kaggle"><i class="fa-brands fa-kaggle" aria-hidden="true"></i></a>
             </div>
             <div class="skills anim d5">
                 <div class="s-row">
@@ -255,7 +256,7 @@
         </section>
 
         <div class="box">
-            <h3 class="title" style="justify-content: center;"><i class="fa-solid fa-earth-americas"></i> <span data-t="mapTitle"></span></h3>
+            <h3 class="title" style="justify-content: center;"><i class="fa-solid fa-earth-americas" aria-hidden="true"></i> <span data-t="mapTitle"></span></h3>
             <div id="map"></div>
             <div class="leg"><div><span class="dot" style="background:#38bdf8"></span> <span data-t="legendWork"></span></div><div><span class="dot" style="background:#2ecc71"></span> <span data-t="legendEdu"></span></div><div><span class="dot" style="background:#f97316"></span> <span data-t="legendTender"></span></div></div>
         </div>
@@ -268,42 +269,42 @@
             </div>
             
             <div>
-                <div class="sec-head"><h3 class="title"><i class="fa-solid fa-briefcase"></i> <span data-t="expTitle"></span></h3></div>
+                <div class="sec-head"><h3 class="title"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> <span data-t="expTitle"></span></h3></div>
                 <div class="timeline-container" id="exp"></div>
             </div>
             
             <div>
-                <div class="sec-head"><h3 class="title"><i class="fa-solid fa-graduation-cap"></i> <span data-t="eduTitle"></span></h3></div>
+                <div class="sec-head"><h3 class="title"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> <span data-t="eduTitle"></span></h3></div>
                 <div class="timeline-container" id="edu"></div>
             </div>
         </div>
 
         <div class="proj">
-            <h3 class="title" style="justify-content: center;"><i class="fa-solid fa-laptop-code"></i> <span data-t="projTitle"></span></h3>
+            <h3 class="title" style="justify-content: center;"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i> <span data-t="projTitle"></span></h3>
             <div class="p-grid" id="projs">
                 <div class="card item-box visible-item" data-cat="ai">
-                    <h4><i class="fa-solid fa-robot"></i> DCC RAG AI Assistant</h4>
+                    <h4><i class="fa-solid fa-robot" aria-hidden="true"></i> DCC RAG AI Assistant</h4>
                     <div class="ptags"><span class="pt">RAG</span><span class="pt">LangChain</span><span class="pt">LLM</span></div>
                     <p data-t="proj3Desc"></p>
-                    <a href="https://github.com/fsenyuz/dcc-intelligence-hub-hv1" target="_blank" rel="noopener noreferrer" class="plnk" aria-label="View Code for DCC RAG AI Assistant"><i class="fa-brands fa-github"></i> <span data-t="viewCode"></span></a>
+                    <a href="https://github.com/fsenyuz/dcc-intelligence-hub-hv1" target="_blank" rel="noopener noreferrer" class="plnk" aria-label="View Code for DCC RAG AI Assistant"><i class="fa-brands fa-github" aria-hidden="true"></i> <span data-t="viewCode"></span></a>
                 </div>
                 <div class="card item-box visible-item" data-cat="ai">
-                    <h4><i class="fa-solid fa-file-contract"></i> Tender Documentation Analysis</h4>
+                    <h4><i class="fa-solid fa-file-contract" aria-hidden="true"></i> Tender Documentation Analysis</h4>
                     <div class="ptags"><span class="pt">NLP</span><span class="pt">Python</span></div>
                     <p data-t="proj4Desc"></p>
-                    <span class="soon"><i class="fa-solid fa-clock"></i> <span data-t="comingSoon"></span></span>
+                    <span class="soon"><i class="fa-solid fa-clock" aria-hidden="true"></i> <span data-t="comingSoon"></span></span>
                 </div>
                 <div class="card item-box visible-item" data-cat="ai">
-                    <h4><i class="fa-solid fa-chart-line"></i> Construction Claim Predictor</h4>
+                    <h4><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Construction Claim Predictor</h4>
                     <div class="ptags"><span class="pt">Python</span><span class="pt">Random Forest</span></div>
                     <p data-t="proj1Desc"></p>
-                    <span class="soon"><i class="fa-solid fa-clock"></i> <span data-t="comingSoon"></span></span>
+                    <span class="soon"><i class="fa-solid fa-clock" aria-hidden="true"></i> <span data-t="comingSoon"></span></span>
                 </div>
                 <div class="card item-box visible-item" data-cat="civil">
-                    <h4><i class="fa-solid fa-file-invoice-dollar"></i> Tender Cost Optimizer</h4>
+                    <h4><i class="fa-solid fa-file-invoice-dollar" aria-hidden="true"></i> Tender Cost Optimizer</h4>
                     <div class="ptags"><span class="pt">Python</span><span class="pt">Automation</span></div>
                     <p data-t="proj2Desc"></p>
-                    <span class="soon"><i class="fa-solid fa-clock"></i> <span data-t="comingSoon"></span></span>
+                    <span class="soon"><i class="fa-solid fa-clock" aria-hidden="true"></i> <span data-t="comingSoon"></span></span>
                 </div>
             </div>
         </div>
@@ -311,19 +312,19 @@
 
     <footer><p>&copy; <span id="yr"></span> Furkan Senyuz. <span data-t="footerText"></span></p></footer>
 
-    <button class="bub" id="bub" onclick="App.chat()" aria-label="Open Chatbot"><i class="fa-solid fa-robot"></i></button>
+    <button class="bub" id="bub" onclick="App.chat()" aria-label="Open Chatbot"><i class="fa-solid fa-robot" aria-hidden="true"></i></button>
     <div class="win" id="win" role="dialog" aria-label="Chatbot Window">
-        <div class="chat-h"><h4><i class="fa-solid fa-brain"></i> FS AI</h4><button class="cls" onclick="App.chat()" aria-label="Close Chat" style="position:static;font-size:1.2rem"><i class="fa-solid fa-xmark"></i></button></div>
+        <div class="chat-h"><h4><i class="fa-solid fa-brain" aria-hidden="true"></i> FS AI</h4><button class="cls" onclick="App.chat()" aria-label="Close Chat" style="position:static;font-size:1.2rem"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button></div>
         <div class="msgs" id="msgs" role="log" aria-live="polite"><div class="msg bot" data-t="chatGreet">Hello! I'm Furkan's AI. Ask me anything about my projects or experience!</div></div>
         <div class="c-inp">
             <input type="text" id="inp" class="inp" placeholder="Ask something..." onkeypress="App.key(event)">
-            <button class="snd" onclick="App.send()" aria-label="Send Message"><i class="fa-solid fa-paper-plane"></i></button>
+            <button class="snd" onclick="App.send()" aria-label="Send Message"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
         </div>
     </div>
 
     <div id="mod" class="mod" role="dialog" aria-modal="true" aria-labelledby="m-tit">
         <div class="m-con">
-            <button class="cls" onclick="App.cls()" aria-label="Close Modal"><i class="fa-solid fa-xmark"></i></button>
+            <button class="cls" onclick="App.cls()" aria-label="Close Modal"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
             <h3 id="m-tit">Title</h3><div id="m-txt"></div>
             <form id="frm" action="https://formspree.io/f/mnjbavgw" method="POST" style="display:none">
                 <input type="text" name="_gotcha" style="display:none">
@@ -339,7 +340,7 @@
         </div>
     </div>
 
-    <div id="cook"><button style="position:absolute;top:10px;right:15px;background:none;border:none;cursor:pointer" onclick="App.hCook()" aria-label="Close Cookie Banner"><i class="fa-solid fa-xmark"></i></button><p data-t="cookieText"></p><div class="c-act"><button class="no" onclick="App.cons(false)" data-t="decline"></button><button class="yes" onclick="App.cons(true)" data-t="accept"></button></div></div>
+    <div id="cook"><button style="position:absolute;top:10px;right:15px;background:none;border:none;cursor:pointer" onclick="App.hCook()" aria-label="Close Cookie Banner"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button><p data-t="cookieText"></p><div class="c-act"><button class="no" onclick="App.cons(false)" data-t="decline"></button><button class="yes" onclick="App.cons(true)" data-t="accept"></button></div></div>
 
     <noscript>
         <div style="text-align:center; padding:50px; color:var(--gold);">
@@ -437,9 +438,14 @@
 
             function lang(){ l=l==='en'?'tr':(l==='tr'?'sr':'en'); render(l); }
 
+            let warmed=false;
             function chat(){
                 const w=document.getElementById('win'); w.classList.toggle('act'); document.getElementById('bub').classList.toggle('act');
-                if(w.classList.contains('act')) document.getElementById('inp').focus();
+                if(w.classList.contains('act')){
+                    document.getElementById('inp').focus();
+                    // Wake the (free-tier) chat backend while the user is typing to avoid cold-start timeouts.
+                    if(!warmed){ warmed=true; try{ fetch(new URL(C.API).origin,{mode:'no-cors'}).catch(()=>{}); }catch(e){} }
+                }
             }
 
             async function send(){

@@ -310,7 +310,7 @@
         </div>
     </main>
 
-    <footer><p>&copy; <span id="yr"></span> Furkan Senyuz. <span data-t="footerText"></span></p></footer>
+    <footer><p>&copy; <span id="yr"></span> Furkan Senyuz. <span data-t="footerText"></span> &middot; <a href="#" onclick="App.priv(event)" data-t="privacyLink" style="color:var(--mut);text-decoration:underline"></a></p></footer>
 
     <button class="bub" id="bub" onclick="App.chat()" aria-label="Open Chatbot"><i class="fa-solid fa-robot" aria-hidden="true"></i></button>
     <div class="win" id="win" role="dialog" aria-label="Chatbot Window">
@@ -332,15 +332,15 @@
                 <input type="email" id="email" name="email" class="frm-c" required placeholder="Email">
                 <textarea id="msg" name="message" class="frm-c" required placeholder="Message" rows="4"></textarea>
                 
-                <button class="g-recaptcha frm-b" data-sitekey="6LeR6GMsAAAAADhs_VIncXqN9ZOlJzCWMLocd1jv" data-callback="onSubmit" data-error-callback="onErr" data-action="submit">Send Message</button>
+                <button class="g-recaptcha frm-b" data-sitekey="6LeR6GMsAAAAADhs_VIncXqN9ZOlJzCWMLocd1jv" data-callback="onSubmit" data-error-callback="onErr" data-action="submit" data-t="formSend">Send Message</button>
                 <p class="recaptcha-text">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply.</p>
                 <div id="fst" style="margin-top:10px;display:none"></div>
             </form>
-            <button id="m-btn" class="frm-b" onclick="App.cls()" style="margin-top:15px">Close</button>
+            <button id="m-btn" class="frm-b" onclick="App.cls()" style="margin-top:15px" data-t="closeBtn">Close</button>
         </div>
     </div>
 
-    <div id="cook"><button style="position:absolute;top:10px;right:15px;background:none;border:none;cursor:pointer" onclick="App.hCook()" aria-label="Close Cookie Banner"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button><p data-t="cookieText"></p><div class="c-act"><button class="no" onclick="App.cons(false)" data-t="decline"></button><button class="yes" onclick="App.cons(true)" data-t="accept"></button></div></div>
+    <div id="cook"><button style="position:absolute;top:10px;right:15px;background:none;border:none;cursor:pointer" onclick="App.hCook()" aria-label="Close Cookie Banner"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button><p data-t="cookieText"></p><a href="#" onclick="App.priv(event)" data-t="privacyLink" style="color:var(--gold);text-decoration:underline;font-size:0.85rem"></a><div class="c-act"><button class="no" onclick="App.cons(false)" data-t="decline"></button><button class="yes" onclick="App.cons(true)" data-t="accept"></button></div></div>
 
     <noscript>
         <div style="text-align:center; padding:50px; color:var(--gold);">
@@ -527,12 +527,16 @@
             function cls(){document.getElementById('mod').classList.remove('act');}
             
             function sub(tok){
-                const f=document.getElementById('frm'), b=f.querySelector('button');
-                b.disabled=true; b.innerText="...";
+                const tr=DATA.translations[l];
+                const f=document.getElementById('frm'), b=f.querySelector('button'), st=document.getElementById('fst');
+                b.disabled=true; b.innerText=tr.formSending; st.style.display='none';
+                const showStatus=(msg,color)=>{ st.textContent=msg; st.style.color=color; st.style.display='block'; };
                 const fd=new FormData(f); fd.append("g-recaptcha-response",tok);
                 fetch(f.action,{method:'POST',body:fd,headers:{'Accept':'application/json'}}).then(r=>{
-                    if(r.ok){f.reset();setTimeout(cls,2000)} b.disabled=false;b.innerText="Send";
-                });
+                    if(r.ok){ f.reset(); showStatus(tr.formSuccess,'var(--green)'); setTimeout(cls,3000); }
+                    else { showStatus(tr.formError,'#ef4444'); }
+                }).catch(()=>showStatus(tr.formError,'#ef4444'))
+                .finally(()=>{ b.disabled=false; b.innerText=tr.formSend; });
             }
 
             return{
@@ -550,7 +554,8 @@
                     });
                 },
                 
-                cont:e=>{e.preventDefault();loadCaptcha();openM(DATA.translations[l].contactBtn,'',true)},
+                cont:e=>{e.preventDefault();loadCaptcha();document.getElementById('fst').style.display='none';openM(DATA.translations[l].contactBtn,'',true)},
+                priv:e=>{e.preventDefault();openM(DATA.translations[l].privacyTitle,DATA.translations[l].privacyText)},
                 cons:g=>{localStorage.setItem(C.CONSENT,g);gtag('consent','update',{'analytics_storage':g?'granted':'denied','ad_storage':g?'granted':'denied','ad_user_data':g?'granted':'denied','ad_personalization':g?'granted':'denied'});App.hCook()},
                 hCook:()=>document.getElementById('cook').classList.remove('shw')
             };

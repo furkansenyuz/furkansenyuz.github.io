@@ -218,6 +218,7 @@ section{padding-top:clamp(48px,7vw,80px)}
   border:none;cursor:pointer;padding:0;transition:opacity .2s,transform .2s;
 }
 .rbar:hover{opacity:1;transform:scaleY(1.15)}
+.rbar.prep{background:var(--stamp-wip);opacity:.7}
 .rbar[aria-pressed="true"]{opacity:1;outline:1.5px solid var(--ink);outline-offset:2px}
 .rbar.now::after{content:"";position:absolute;right:-9px;top:3px;border:4px solid transparent;border-left:9px solid var(--work)}
 .rlbl{position:absolute;top:36px;font-family:ui-monospace,monospace;font-size:10.5px;letter-spacing:.05em;color:var(--ink);white-space:nowrap}
@@ -529,6 +530,10 @@ html{scrollbar-color:var(--line2) transparent}
               <div class="rlbl" style="left:42.9%"><b data-i="exp3">Planning &amp; Cost Control Chief</b> · <span class="co">Fernas — Aydın, TR · €1.13B</span></div>
             </div>
             <div class="row">
+              <button class="rbar prep" style="left:32.5%;width:10%" data-exp="6" aria-label="KPSS exam preparation, Türkiye, 2020"></button>
+              <div class="rlbl" style="left:32.5%"><b data-i="exp7">KPSS Preparation</b> · <span class="co">Türkiye · 2020</span></div>
+            </div>
+            <div class="row">
               <button class="rbar" style="left:28.8%;width:3.4%" data-exp="3" data-loc="canakkale" aria-label="Technical Office Chief, Limak, 1915 Çanakkale Bridge, 2019"></button>
               <div class="rlbl" style="left:23.5%"><b data-i="exp4">Technical Office Chief</b> · <span class="co">Limak — 1915 Çanakkale Bridge</span></div>
             </div>
@@ -771,7 +776,7 @@ window.P=(function(){
     st1:"Yıl sahada",st2:"Üretilen & teklif verilen iş",st3:"Ülkede ihale",st4:"Mega proje görevi",
     secA:"SAHA KAYDI — 2016 → BUGÜN",
     exp1:"Teknik Ofis Şefi",exp2:"İhale & Proje Yönetim Uzmanı",exp3:"Planlama & Maliyet Kontrol Şefi",
-    exp4:"Teknik Ofis Şefi",exp5:"Planlama & Maliyet Mühendisi",exp6:"Şantiye Şefi",
+    exp4:"Teknik Ofis Şefi",exp5:"Planlama & Maliyet Mühendisi",exp6:"Şantiye Şefi",exp7:"KPSS Hazırlığı",
     secB:"OPERASYON SAHASI — APLİKASYON PLANI",
     remote:"DETAY — UZAKTAN EĞİTİM · ÖLÇEKSİZ",legW:"İş & projeler",legE:"Eğitim",legT:"Hazırlanan ihaleler",
     secC:"YETKİNLİKLER — İKİ DİSİPLİN, TEK MASA",
@@ -804,7 +809,8 @@ window.P=(function(){
       {co:"Fernas — Aydın-Denizli Otoyolu (€1.14B) · Oca – Ağu 2021",b:["Tüm ana imalatların master iş programı TILOS'ta oluşturuldu.","Projenin tüm raporlama sistemleri kuruldu."]},
       {co:"Limak — Malkara-Çanakkale Otoyolu, 1915 Çanakkale Köprüsü dahil · Ağu – Ara 2019",b:["Teknik ofis sıfırdan kuruldu — tüm raporlama ve saha takip sistemleri.","Toprak işleri, sanat yapıları ve üstyapı için master plan hazırlandı."]},
       {co:"Limak — Kuzey Marmara Otoyolu ($500M) · Oca 2018 – Ağu 2019",b:["Kritik imalatlar (tüneller, prefabrik kirişler) için detay programlar ve kaynak analizi.","Microsoft AX (ERP) ile birim maliyet, metraj ve kârlılık hesapları.","Tüm çelik köprü imalatlarının hakediş yönetimi."]},
-      {co:"Mat Yapı — 10.000 m² konut, 100 daire · İstanbul · Ara 2016 – Oca 2018",b:["Tüm saha operasyonları; Kazanılmış Değer Yönetimi (EVM) ile performans takibi.","10 m derinliğindeki kazı için şev stabilite planının tasarımı."]}
+      {co:"Mat Yapı — 10.000 m² konut, 100 daire · İstanbul · Ara 2016 – Oca 2018",b:["Tüm saha operasyonları; Kazanılmış Değer Yönetimi (EVM) ile performans takibi.","10 m derinliğindeki kazı için şev stabilite planının tasarımı."]},
+      {co:"Bağımsız çalışma · Türkiye · Oca – Ara 2020",b:["KPSS'ye (Kamu Personeli Seçme Sınavı) tam zamanlı hazırlık."]}
     ]
   };
   const SR={
@@ -815,7 +821,7 @@ window.P=(function(){
     st1:"Godina na terenu",st2:"Izvedeni i tenderisani projekti",st3:"Zemalja — tenderi",st4:"Mega projekata",
     secA:"TERENSKI DOSIJE — 2016 → DANAS",
     exp1:"Šef Tehničke Službe",exp2:"Specijalista za Tendere i PM",exp3:"Šef Planiranja i Kontrole Troškova",
-    exp4:"Šef Tehničke Službe",exp5:"Inženjer Planiranja i Troškova",exp6:"Šef Gradilišta",
+    exp4:"Šef Tehničke Službe",exp5:"Inženjer Planiranja i Troškova",exp6:"Šef Gradilišta",exp7:"Priprema za KPSS",
     secB:"PODRUČJE OPERACIJA — SITUACIONI PLAN",
     legW:"Posao i projekti",legE:"Obrazovanje",legT:"Pripremljeni tenderi",
     fbnote:"INTERAKTIVNA MAPA SE UČITAVA NA SAJTU — PRIKAZAN JE OFLAJN PLAN",
@@ -848,7 +854,8 @@ window.P=(function(){
       {co:"Fernas — autoput Aydin–Denizli (€1,14 mlrd) · jan – avg 2021",b:["Master plan svih glavnih radova izrađen u TILOS-u.","Uspostavljeni svi sistemi projektnog izveštavanja."]},
       {co:"Limak — autoput Malkara–Čanakkale, uklj. most 1915 Čanakkale · avg – dec 2019",b:["Tehnička služba uspostavljena od nule — izveštavanje i praćenje gradilišta.","Master plan za zemljane radove, objekte i kolovoznu konstrukciju."]},
       {co:"Limak — Severnomarmarski autoput ($500M) · jan 2018 – avg 2019",b:["Detaljni planovi za kritične radove — tuneli, prefabrikovani nosači.","Jedinične cene, količine i marže u Microsoft AX (ERP).","Privremene situacije za sve čelične mostove."]},
-      {co:"Mat Yapi — 10.000 m² stambeno, 100 stanova · Istanbul · dec 2016 – jan 2018",b:["Vođenje svih radova uz praćenje po Earned Value Management (EVM).","Projekat stabilnosti kosine za iskop dubine 10 m."]}
+      {co:"Mat Yapi — 10.000 m² stambeno, 100 stanova · Istanbul · dec 2016 – jan 2018",b:["Vođenje svih radova uz praćenje po Earned Value Management (EVM).","Projekat stabilnosti kosine za iskop dubine 10 m."]},
+      {co:"Samostalno učenje · Turska · jan – dec 2020",b:["Priprema za KPSS — turski ispit za izbor javnih službenika, u punom radnom vremenu."]}
     ]
   };
   const DE={
@@ -859,7 +866,7 @@ window.P=(function(){
     st1:"Jahre im Feld",st2:"Gebaut & ausgeschrieben",st3:"Länder — Ausschreibungen",st4:"Großprojekt-Stationen",
     secA:"FELDAKTE — 2016 → HEUTE",
     exp1:"Leiter Technisches Büro",exp2:"Spezialist Ausschreibung & PM",exp3:"Leiter Terminplanung & Kostenkontrolle",
-    exp4:"Leiter Technisches Büro",exp5:"Termin- & Kostenplaner",exp6:"Bauleiter",
+    exp4:"Leiter Technisches Büro",exp5:"Termin- & Kostenplaner",exp6:"Bauleiter",exp7:"KPSS-Vorbereitung",
     secB:"EINSATZGEBIET — LAGEPLAN",
     legW:"Arbeit & Projekte",legE:"Ausbildung",legT:"Ausschreibungen",
     fbnote:"LIVE-KARTE LÄDT AUF DER WEBSITE — OFFLINE-PLAN WIRD GEZEIGT",
@@ -892,7 +899,8 @@ window.P=(function(){
       {co:"Fernas — Autobahn Aydin–Denizli (€1,14 Mrd) · Jan – Aug 2021",b:["Master-Terminplan aller Hauptgewerke in TILOS erstellt.","Alle Projektberichtssysteme aufgebaut."]},
       {co:"Limak — Autobahn Malkara–Çanakkale, inkl. 1915-Çanakkale-Brücke · Aug – Dez 2019",b:["Technisches Büro von Grund auf aufgebaut — Berichtswesen und Baustellenverfolgung.","Master-Plan für Erdbau, Bauwerke und Oberbau."]},
       {co:"Limak — Nordmarmara-Autobahn ($500M) · Jan 2018 – Aug 2019",b:["Detailterminpläne für kritische Gewerke — Tunnel, Fertigteilträger.","Einheitspreise, Mengen und Margen in Microsoft AX (ERP).","Abschlagszahlungen für alle Stahlbrücken."]},
-      {co:"Mat Yapi — 10.000 m² Wohnbau, 100 Einheiten · Istanbul · Dez 2016 – Jan 2018",b:["Gesamte Baustellenorganisation mit Earned-Value-Management (EVM).","Böschungssicherungsplan für eine 10 m tiefe Baugrube."]}
+      {co:"Mat Yapi — 10.000 m² Wohnbau, 100 Einheiten · Istanbul · Dez 2016 – Jan 2018",b:["Gesamte Baustellenorganisation mit Earned-Value-Management (EVM).","Böschungssicherungsplan für eine 10 m tiefe Baugrube."]},
+      {co:"Eigenstudium · Türkei · Jan – Dez 2020",b:["Vollzeit-Vorbereitung auf die KPSS — die türkische Auswahlprüfung für den öffentlichen Dienst."]}
     ]
   };
   const EN={
@@ -903,7 +911,8 @@ window.P=(function(){
       {co:"Fernas — Aydın-Denizli Motorway (€1.14B) · Jan – Aug 2021",b:["Created the master plan for all major works in TILOS.","Established all project reporting systems."]},
       {co:"Limak — Malkara-Çanakkale Motorway, incl. 1915 Çanakkale Bridge · Aug – Dec 2019",b:["Built the technical office from scratch — all reporting and site-tracking systems.","Created the master plan for earthworks, structures and pavement."]},
       {co:"Limak — Northern Marmara Motorway ($500M) · Jan 2018 – Aug 2019",b:["Detailed schedules for critical works — tunnels, prefabricated beams — with resource analysis.","Unit costs, material requirements and margins in Microsoft AX (ERP).","Managed progress payments for all steel bridge constructions."]},
-      {co:"Mat Yapı — 10,000 m² residential, 100 units · Istanbul · Dec 2016 – Jan 2018",b:["Ran all site operations with Earned Value Management (EVM) tracking.","Designed the slope-stability plan for a 10 m deep excavation."]}
+      {co:"Mat Yapı — 10,000 m² residential, 100 units · Istanbul · Dec 2016 – Jan 2018",b:["Ran all site operations with Earned Value Management (EVM) tracking.","Designed the slope-stability plan for a 10 m deep excavation."]},
+      {co:"Independent study · Türkiye · Jan – Dec 2020",b:["Full-time preparation for the KPSS — Türkiye's public-personnel selection examination."]}
     ]
   };
   document.querySelectorAll("[data-i]").forEach(el=>{EN[el.dataset.i]=el.innerHTML});

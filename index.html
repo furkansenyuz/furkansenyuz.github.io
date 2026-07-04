@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Furkan Senyuz | Civil Engineer & AI Solutions Developer</title>
-    <meta name="description" content="Civil Engineer & AI Solutions Developer bridging construction with Python, Machine Learning, and Primavera P6. Portfolio with Gemini AI integration.">
+    <meta name="description" content="Civil Engineer & AI Solutions Developer bridging construction with Python, Machine Learning, and Primavera P6. €2B+ of highways and bridges, tendered in 10+ countries.">
     <meta name="author" content="Furkan Senyuz">
-    <meta name="keywords" content="Furkan Senyuz, Civil Engineer, AI Developer, Primavera P6, Python, Machine Learning, Construction Management">
+    <meta name="keywords" content="Furkan Senyuz, Civil Engineer, AI Developer, Primavera P6, Python, Machine Learning, Construction Management, FIDIC">
     <link rel="canonical" href="https://furkansenyuz.com">
-    
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -29,585 +29,957 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://furkansenyuz.com/">
     <meta property="og:title" content="Furkan Senyuz | Civil Engineer & AI Solutions Developer">
-    <meta property="og:description" content="Bridging the gap between physical infrastructure and digital intelligence.">
+    <meta property="og:description" content="Concrete holds the road up. code() tells you when it's done.">
     <meta property="og:image" content="https://furkansenyuz.com/profile.jpg">
-
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://furkansenyuz.com/">
+    <meta property="twitter:card" content="summary">
     <meta property="twitter:title" content="Furkan Senyuz | Civil Engineer & AI Solutions Developer">
-    <meta property="twitter:description" content="Bridging the gap between physical infrastructure and digital intelligence.">
+    <meta property="twitter:description" content="Concrete holds the road up. code() tells you when it's done.">
     <meta property="twitter:image" content="https://furkansenyuz.com/profile.jpg">
-    
-    <link rel="manifest" href='data:application/manifest+json,{"name":"Furkan Senyuz Portfolio","short_name":"FS Portfolio","start_url":"/","display":"standalone","background_color":"#0f172a","theme_color":"#fbbf24","orientation":"portrait","icons":[{"src":"https://furkansenyuz.com/icon-192.png","sizes":"192x192","type":"image/png"},{"src":"https://furkansenyuz.com/icon-512.png","sizes":"512x512","type":"image/png"}]}'>
-    <meta name="theme-color" content="#fbbf24">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta name="theme-color" content="#14181E">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    <link rel="prefetch" href="https://cdn.jsdelivr.net/gh/pointhi/leaflet-color-markers@master/img/marker-icon-2x-blue.png">
-    
     <script>
-        window.CFG = { GA:'G-1E33W355PW', API:"https://portfolio-backend-hu1r.onrender.com/chat", THEME:'theme', CONSENT:'cookie_consent', LANG:'lang', GEO:'https://ipapi.co/json/', RETRY:2000, MAX:2, LIM:50 };
-        window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
         gtag('consent', 'default', { 'ad_storage':'denied', 'ad_user_data':'denied', 'ad_personalization':'denied', 'analytics_storage':'denied' });
+        gtag('js', new Date());
     </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E33W355PW"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', window.CFG.GA, { 'anonymize_ip': true });</script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    
-    <style>
-        /* v60 GOLD MASTER CSS */
-        :root { --bg:#0f172a; --sec:#1e293b; --txt:#f1f5f9; --mut:#94a3b8; --gold:#fbbf24; --blue:#38bdf8; --green:#2ecc71; --brd:rgba(255,255,255,0.1); --shd:0 10px 15px -3px rgba(0,0,0,0.3); --inp:#0f172a; --bot:#fbbf24; --usr:#334155; --ovr:rgba(2,6,23,0.7); }
-        body.light-mode { --bg:#f8fafc; --sec:#ffffff; --txt:#0f172a; --mut:#475569; --gold:#d97706; --blue:#0284c7; --green:#15803d; --brd:#e2e8f0; --shd:0 10px 15px -3px rgba(0,0,0,0.1); --inp:#f1f5f9; --bot:#d97706; --usr:#e2e8f0; --ovr:rgba(15,23,42,0.45); }
-        
-        * { margin:0; padding:0; box-sizing:border-box; } 
-        html { scroll-behavior:smooth; }
-        body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--txt); line-height:1.7; transition:background 0.3s,color 0.3s; overflow-x:hidden; }
-        
-        .skip-link { position: absolute; top: -40px; left: 0; background: var(--gold); color: #000; padding: 8px; z-index: 2000; transition: top 0.3s; text-decoration: none; font-weight: bold; }
-        .skip-link:focus { top: 0; outline: 3px solid var(--txt); }
-        *:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
-
-        @keyframes fadeIn { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        .anim { opacity:0; animation:fadeIn 0.8s ease-out forwards; } .d1{animation-delay:0.1s} .d2{animation-delay:0.2s} .d3{animation-delay:0.3s} .d4{animation-delay:0.4s} .d5{animation-delay:0.5s}
-        .hidden-item { display:none !important; } 
-        .grecaptcha-badge { visibility: hidden !important; opacity: 0 !important; z-index: -1 !important; }
-
-        #loader { position:fixed; top:0; left:0; width:100%; height:100%; background:var(--bg); z-index:9999; display:flex; justify-content:center; align-items:center; flex-direction:column; transition:opacity 0.5s; }
-        .loader-spin { width:50px; height:50px; border:5px solid var(--sec); border-top:5px solid var(--gold); border-radius:50%; animation:spin 1s linear infinite; }
-
-        header { background:var(--bg); padding:15px 0; position:fixed; width:100%; top:0; z-index:1000; border-bottom:1px solid var(--brd); backdrop-filter:blur(10px); }
-        .nav-con { max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:0 20px; }
-        .logo { font-size:1.5rem; font-weight:700; color:var(--txt); text-decoration:none; } .logo span { color:var(--gold); }
-        .act { display:flex; gap:15px; align-items:center; }
-        .i-btn { background:none; border:none; color:var(--txt); cursor:pointer; font-size:1.1rem; transition:0.3s; } .i-btn:hover { color:var(--gold); }
-        .b-con { background:var(--txt); color:var(--bg); padding:8px 24px; border-radius:50px; text-decoration:none; font-weight:600; font-size:0.9rem; transition:0.3s; } .b-con:hover { background:var(--gold); color:#fff; transform:translateY(-2px); }
-        .b-cv { border:1px solid var(--gold); color:var(--gold); padding:7px 20px; border-radius:50px; text-decoration:none; font-weight:600; font-size:0.9rem; transition:0.3s; } .b-cv:hover { background:var(--gold); color:#fff; }
-
-        .hero { padding:160px 20px 80px; text-align:center; max-width:900px; margin:0 auto; }
-        .avt { width:160px; height:160px; border-radius:50%; border:4px solid var(--gold); box-shadow:0 0 20px rgba(251,191,36,0.3); margin-bottom:25px; object-fit:cover; background:var(--sec); }
-        .hero h1 { font-size:3.5rem; font-weight:800; color:var(--txt); margin-bottom:15px; line-height:1.1; }
-        .sub { font-size:1.4rem; color:var(--mut); font-weight:300; margin-bottom:30px; }
-        .slogan { font-size:1.8rem; color:var(--gold); font-weight:600; margin-bottom:40px; }
-        .socials { display:flex; justify-content:center; gap:30px; margin-bottom:50px; } 
-        .soc { font-size:2rem; color:var(--mut); transition:0.3s; } .soc:hover { color:var(--gold); transform:translateY(-3px); }
-
-        .skills { display:flex; flex-direction:column; gap:20px; align-items:center; }
-        .s-row { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; }
-        .tag { padding:12px 24px; border-radius:12px; font-weight:600; font-size:0.95rem; color:#fff; box-shadow:var(--shd); transition:0.2s; cursor:pointer; position:relative; }
-        .tag:hover { transform:translateY(-2px); }
-        .tag[data-tooltip]::after { content:attr(data-tooltip); position:absolute; bottom:calc(100% + 10px); left:50%; transform:translateX(-50%); background:var(--sec); color:var(--txt); border:1px solid var(--gold); padding:10px 14px; border-radius:10px; font-size:0.8rem; font-weight:400; width:max-content; max-width:260px; text-align:center; line-height:1.4; box-shadow:var(--shd); opacity:0; visibility:hidden; transition:0.2s; pointer-events:none; z-index:20; }
-        .tag[data-tooltip]:hover::after, .tag[data-tooltip].active::after { opacity:1; visibility:visible; }
-        .bg-t { background:var(--green); } .bg-e { background:var(--sec); border:1px solid var(--blue); color:var(--blue); } 
-        .light-mode .bg-e { background:#e0f2fe; border-color:#0284c7; color:#0284c7; }
-
-        .box { max-width:1200px; margin:60px auto; padding:0 20px; }
-        #map { height:500px; border-radius:20px; border:1px solid var(--brd); margin-bottom:20px; z-index:1; background:var(--sec); }
-        .leg { display:flex; gap:20px; justify-content:center; color:var(--mut); } 
-        .dot { width:12px; height:12px; border-radius:50%; display:inline-block; margin-right:5px; }
-
-        .grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; max-width:1200px; margin:80px auto; padding:0 20px; }
-        .sec-head { text-align:center; margin-bottom:30px; }
-        .title { font-size:1.8rem; margin-bottom:15px; color:var(--txt); display:flex; align-items:center; gap:12px; border-bottom: 2px solid var(--gold); padding-bottom: 10px; display: inline-block; }
-        .filters { grid-column: 1 / -1; display:flex; justify-content:center; gap:15px; margin-bottom:40px; }
-        .f-btn { background:var(--sec); color:var(--mut); border:1px solid var(--brd); padding:10px 24px; border-radius:30px; cursor:pointer; transition:0.3s; font-weight:600; } 
-        .f-btn:hover, .f-btn.active { background:var(--gold); color:#000; border-color:var(--gold); }
-
-        .timeline-container { display:flex; flex-direction:column; gap:30px; border-left: 2px solid var(--brd); padding-left: 20px; margin-left: 10px; }
-        .t-item { position:relative; background:var(--sec); padding:25px; border-radius:15px; box-shadow:var(--shd); border: 1px solid var(--brd); transition: transform 0.3s ease; }
-        .t-item:hover { transform: translateX(5px); border-color: var(--gold); }
-        .t-item::before { content: ''; position: absolute; left: -27px; top: 25px; width: 12px; height: 12px; border-radius: 50%; background: var(--gold); border: 2px solid var(--bg); }
-        .t-item.edu::before { background: var(--green); }
-        .t-item h4 { font-size:1.2rem; margin-bottom:5px; font-weight:700; color:var(--txt); }
-        .t-item .co { font-size:1rem; color:var(--gold); font-weight:600; display:block; margin-bottom:10px; } .t-item.edu .co { color:var(--green); }
-        .t-item .meta { font-size:0.85rem; color:var(--mut); display:flex; justify-content:space-between; margin-bottom:12px; border-bottom: 1px solid var(--brd); padding-bottom: 8px; }
-        .t-item ul { padding-left:20px; color:var(--mut); font-size: 0.95rem; } .t-item ul li { margin-bottom: 5px; }
-
-        .proj { max-width:1200px; margin:80px auto; padding:0 20px; }
-        .p-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:30px; margin-top: 30px; }
-        .card { background:var(--sec); padding:30px; border-radius:20px; border:1px solid var(--brd); transition:0.3s; box-shadow:var(--shd); display:flex; flex-direction:column; } 
-        .card:hover { transform:translateY(-8px); border-color:var(--gold); }
-        .card h4 { color:var(--gold); margin-bottom:15px; font-size:1.3rem; }
-        .ptags { display:flex; gap:10px; margin-bottom:20px; flex-wrap:wrap; } 
-        .pt { font-size:0.8rem; background:var(--brd); padding:6px 12px; border-radius:6px; color: var(--txt); }
-        .card p { flex-grow: 1; color: var(--mut); margin-bottom: 20px; }
-        .plnk { color:var(--txt); text-decoration:none; font-size:1rem; display:inline-flex; align-items:center; gap:8px; font-weight: 600; } .plnk:hover { color:var(--gold); }
-        .soon { color:var(--txt); opacity:0.55; font-size:1rem; display:inline-flex; align-items:center; gap:8px; font-weight:600; cursor:default; }
-
-        .bub { position: fixed; bottom: 30px; right: 30px; background: var(--gold); color: #000; width: 65px; height: 65px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.8rem; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.4); z-index: 2500; transition: transform 0.3s; } 
-        .bub:hover { transform: scale(1.1); }
-        
-        .win { 
-            position: fixed; bottom: 100px; right: 30px; width: 380px; height: 600px; max-height: 80dvh; 
-            background: var(--sec); border: 1px solid var(--brd); border-radius: 20px; 
-            display: flex; flex-direction: column; box-shadow: 0 10px 40px rgba(0,0,0,0.5); z-index: 2500; 
-            opacity: 0; visibility: hidden; transform: translateY(20px); transition: 0.3s; overflow: hidden; 
-            align-items: stretch;
-            padding: 0; 
-        } 
-        .win.act { opacity: 1; visibility: visible; transform: translateY(0); }
-        
-        .chat-h { 
-            width: 100%; 
-            background: var(--gold); 
-            padding: 15px 20px; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            color: #000; 
-            font-weight: bold; 
-            font-size: 1.1rem;
-            border-radius: 0; 
-            flex-shrink: 0;
-        }
-        
-        .msgs { flex-grow: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 15px; }
-        .msg { padding: 12px 16px; border-radius: 12px; max-width: 85%; line-height: 1.5; font-size: 0.95rem; } 
-        .msg.bot { background: var(--bot); color: #000; align-self: flex-start; border-bottom-left-radius: 2px; } 
-        .msg.usr { background: var(--usr); color: var(--txt); align-self: flex-end; border-bottom-right-radius: 2px; }
-        body.light-mode .msg.bot { color: #fff; }
-        
-        .c-inp { 
-            padding: 15px; 
-            border-top: 1px solid var(--brd); 
-            display: flex; 
-            gap: 12px; 
-            background: var(--bg); 
-            align-items: center; 
-            flex-shrink: 0;
-        }
-        .inp { 
-            flex-grow: 1; 
-            padding: 0 20px; 
-            height: 50px; 
-            border-radius: 25px; 
-            border: 1px solid var(--brd); 
-            background: var(--sec); 
-            color: var(--txt); 
-            outline: none; 
-            font-size: 1rem; 
-            width: 100%;
-        }
-        .snd { background: var(--gold); border: none; width: 50px; height: 50px; border-radius: 50%; color: #000; cursor: pointer; display: flex; justify-content: center; align-items: center; font-size: 1.3rem; flex-shrink: 0; }
-
-        .mod { position:fixed; top:0; left:0; width:100%; height:100%; background:var(--ovr); z-index:3000; display:flex; justify-content:center; align-items:center; opacity:0; visibility:hidden; transition:0.3s; backdrop-filter:blur(5px); } .mod.act { opacity:1; visibility:visible; }
-        .m-con { background:var(--sec); border:1px solid var(--gold); padding:40px; border-radius:20px; max-width:500px; width:90%; text-align:center; position:relative; transform:translateY(20px); transition:0.3s; } .mod.act .m-con { transform:translateY(0); }
-        .cls { position:absolute; top:20px; right:20px; background:none; border:none; color:var(--mut); font-size:1.8rem; cursor:pointer; }
-        .frm-c { padding:15px; border-radius:10px; border:1px solid var(--brd); background:var(--inp); color:var(--txt); width:100%; margin-bottom:15px; font-family:'Inter',sans-serif; font-size: 1rem; }
-        .frm-b { background:var(--gold); color:#000; border:none; padding:15px; border-radius:10px; font-weight:bold; cursor:pointer; width:100%; font-size: 1rem; margin-top: 10px; }
-        
-        .recaptcha-text { font-size: 0.75rem; color: var(--mut); margin-top: 15px; text-align: center; line-height: 1.4; }
-        .recaptcha-text a { color: var(--gold); text-decoration: none; } .recaptcha-text a:hover { text-decoration: underline; }
-
-        #cook { position:fixed; bottom:-200px; left:0; width:100%; background:var(--sec); border-top:1px solid var(--gold); padding:20px; z-index:2000; display:flex; flex-direction:column; align-items:center; gap:15px; transition:0.5s; box-shadow:0 -4px 10px rgba(0,0,0,0.3); } #cook.shw { bottom:0; }
-        .c-act button { padding:8px 24px; border-radius:50px; font-weight:bold; cursor:pointer; margin:0 5px; } .yes { background:var(--gold); border:none; color:#000; } .no { background:transparent; border:1px solid var(--mut); color:var(--mut); }
-        footer { text-align:center; padding:50px 0; color:var(--mut); border-top:1px solid var(--brd); margin-top:80px; font-size:0.95rem; }
-
-        @media(max-width:900px){ .grid{grid-template-columns:1fr; gap:40px;} .timeline-container{ margin-left:0; border-left: none; padding-left: 0; } .t-item::before{ display: none; } }
-        @media(max-width:768px){ .hero{padding-top:130px} .hero h1{font-size:2.5rem} #map{height:350px} .win{width:90%;right:5%;bottom:90px} .s-row{gap:8px;} .tag{padding:8px 16px; font-size:0.85rem;} }
-    </style>
+    <script>gtag('config', 'G-1E33W355PW', { 'anonymize_ip': true });</script>
 </head>
 <body>
-    <div id="loader"><div class="loader-spin"></div><p id="ldr-txt" style="margin-top:20px;color:var(--gold);font-weight:bold;">Loading Profile...</p></div>
-    <script>(function(){var l=(navigator.language||'').toLowerCase();var t=l.indexOf('tr')===0?'Profil Yükleniyor...':(l.indexOf('sr')===0?'Učitavanje profila...':(l.indexOf('de')===0?'Profil wird geladen...':null));if(t)document.getElementById('ldr-txt').textContent=t;})();</script>
-    <a href="#main-content" class="skip-link">Skip to content</a>
+<style>
+:root{
+  --paper:#F6F5F1; --ink:#24272B; --mut:#6E7178; --line:#DBD9D0; --line2:#C9C7BD;
+  --acc:#B36A00; --acc-ink:#8A5200;
+  --work:#B36A00; --edu:#3F7D4E; --tender:#3E7CA6;
+  --card:#FDFCF9; --stamp-ok:#B36A00; --stamp-wip:#8A8D93;
+  --grid:rgba(36,39,43,.05); --hot:#8A5200; --land:#EDEAE0; --lndln:#D2CFC4; --duo:#E7E3D8;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --paper:#14181E; --ink:#E9E7E0; --mut:#99A0A9; --line:#2A3139; --line2:#38414B;
+    --acc:#F5B324; --acc-ink:#F5B324;
+    --work:#F5B324; --edu:#6FBF84; --tender:#71B6DF;
+    --card:#1A2027; --stamp-ok:#F5B324; --stamp-wip:#6E7680;
+    --grid:rgba(233,231,224,.045); --hot:#F5B324; --land:#1F2731; --lndln:#3D4854; --duo:#C9CFD7;
+  }
+}
+:root[data-theme="light"]{
+  --paper:#F6F5F1; --ink:#24272B; --mut:#6E7178; --line:#DBD9D0; --line2:#C9C7BD;
+  --acc:#B36A00; --acc-ink:#8A5200;
+  --work:#B36A00; --edu:#3F7D4E; --tender:#3E7CA6;
+  --card:#FDFCF9; --stamp-ok:#B36A00; --stamp-wip:#8A8D93;
+  --grid:rgba(36,39,43,.05); --hot:#8A5200; --land:#EDEAE0; --lndln:#D2CFC4; --duo:#E7E3D8;
+}
+:root[data-theme="dark"]{
+  --paper:#14181E; --ink:#E9E7E0; --mut:#99A0A9; --line:#2A3139; --line2:#38414B;
+  --acc:#F5B324; --acc-ink:#F5B324;
+  --work:#F5B324; --edu:#6FBF84; --tender:#71B6DF;
+  --card:#1A2027; --stamp-ok:#F5B324; --stamp-wip:#6E7680;
+  --grid:rgba(233,231,224,.045); --hot:#F5B324; --land:#1F2731; --lndln:#3D4854; --duo:#C9CFD7;
+}
+:root[data-theme="blueprint"]{
+  --paper:#1C4382; --ink:#EAF2FF; --mut:#A9C2E9; --line:rgba(234,242,255,.18); --line2:rgba(234,242,255,.34);
+  --acc:#FFE08A; --acc-ink:#FFE08A;
+  --work:#FFE08A; --edu:#A5EBBE; --tender:#9FD2FF;
+  --card:#23509B; --stamp-ok:#FFE08A; --stamp-wip:#A9C2E9;
+  --grid:rgba(234,242,255,.07); --hot:#FFFFFF; --land:#24549F; --lndln:rgba(234,242,255,.38); --duo:#D3E2F6;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16px; line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.mono{font-family:ui-monospace,"SF Mono","Cascadia Code",Consolas,"Roboto Mono",monospace}
+a{color:var(--acc-ink)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 
-    <header class="anim d1">
-        <div class="nav-con">
-            <a href="#" class="logo">furkan<span>senyuz</span></a>
-            <nav class="act" aria-label="Main Navigation">
-                <button class="i-btn" id="lang-btn" aria-label="Switch Language" onclick="App.lang()">TR</button>
-                <button class="i-btn" aria-label="Toggle Theme" onclick="App.theme()"><i class="fa-solid fa-sun" aria-hidden="true"></i></button>
-                <a href="CV_FS_2026.pdf" class="b-cv" target="_blank" aria-label="Download CV"><i class="fa-solid fa-download" aria-hidden="true"></i> CV</a>
-                <a href="#" class="b-con" onclick="App.cont(event)" aria-label="Contact Me"><i class="fa-regular fa-envelope" aria-hidden="true"></i> <span data-t="contactBtn"></span></a>
-            </nav>
-        </div>
-    </header>
+/* ---------- sheet frame + graph paper ---------- */
+.sheet{max-width:1180px;margin:18px auto;padding:0 16px;position:relative}
+.frame{
+  border:1.5px solid var(--ink);position:relative;background:var(--paper);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:28px 28px;
+}
+.reg{position:absolute;width:18px;height:18px;pointer-events:none}
+.reg::before,.reg::after{content:"";position:absolute;background:var(--ink)}
+.reg::before{width:18px;height:1.5px;top:8px}
+.reg::after{width:1.5px;height:18px;left:8px}
+.reg.tl{top:-9px;left:-9px}.reg.tr{top:-9px;right:-9px}
+.reg.bl{bottom:-9px;left:-9px}.reg.br{bottom:-9px;right:-9px}
+.inner{padding:0 clamp(20px,5vw,64px) 48px}
 
-    <main id="main-content">
-        <section class="hero">
-            <img src="profile.jpg" class="avt anim d2" alt="Furkan Senyuz" width="160" height="160" fetchpriority="high">
-            <h1 class="anim d3">Furkan Senyuz</h1>
-            <p class="sub anim d4" data-t="heroTitle"></p>
-            <div class="slogan anim d5" data-t="heroSlogan"></div>
-            <div class="socials anim d5">
-                <a href="https://www.linkedin.com/in/furkansenyuz" class="soc" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
-                <a href="https://github.com/furkansenyuz" class="soc" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-            </div>
-            <div class="skills anim d5">
-                <div class="s-row">
-                    <div class="tag bg-t" data-tip="skillTip1" onclick="App.tip(this)">Python & SQL</div>
-                    <div class="tag bg-t" data-tip="skillTip2" onclick="App.tip(this)">ML & AI APIs</div>
-                    <div class="tag bg-t" data-tip="skillTip3" onclick="App.tip(this)">Power BI & ERP</div>
-                </div>
-                <div class="s-row">
-                    <div class="tag bg-e" data-tip="skillTip4" onclick="App.tip(this)">Primavera P6 & TILOS</div>
-                    <div class="tag bg-e" data-tip="skillTip5" onclick="App.tip(this)">Tender & Cost</div>
-                    <div class="tag bg-e" data-tip="skillTip6" onclick="App.tip(this)">FIDIC & Claims</div>
-                </div>
-            </div>
-        </section>
+/* top bar */
+.bar{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
+  padding:14px clamp(20px,5vw,64px);border-bottom:1.5px solid var(--ink);
+  font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  background:var(--paper);
+}
+.bar .wm{color:var(--ink);text-decoration:none;letter-spacing:.2em}
+.bar .wm b{color:var(--acc-ink);font-weight:600}
+.ctrl{display:flex;gap:8px}
+.ctrl button{
+  font:inherit;letter-spacing:.14em;text-transform:uppercase;
+  background:none;border:1px solid var(--line2);color:var(--ink);
+  padding:5px 12px;cursor:pointer;transition:border-color .2s,color .2s;
+}
+.ctrl button:hover{border-color:var(--acc);color:var(--acc-ink)}
+.ctrl button[aria-pressed="true"]{border-color:var(--acc);color:var(--acc-ink)}
 
-        <div class="box">
-            <h3 class="title" style="justify-content: center;"><i class="fa-solid fa-earth-americas" aria-hidden="true"></i> <span data-t="mapTitle"></span></h3>
-            <div id="map"></div>
-            <div class="leg"><div><span class="dot" style="background:#38bdf8"></span> <span data-t="legendWork"></span></div><div><span class="dot" style="background:#2ecc71"></span> <span data-t="legendEdu"></span></div><div><span class="dot" style="background:#f97316"></span> <span data-t="legendTender"></span></div></div>
-        </div>
+/* ---------- hero ---------- */
+.hero{display:grid;grid-template-columns:1fr auto;gap:clamp(24px,5vw,72px);align-items:end;padding-top:clamp(40px,7vw,84px)}
+.eyebrow{font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mut);margin-bottom:22px}
+.eyebrow em{font-style:normal;color:var(--acc-ink)}
+h1.hname{font-size:clamp(3rem,8.5vw,5.4rem);font-weight:800;letter-spacing:-.03em;line-height:.95;text-transform:uppercase;text-wrap:balance}
+h1.hname span{display:block;font-weight:250;letter-spacing:-.015em}
+.role{font-family:ui-monospace,monospace;font-size:clamp(.8rem,1.6vw,.95rem);letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-top:18px}
+.slogan{margin-top:26px;font-size:clamp(1.1rem,2.5vw,1.55rem);line-height:1.45;font-weight:300}
+.slogan b{font-weight:800}
+.slogan code{font-family:ui-monospace,monospace;font-weight:600;color:var(--acc-ink);font-size:.92em}
+.links{display:flex;gap:22px;margin-top:34px;flex-wrap:wrap;font-family:ui-monospace,monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.links a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line2);padding-bottom:3px;transition:color .2s,border-color .2s}
+.links a:hover{color:var(--acc-ink);border-color:var(--acc)}
+.links a.cta{color:var(--paper);background:var(--ink);border:none;padding:10px 18px}
+.links a.cta:hover{background:var(--acc);color:#14181E}
+.links a.cta.cv2{background:none;border:1.5px solid var(--ink);color:var(--ink)}
+.links a.cta.cv2:hover{border-color:var(--acc);color:var(--acc-ink)}
 
-        <div class="grid">
-            <div class="filters">
-                <button class="f-btn active" onclick="App.filt('all')" data-t="filterAll"></button>
-                <button class="f-btn" onclick="App.filt('civil')" data-t="filterCivil"></button>
-                <button class="f-btn" onclick="App.filt('ai')" data-t="filterAI"></button>
-            </div>
-            
-            <div>
-                <div class="sec-head"><h3 class="title"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> <span data-t="expTitle"></span></h3></div>
-                <div class="timeline-container" id="exp"></div>
-            </div>
-            
-            <div>
-                <div class="sec-head"><h3 class="title"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> <span data-t="eduTitle"></span></h3></div>
-                <div class="timeline-container" id="edu"></div>
-            </div>
-        </div>
+.portrait{position:relative;width:clamp(150px,22vw,230px);flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:12px}
+.dbub{width:100%;aspect-ratio:1;border-radius:50%;overflow:hidden;background:var(--duo);border:1.5px solid var(--ink);position:relative}
+.dbub img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) contrast(1.12) brightness(1.02);mix-blend-mode:multiply}
+.dbub::after{content:"";position:absolute;inset:7px;border:1px dashed var(--paper);border-radius:50%;opacity:.55;pointer-events:none}
 
-        <div class="proj">
-            <h3 class="title" style="justify-content: center;"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i> <span data-t="projTitle"></span></h3>
-            <div class="p-grid" id="projs">
-                <div class="card item-box visible-item" data-cat="ai">
-                    <h4><i class="fa-solid fa-robot" aria-hidden="true"></i> DCC RAG AI Assistant</h4>
-                    <div class="ptags"><span class="pt">RAG</span><span class="pt">LangChain</span><span class="pt">LLM</span></div>
-                    <p data-t="proj3Desc"></p>
-                    <a href="https://github.com/furkansenyuz/dcc-intelligence-hub-hv1" target="_blank" rel="noopener noreferrer" class="plnk" aria-label="View Code for DCC RAG AI Assistant"><i class="fa-brands fa-github" aria-hidden="true"></i> <span data-t="viewCode"></span></a>
-                </div>
-                <div class="card item-box visible-item" data-cat="ai">
-                    <h4><i class="fa-solid fa-file-contract" aria-hidden="true"></i> Tender Documentation Analysis</h4>
-                    <div class="ptags"><span class="pt">NLP</span><span class="pt">Python</span></div>
-                    <p data-t="proj4Desc"></p>
-                    <span class="soon"><i class="fa-solid fa-clock" aria-hidden="true"></i> <span data-t="comingSoon"></span></span>
-                </div>
-                <div class="card item-box visible-item" data-cat="ai">
-                    <h4><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Construction Claim Predictor</h4>
-                    <div class="ptags"><span class="pt">Python</span><span class="pt">Random Forest</span></div>
-                    <p data-t="proj1Desc"></p>
-                    <span class="soon"><i class="fa-solid fa-clock" aria-hidden="true"></i> <span data-t="comingSoon"></span></span>
-                </div>
-                <div class="card item-box visible-item" data-cat="civil">
-                    <h4><i class="fa-solid fa-file-invoice-dollar" aria-hidden="true"></i> Tender Cost Optimizer</h4>
-                    <div class="ptags"><span class="pt">Python</span><span class="pt">Automation</span></div>
-                    <p data-t="proj2Desc"></p>
-                    <span class="soon"><i class="fa-solid fa-clock" aria-hidden="true"></i> <span data-t="comingSoon"></span></span>
-                </div>
-            </div>
-        </div>
-    </main>
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1.5px solid var(--ink);margin-top:clamp(40px,6vw,64px);background:var(--card)}
+.stat{padding:18px 20px 16px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:none}
+.stat .n{font-family:ui-monospace,monospace;font-size:clamp(1.4rem,3vw,2rem);font-weight:600;font-variant-numeric:tabular-nums;color:var(--acc-ink)}
+.stat .l{font-family:ui-monospace,monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-top:4px}
 
-    <footer><p>&copy; <span id="yr"></span> Furkan Senyuz. <span data-t="footerText"></span> &middot; <a href="#" onclick="App.priv(event)" data-t="privacyLink" style="color:var(--mut);text-decoration:underline"></a></p></footer>
 
-    <button class="bub" id="bub" onclick="App.chat()" aria-label="Open Chatbot"><i class="fa-solid fa-robot" aria-hidden="true"></i></button>
-    <div class="win" id="win" role="dialog" aria-label="Chatbot Window">
-        <div class="chat-h"><h4><i class="fa-solid fa-brain" aria-hidden="true"></i> FS AI</h4><button class="cls" onclick="App.chat()" aria-label="Close Chat" style="position:static;font-size:1.2rem"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button></div>
-        <div class="msgs" id="msgs" role="log" aria-live="polite"><div class="msg bot" data-t="chatGreet">Hello! I'm Furkan's AI. Ask me anything about my projects or experience!</div></div>
-        <div class="c-inp">
-            <input type="text" id="inp" class="inp" placeholder="Ask something..." onkeypress="App.key(event)">
-            <button class="snd" onclick="App.send()" aria-label="Send Message"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
-        </div>
+/* ---------- hero bridge elevation ---------- */
+.brg{margin-top:clamp(30px,5vw,52px)}
+.brg svg{display:block;width:100%;height:auto}
+.gnd{stroke:var(--line2);stroke-width:1}
+.twr{stroke:var(--ink);stroke-width:2.4;transform-box:fill-box;transform-origin:bottom;transform:scaleY(0);animation:rise2 .7s ease .45s forwards}
+@keyframes rise2{to{transform:scaleY(1)}}
+.deckl{stroke:var(--ink);stroke-width:1.8;stroke-dasharray:960;stroke-dashoffset:960;animation:trace2 1s ease .5s forwards}
+.deckl2{stroke:var(--line2);stroke-width:1;stroke-dasharray:960;stroke-dashoffset:960;animation:trace2 1s ease .6s forwards}
+.cable{stroke:var(--acc);stroke-width:2;stroke-dasharray:1400;stroke-dashoffset:1400;animation:trace2 1.5s ease 1s forwards}
+@keyframes trace2{to{stroke-dashoffset:0}}
+.sadl{fill:var(--acc);opacity:0;animation:fadeIn2 .3s 2.2s forwards}
+.hang{stroke:var(--mut);stroke-width:.9;opacity:0;animation:fadeIn2 .35s forwards}
+@keyframes fadeIn2{to{opacity:1}}
+
+/* ---------- dimension dividers ---------- */
+section{padding-top:clamp(48px,7vw,80px)}
+.dim{display:flex;align-items:center;gap:16px;margin-bottom:clamp(24px,4vw,40px)}
+.dim .ln{flex:1;height:1px;background:var(--line2);position:relative;transform:scaleX(0);transform-origin:left;transition:transform .8s ease}
+.dim.on .ln{transform:scaleX(1)}
+.dim .ln::before,.dim .ln::after{content:"";position:absolute;top:-3.5px;border:4px solid transparent}
+.dim .ln::before{left:-1px;border-right:7px solid var(--line2)}
+.dim .ln::after{right:-1px;border-left:7px solid var(--line2)}
+.dim h2{font-family:ui-monospace,monospace;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;white-space:nowrap}
+.dim h2 .k{color:var(--acc-ink);margin-right:10px}
+
+/* ---------- schedule ---------- */
+.sched-wrap{overflow-x:auto;border:1.5px solid var(--ink);background:var(--card)}
+.sched{min-width:820px;position:relative;padding:34px 0 10px}
+.grid-y{position:absolute;inset:0;pointer-events:none}
+.grid-y i{position:absolute;top:0;bottom:0;width:1px;background:var(--line)}
+.grid-y span{position:absolute;top:8px;transform:translateX(-50%);font-family:ui-monospace,monospace;font-size:10px;letter-spacing:.08em;color:var(--mut);font-variant-numeric:tabular-nums}
+.row{position:relative;height:58px}
+.rbar{
+  position:absolute;top:10px;height:24px;background:var(--work);opacity:.9;
+  border:none;cursor:pointer;padding:0;transition:opacity .2s,transform .2s;
+}
+.rbar:hover{opacity:1;transform:scaleY(1.15)}
+.rbar[aria-pressed="true"]{opacity:1;outline:1.5px solid var(--ink);outline-offset:2px}
+.rbar.now::after{content:"";position:absolute;right:-9px;top:3px;border:4px solid transparent;border-left:9px solid var(--work)}
+.rlbl{position:absolute;top:36px;font-family:ui-monospace,monospace;font-size:10.5px;letter-spacing:.05em;color:var(--ink);white-space:nowrap}
+.rlbl b{font-weight:600}
+.rlbl .co{color:var(--mut)}
+.sched-note{font-family:ui-monospace,monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);padding:10px 14px;border-top:1px solid var(--line)}
+
+/* detail panel */
+.detail{border:1.5px solid var(--ink);border-top:none;background:var(--card);padding:18px clamp(16px,3vw,28px) 20px}
+.detail .dk{font-family:ui-monospace,monospace;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--acc-ink);margin-bottom:8px}
+.detail h3{font-size:1.05rem;font-weight:700}
+.detail .dmeta{font-family:ui-monospace,monospace;font-size:11px;color:var(--mut);letter-spacing:.06em;margin:2px 0 10px}
+.detail ul{list-style:none}
+.detail li{padding-left:18px;position:relative;color:var(--mut);font-size:.93rem;margin-bottom:4px}
+.detail li::before{content:"—";position:absolute;left:0;color:var(--acc-ink)}
+@keyframes dswap{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+.detail.swap>*{animation:dswap .35s ease both}
+
+/* ---------- survey plot ---------- */
+.plot-wrap{border:1.5px solid var(--ink);position:relative;background:var(--card)}
+#lmap{display:none;height:500px;background:var(--card)}
+.plot-wrap.live #lmap{display:block}
+.plot-wrap.live .plot-scroll,.plot-wrap.live .coord,.plot-wrap.live .fbnote{display:none}
+.plot-wrap.live .legend .lw i{background:#38bdf8}
+.plot-wrap.live .legend .le i{background:#2ecc71}
+.plot-wrap.live .legend .lt i{background:#f97316;border:none}
+.fbnote{margin-left:auto;font-size:9.5px;color:var(--mut);letter-spacing:.1em}
+.plot-scroll{overflow-x:auto}
+.plot-wrap svg{display:block;width:100%;height:auto}
+.land{fill:var(--land);stroke:var(--lndln);stroke-width:.8}
+.plot-grid{stroke:var(--line);stroke-width:1}
+.plot-lbl{font-family:ui-monospace,monospace;font-size:11px;fill:var(--mut);letter-spacing:.08em}
+.pt-lbl{font-family:ui-monospace,monospace;font-size:11.5px;fill:var(--ink)}
+.pt-lbl.dimm{fill:var(--mut)}
+.leader{stroke:var(--line2);stroke-width:1}
+.compass{stroke:var(--mut);fill:none;stroke-width:1.2}
+.compass-n{font-family:ui-monospace,monospace;font-size:12px;fill:var(--mut)}
+.sbar{stroke:var(--ink);stroke-width:1}
+.ins-frame{fill:var(--card);stroke:var(--ink);stroke-width:1.2}
+.ins-t{font-family:ui-monospace,monospace;font-size:9px;fill:var(--ink);letter-spacing:.16em;font-weight:600}
+.ins-lbl{font-family:ui-monospace,monospace;font-size:10px;fill:var(--ink)}
+.pt{transform-box:fill-box;transform-origin:center;transition:transform .2s;pointer-events:all}
+.pt-work{fill:var(--work)}
+.pt-edu{fill:var(--edu)}
+.pt-tender{fill:none;stroke:var(--tender);stroke-width:1.6}
+.pt.hot{transform:scale(1.8)}
+.pt-lbl.hot{font-weight:700;fill:var(--hot)}
+.coord{position:absolute;right:14px;bottom:54px;font-family:ui-monospace,monospace;font-size:10px;letter-spacing:.12em;color:var(--mut);pointer-events:none;font-variant-numeric:tabular-nums}
+@media(hover:none){.coord{display:none}}
+.legend{display:flex;gap:26px;flex-wrap:wrap;padding:12px 16px;border-top:1px solid var(--line);font-family:ui-monospace,monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:8px;vertical-align:-1px}
+.legend .lw i{background:var(--work)}
+.legend .le i{background:var(--edu)}
+.legend .lt i{background:none;border:1.6px solid var(--tender)}
+
+/* ---------- capabilities ---------- */
+.caps{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,36px)}
+.cap{border:1.5px solid var(--ink);background:var(--card)}
+.cap h3{font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:12px 18px;border-bottom:1px solid var(--line)}
+.cap h3 span{color:var(--acc-ink)}
+.cap ul{list-style:none}
+.cap li{padding:14px 18px;border-bottom:1px solid var(--line)}
+.cap li:last-child{border-bottom:none}
+.cap .sk{font-weight:600;font-size:.98rem}
+.cap .sd{font-family:ui-monospace,monospace;font-size:11px;color:var(--mut);letter-spacing:.04em;margin-top:2px}
+
+/* ---------- projects: drawing register ---------- */
+.dreg{border:1.5px solid var(--ink);background:var(--card)}
+.dreg-h{display:grid;grid-template-columns:104px 1fr 190px;gap:18px;padding:10px 18px;border-bottom:1px solid var(--ink);font-family:ui-monospace,monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut)}
+.reg-r{display:grid;grid-template-columns:104px 1fr 190px;gap:18px;padding:17px 18px;border-bottom:1px solid var(--line);align-items:center;transition:background .15s}
+.reg-r:last-child{border-bottom:none}
+.reg-r:hover{background:var(--paper)}
+.rno{font-family:ui-monospace,monospace;font-size:11px;color:var(--acc-ink);letter-spacing:.08em;font-variant-numeric:tabular-nums}
+.rt{font-weight:700;font-size:1.02rem;letter-spacing:-.01em}
+.rtags{font-family:ui-monospace,monospace;font-size:10px;color:var(--mut);letter-spacing:.1em;text-transform:uppercase;margin-left:10px;white-space:nowrap}
+.reg-r p{color:var(--mut);font-size:.92rem;margin-top:3px;max-width:62ch}
+.rst{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+.chip{font-family:ui-monospace,monospace;font-size:9.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;border:1.5px solid var(--stamp-wip);color:var(--stamp-wip);padding:4px 10px;border-radius:2px;background:repeating-linear-gradient(45deg,transparent 0 5px,var(--grid) 5px 10px);white-space:nowrap}
+.chip.ok{border-color:var(--stamp-ok);color:var(--stamp-ok);background:none}
+.dreg .go{font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--line2);padding-bottom:2px}
+.dreg .go:hover{color:var(--acc-ink);border-color:var(--acc)}
+
+/* ---------- credentials ---------- */
+.creds{border:1.5px solid var(--ink);background:var(--card)}
+.cred{display:grid;grid-template-columns:110px 1fr auto;gap:10px 20px;align-items:baseline;padding:13px 18px;border-bottom:1px solid var(--line)}
+.cred:last-child{border-bottom:none}
+.cred .yr{font-family:ui-monospace,monospace;font-size:11px;color:var(--acc-ink);letter-spacing:.08em;font-variant-numeric:tabular-nums}
+.cred .ti{font-weight:600;font-size:.95rem}
+.cred .org{font-family:ui-monospace,monospace;font-size:11px;color:var(--mut);letter-spacing:.04em;text-align:right}
+
+/* ---------- footer ---------- */
+.foot{margin-top:clamp(56px,8vw,88px);border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:center;font-family:ui-monospace,monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+
+/* ---------- chat ---------- */
+.bub{position:fixed;bottom:26px;right:26px;width:56px;height:56px;background:var(--acc);color:#14181E;border:1.5px solid var(--ink);font-family:ui-monospace,monospace;font-weight:700;font-size:15px;letter-spacing:.08em;cursor:pointer;z-index:900;transition:transform .2s}
+.bub:hover{transform:translateY(-3px)}
+.chatw{position:fixed;bottom:96px;right:26px;width:min(370px,calc(100vw - 32px));height:520px;max-height:72dvh;background:var(--card);border:1.5px solid var(--ink);display:flex;flex-direction:column;z-index:900;opacity:0;visibility:hidden;transform:translateY(14px);transition:.25s}
+.chatw.act{opacity:1;visibility:visible;transform:none}
+.chat-h{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1.5px solid var(--ink);font-family:ui-monospace,monospace;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+.chat-h b{color:var(--acc-ink)}
+.chat-h button{background:none;border:none;color:var(--mut);font-size:16px;cursor:pointer;padding:2px 6px}
+.msgs{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
+.msg{border:1px solid var(--line2);padding:10px 13px;font-size:.92rem;line-height:1.5;max-width:86%}
+.msg.bot{border-left:3px solid var(--acc);align-self:flex-start;background:var(--paper)}
+.msg.usr{border-right:3px solid var(--mut);align-self:flex-end}
+.c-inp{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}
+.c-inp input{flex:1;background:var(--paper);border:1px solid var(--line2);color:var(--ink);padding:10px 14px;font-size:.95rem;outline:none}
+.c-inp input:focus{border-color:var(--acc)}
+.c-inp button{background:var(--ink);color:var(--paper);border:none;width:42px;cursor:pointer;font-size:15px}
+.c-inp button:hover{background:var(--acc);color:#14181E}
+/* ---------- contact modal ---------- */
+.mod{position:fixed;inset:0;background:rgba(10,14,20,.55);backdrop-filter:blur(4px);z-index:950;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:.25s;padding:16px}
+.mod.act{opacity:1;visibility:visible}
+.m-con{background:var(--card);border:1.5px solid var(--ink);width:min(460px,100%);padding:30px clamp(20px,4vw,34px);position:relative;transform:translateY(14px);transition:.25s;max-height:88dvh;overflow-y:auto}
+.mod.act .m-con{transform:none}
+.m-con h3{font-family:ui-monospace,monospace;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;margin-bottom:18px}
+.m-con h3 span{color:var(--acc-ink)}
+.m-x{position:absolute;top:14px;right:14px;background:none;border:none;color:var(--mut);font-size:18px;cursor:pointer}
+.frm-c{width:100%;background:var(--paper);border:1px solid var(--line2);color:var(--ink);padding:12px 14px;font-size:.95rem;font-family:inherit;margin-bottom:12px;outline:none}
+.frm-c:focus{border-color:var(--acc)}
+.frm-b{width:100%;background:var(--ink);color:var(--paper);border:none;padding:13px;font-family:ui-monospace,monospace;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;cursor:pointer}
+.frm-b:hover{background:var(--acc);color:#14181E}
+.frm-b:disabled{opacity:.6;cursor:wait}
+#fst{font-size:.85rem;margin-top:10px;display:none}
+.rc-note{font-size:.72rem;color:var(--mut);margin-top:12px;line-height:1.5}
+.rc-note a{color:var(--acc-ink)}
+.m-txt{color:var(--mut);font-size:.92rem}
+.grecaptcha-badge{visibility:hidden!important}
+/* ---------- cookie banner ---------- */
+.cook{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1.5px solid var(--ink);padding:14px clamp(16px,4vw,32px);z-index:940;display:none;align-items:center;gap:14px 22px;flex-wrap:wrap;font-size:.85rem;color:var(--mut)}
+.cook.shw{display:flex}
+.cook .c-act{margin-left:auto;display:flex;gap:10px}
+.cook button{font-family:ui-monospace,monospace;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:8px 16px;cursor:pointer}
+.cook .yes{background:var(--acc);border:1.5px solid var(--ink);color:#14181E}
+.cook .no{background:none;border:1px solid var(--line2);color:var(--mut)}
+.cook a{color:var(--acc-ink)}
+
+/* ---------- animation ---------- */
+.rise{opacity:0;transform:translateY(16px);animation:rise .7s ease forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.dd1{animation-delay:.05s}.dd2{animation-delay:.15s}.dd3{animation-delay:.25s}.dd4{animation-delay:.35s}.dd5{animation-delay:.5s}
+@media (prefers-reduced-motion: reduce){
+  .rise{opacity:1;transform:none;animation:none}
+  .dim .ln{transform:none;transition:none}
+  .twr{transform:none;animation:none}
+  .deckl,.deckl2,.cable{stroke-dashoffset:0;animation:none}
+  .hang,.sadl{opacity:1;animation:none}
+  .pt,.rbar{transition:none}
+  .detail.swap>*{animation:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- responsive ---------- */
+@media(max-width:860px){
+  .dim h2{white-space:normal;font-size:11px;letter-spacing:.16em}
+  .plot-scroll svg{min-width:720px}
+  #lmap{height:340px}
+  .hero{grid-template-columns:1fr}
+  .portrait{order:-1}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat:nth-child(2){border-right:none}
+  .stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line)}
+  .caps{grid-template-columns:1fr}
+  .dreg-h{display:none}
+  .reg-r{grid-template-columns:1fr;gap:8px}
+  .rst{flex-direction:row;align-items:center}
+  .rtags{display:block;margin:4px 0 0;white-space:normal}
+  .cred{grid-template-columns:82px 1fr}
+  .cred .org{grid-column:2;text-align:left}
+}
+
+/* ---------- print: a drawing sheet should print like one ---------- */
+@media print{
+  :root,:root[data-theme="dark"],:root[data-theme="light"]{
+    --paper:#fff; --ink:#1a1c1f; --mut:#55585d; --line:#d8d6ce; --line2:#c4c2b8;
+    --acc:#8A5200; --acc-ink:#8A5200; --work:#8A5200; --edu:#3F7D4E; --tender:#3E7CA6;
+    --card:#fff; --stamp-ok:#8A5200; --stamp-wip:#8a8d93; --grid:rgba(0,0,0,.04); --hot:#8A5200; --land:#f0eee6; --lndln:#d8d6ce; --duo:#eceae2;
+  }
+  .ctrl,.bar .sta{display:none}
+  .sheet{margin:0;max-width:none;padding:0}
+  section{break-inside:avoid}
+}
+</style>
+
+<div class="sheet">
+  <div class="frame">
+    <span class="reg tl"></span><span class="reg tr"></span><span class="reg bl"></span><span class="reg br"></span>
+
+    <div class="bar">
+      <a class="wm" href="#">FURKAN <b>ŞENYÜZ</b></a>
+      <div class="ctrl">
+        <button id="langBtn" aria-pressed="false" onclick="P.lang()">TR</button>
+        <button id="themeBtn" aria-pressed="false" onclick="P.theme()">DARK</button>
+      </div>
     </div>
 
-    <div id="mod" class="mod" role="dialog" aria-modal="true" aria-labelledby="m-tit">
-        <div class="m-con">
-            <button class="cls" onclick="App.cls()" aria-label="Close Modal"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
-            <h3 id="m-tit">Title</h3><div id="m-txt"></div>
-            <form id="frm" action="https://formspree.io/f/mnjbavgw" method="POST" style="display:none">
-                <input type="text" name="_gotcha" style="display:none">
-                <input type="text" id="name" name="name" class="frm-c" required placeholder="Name">
-                <input type="email" id="email" name="email" class="frm-c" required placeholder="Email">
-                <textarea id="msg" name="message" class="frm-c" required placeholder="Message" rows="4"></textarea>
-                
-                <button class="g-recaptcha frm-b" data-sitekey="6LeR6GMsAAAAADhs_VIncXqN9ZOlJzCWMLocd1jv" data-callback="onSubmit" data-error-callback="onErr" data-action="submit" data-t="formSend">Send Message</button>
-                <p class="recaptcha-text">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply.</p>
-                <div id="fst" style="margin-top:10px;display:none"></div>
-            </form>
-            <button id="m-btn" class="frm-b" onclick="App.cls()" style="margin-top:15px" data-t="closeBtn">Close</button>
+    <div class="inner">
+
+      <!-- HERO -->
+      <div class="hero">
+        <div>
+          <p class="eyebrow rise dd1"><em>FURKANSENYUZ.COM</em> — <span data-i="eyebrow">CIVIL ENGINEERING × ARTIFICIAL INTELLIGENCE</span></p>
+          <h1 class="hname rise dd2">Furkan<span>Şenyüz</span></h1>
+          <p class="role rise dd3" data-i="role">Civil Engineer &amp; AI Solutions Developer</p>
+          <p class="slogan rise dd4" data-i="slogan"><b>Concrete</b> holds the road up.<br><code>code()</code> tells you when it&#39;s done.</p>
+          <div class="links rise dd5">
+            <a class="cta" href="#" onclick="P.cont(event)" data-i="contactBtn">Let's connect</a>
+            <a class="cta cv2" href="CV_FS_2026.pdf" target="_blank" rel="noopener" data-i="cv">Download CV</a>
+            <a href="https://www.linkedin.com/in/furkansenyuz" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/furkansenyuz" target="_blank" rel="noopener">GitHub</a>
+          </div>
         </div>
+        <div class="portrait rise dd3">
+          <div class="dbub"><img alt="Furkan Şenyüz portrait" src="data:image/jpeg;base64,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">
+          </div>
+        </div>
+      </div>
+
+
+      <!-- FIG. 02 — bridge elevation, drawn on load -->
+      <div class="brg rise dd4" aria-hidden="true">
+        <svg viewBox="0 0 1000 180" preserveAspectRatio="xMidYMax meet">
+          <line class="gnd" x1="34" y1="128" x2="86" y2="128"/><line class="gnd" x1="914" y1="128" x2="966" y2="128"/>
+          <line class="gnd" x1="42" y1="128" x2="34" y2="138"/><line class="gnd" x1="51" y1="128" x2="43" y2="138"/><line class="gnd" x1="60" y1="128" x2="52" y2="138"/><line class="gnd" x1="69" y1="128" x2="61" y2="138"/><line class="gnd" x1="78" y1="128" x2="70" y2="138"/><line class="gnd" x1="922" y1="128" x2="914" y2="138"/><line class="gnd" x1="931" y1="128" x2="923" y2="138"/><line class="gnd" x1="940" y1="128" x2="932" y2="138"/><line class="gnd" x1="949" y1="128" x2="941" y2="138"/><line class="gnd" x1="958" y1="128" x2="950" y2="138"/>
+          <g class="twr"><line x1="276" y1="14" x2="276" y2="148"/><line x1="284" y1="14" x2="284" y2="148"/><line x1="272" y1="46" x2="288" y2="46"/><line x1="272" y1="84" x2="288" y2="84"/></g>
+          <g class="twr" style="animation-delay:.65s"><line x1="716" y1="14" x2="716" y2="148"/><line x1="724" y1="14" x2="724" y2="148"/><line x1="712" y1="46" x2="728" y2="46"/><line x1="712" y1="84" x2="728" y2="84"/></g>
+          <line class="deckl" x1="20" y1="120" x2="980" y2="120"/>
+          <line class="deckl2" x1="20" y1="124" x2="980" y2="124"/>
+          <line class="hang" style="animation-delay:2.00s" x1="300" y1="33.0" x2="300" y2="120"/><line class="hang" style="animation-delay:2.04s" x1="320" y1="44.8" x2="320" y2="120"/><line class="hang" style="animation-delay:2.07s" x1="340" y1="55.3" x2="340" y2="120"/><line class="hang" style="animation-delay:2.10s" x1="360" y1="64.6" x2="360" y2="120"/><line class="hang" style="animation-delay:2.14s" x1="380" y1="72.7" x2="380" y2="120"/><line class="hang" style="animation-delay:2.17s" x1="400" y1="79.5" x2="400" y2="120"/><line class="hang" style="animation-delay:2.21s" x1="420" y1="85.1" x2="420" y2="120"/><line class="hang" style="animation-delay:2.25s" x1="440" y1="89.4" x2="440" y2="120"/><line class="hang" style="animation-delay:2.28s" x1="460" y1="92.5" x2="460" y2="120"/><line class="hang" style="animation-delay:2.31s" x1="480" y1="94.4" x2="480" y2="120"/><line class="hang" style="animation-delay:2.35s" x1="500" y1="95.0" x2="500" y2="120"/><line class="hang" style="animation-delay:2.38s" x1="520" y1="94.4" x2="520" y2="120"/><line class="hang" style="animation-delay:2.42s" x1="540" y1="92.5" x2="540" y2="120"/><line class="hang" style="animation-delay:2.46s" x1="560" y1="89.4" x2="560" y2="120"/><line class="hang" style="animation-delay:2.49s" x1="580" y1="85.1" x2="580" y2="120"/><line class="hang" style="animation-delay:2.52s" x1="600" y1="79.5" x2="600" y2="120"/><line class="hang" style="animation-delay:2.56s" x1="620" y1="72.7" x2="620" y2="120"/><line class="hang" style="animation-delay:2.60s" x1="640" y1="64.6" x2="640" y2="120"/><line class="hang" style="animation-delay:2.63s" x1="660" y1="55.3" x2="660" y2="120"/><line class="hang" style="animation-delay:2.67s" x1="680" y1="44.8" x2="680" y2="120"/><line class="hang" style="animation-delay:2.70s" x1="700" y1="33.0" x2="700" y2="120"/><line class="hang" style="animation-delay:2.74s" x1="100" y1="100.2" x2="100" y2="120"/><line class="hang" style="animation-delay:2.74s" x1="900" y1="100.2" x2="900" y2="120"/><line class="hang" style="animation-delay:2.77s" x1="140" y1="82.4" x2="140" y2="120"/><line class="hang" style="animation-delay:2.77s" x1="860" y1="82.4" x2="860" y2="120"/><line class="hang" style="animation-delay:2.81s" x1="180" y1="64.5" x2="180" y2="120"/><line class="hang" style="animation-delay:2.81s" x1="820" y1="64.5" x2="820" y2="120"/><line class="hang" style="animation-delay:2.84s" x1="220" y1="46.7" x2="220" y2="120"/><line class="hang" style="animation-delay:2.84s" x1="780" y1="46.7" x2="780" y2="120"/><line class="hang" style="animation-delay:2.88s" x1="260" y1="28.9" x2="260" y2="120"/><line class="hang" style="animation-delay:2.88s" x1="740" y1="28.9" x2="740" y2="120"/>
+          <path class="cable" d="M60 118 L280 20 Q500 170 720 20 L940 118" fill="none"/>
+          <circle class="sadl" cx="280" cy="20" r="3"/><circle class="sadl" cx="720" cy="20" r="3"/>
+        </svg>
+      </div>
+
+      <!-- STATS -->
+      <div class="stats rise dd5">
+        <div class="stat"><div class="n">9+</div><div class="l" data-i="st1">Years in the field</div></div>
+        <div class="stat"><div class="n">€2B+</div><div class="l" data-i="st2">Projects delivered &amp; tendered</div></div>
+        <div class="stat"><div class="n">10+</div><div class="l" data-i="st3">Countries tendered</div></div>
+        <div class="stat"><div class="n">6</div><div class="l" data-i="st4">Mega-project postings</div></div>
+      </div>
+
+      <!-- A: EXPERIENCE -->
+      <section id="record">
+        <div class="dim"><h2><span class="k">A</span><span data-i="secA">FIELD RECORD — 2016 → PRESENT</span></h2><div class="ln"></div></div>
+        <div class="sched-wrap" id="schedWrap">
+          <div class="sched">
+            <div class="grid-y">
+              <i style="left:2.5%"></i><span style="left:2.5%">2017</span>
+              <i style="left:12.5%"></i><span style="left:12.5%">2018</span>
+              <i style="left:22.5%"></i><span style="left:22.5%">2019</span>
+              <i style="left:32.5%"></i><span style="left:32.5%">2020</span>
+              <i style="left:42.5%"></i><span style="left:42.5%">2021</span>
+              <i style="left:52.5%"></i><span style="left:52.5%">2022</span>
+              <i style="left:62.5%"></i><span style="left:62.5%">2023</span>
+              <i style="left:72.5%"></i><span style="left:72.5%">2024</span>
+              <i style="left:82.5%"></i><span style="left:82.5%">2025</span>
+              <i style="left:92.5%"></i><span style="left:92.5%">2026</span>
+            </div>
+            <div class="row">
+              <button class="rbar now" style="left:72.5%;width:24.5%" data-exp="0" data-loc="kuzmin" aria-label="Technical Office Chief, Taşyapı Kuzmin, 2024 to present"></button>
+              <div class="rlbl" style="left:auto;right:3%"><b data-i="exp1">Technical Office Chief</b> · <span class="co">Taşyapı — Kuzmin, RS · €345M</span></div>
+            </div>
+            <div class="row">
+              <button class="rbar" style="left:49.6%;width:22.9%" data-exp="1" data-loc="belgrade" aria-label="Tendering and PM Specialist, Taşyapı Belgrade, 2021 to 2024"></button>
+              <div class="rlbl" style="left:49.6%"><b data-i="exp2">Tendering &amp; PM Specialist</b> · <span class="co">Taşyapı — Belgrade, RS</span></div>
+            </div>
+            <div class="row">
+              <button class="rbar" style="left:42.9%;width:5.9%" data-exp="2" data-loc="aydin" aria-label="Planning and Cost Control Chief, Fernas Aydın, 2021"></button>
+              <div class="rlbl" style="left:42.9%"><b data-i="exp3">Planning &amp; Cost Control Chief</b> · <span class="co">Fernas — Aydın, TR · €1.13B</span></div>
+            </div>
+            <div class="row">
+              <button class="rbar" style="left:28.8%;width:3.4%" data-exp="3" data-loc="canakkale" aria-label="Technical Office Chief, Limak, 1915 Çanakkale Bridge, 2019"></button>
+              <div class="rlbl" style="left:23.5%"><b data-i="exp4">Technical Office Chief</b> · <span class="co">Limak — 1915 Çanakkale Bridge</span></div>
+            </div>
+            <div class="row">
+              <button class="rbar" style="left:12.9%;width:15.9%" data-exp="4" data-loc="kocaeli" aria-label="Planning and Cost Engineer, Limak, Northern Marmara Motorway, 2018 to 2019"></button>
+              <div class="rlbl" style="left:12.9%"><b data-i="exp5">Planning &amp; Cost Engineer</b> · <span class="co">Limak — N. Marmara Motorway · $500M</span></div>
+            </div>
+            <div class="row">
+              <button class="rbar" style="left:1.7%;width:11.2%" data-exp="5" data-loc="istanbul" aria-label="Site Chief, Mat Yapı Istanbul, 2016 to 2018"></button>
+              <div class="rlbl" style="left:1.7%"><b data-i="exp6">Site Chief</b> · <span class="co">Mat Yapı — Istanbul, TR</span></div>
+            </div>
+          </div>
+          <div class="sched-note" data-i="schedNote">Drawn as a linear schedule — the way I plan motorways in TILOS &amp; Primavera P6. Click a bar for details; its location lights up on the plan below.</div>
+        </div>
+        <div class="detail" id="detail" aria-live="polite"></div>
+      </section>
+
+      <!-- B: MAP -->
+      <section id="ops">
+        <div class="dim"><h2><span class="k">B</span><span data-i="secB">AREA OF OPERATIONS — SETTING-OUT PLAN</span></h2><div class="ln"></div></div>
+        <div class="plot-wrap">
+          <div id="lmap" role="application" aria-label="Interactive map of work, education and tender locations"></div>
+          <div class="plot-scroll"><svg viewBox="0 0 1000 460" role="img" aria-label="Survey plot of work, education and tender locations across Europe and Central Asia">
+            <defs><clipPath id="clipmap"><rect x="0" y="0" width="1000" height="460"/></clipPath></defs>
+            <path class="land" clip-path="url(#clipmap)" d="M494 425.1L484.3 433.9L485.4 437.9L485.8 439.6L471.1 448.1L464.1 445.3L460.8 436.9L467.6 436.2L468.6 436.1L470.7 431L480.9 431.3L494 425.1ZM338.6 424.3L346.4 431.4L357.5 430.2L368.2 431.7L367.8 435.3L375.6 432.8L373.8 439L353.2 440.8L353.3 437.3L335.9 433.2L338.6 424.3ZM221.7 371.5L216.6 388L218.7 394.5L215.7 405.2L204.8 397.3L197.5 395.1L177.6 384.5L179.6 373.7L196.3 375.6L210.9 373.4L221.7 371.5ZM131.6 309.3L140.1 324.1L138.1 351.8L131.6 350.4L125.8 357.4L120.4 351.9L119.9 326.6L116.6 314.7L124.4 315.7L131.6 309.3ZM136.6 289.5L131.8 305.7L125.4 301.4L122.1 287.4L124.9 279.6L134.2 271.6L136.6 289.5ZM-97 78.2L-122.3 90.6L-142.5 87.4L-131 65.6L-138.4 44.3L-119 27.9L-108.2 18.1L-96.2 17.3L-80.9 30.2L-88.5 44.6L-86.2 59.5L-97 78.2ZM181.3 8.2L172.7 25.1L157.8 13.3L155.8 4.6L176.7 -2.3L181.3 8.2ZM-42.9 -55.1L-58.2 -32.5L-43.6 -35.3L-28 -35.2L-31.7 -18.2L-44.6 0.6L-29.8 1.9L-15.9 28.8L-6.1 32.1L2.6 55.9L6.7 64.2L24 68.2L22.3 81.6L15 87.7L20.7 98.5L7.8 109.4L-11.2 109.2L-35.6 115L-42.2 110.9L-51.7 120.7L-64.9 118.3L-74.9 126.3L-82.5 122.1L-61.6 100.1L-48.8 95.6L-71.2 92.1L-75.3 83.8L-60.3 77.4L-68.1 66.1L-65.4 52.4L-44.2 54.3L-42.1 42.1L-51.9 29L-69.2 25.3L-72.6 19.6L-67.4 10.3L-72.1 4.5L-79.8 14.4L-80.7 -5.7L-87.9 -16.4L-82.7 -38L-71.6 -55L-60.1 -53.3L-42.9 -55.1ZM-2571.4 -271.1L-2536.4 -255.1L-2499 -234.3L-2500.2 -221.3L-2490.6 -216.1L-2493.9 -231.3L-2455.1 -228.2L-2427.1 -208.6L-2441.3 -199.5L-2464.7 -197.3L-2465.1 -176.9L-2470.8 -172.6L-2484.2 -173.2L-2495.1 -180.5L-2514 -186.6L-2517.2 -195.6L-2531.8 -199L-2548 -196.4L-2555.7 -203.7L-2552.7 -211.4L-2569.8 -206.5L-2563.3 -196.6L-2571.4 -187.8L2571.3 -187.6L2553 -178.4L2534.5 -180L2547.3 -168.9L2555.8 -151.6L2562.4 -146L2564.1 -137.4L2560.4 -131.8L2533.8 -136.4L2493.8 -120.6L2481.1 -118.2L2459.3 -103.5L2438.5 -90.7L2433.3 -81.2L2412.9 -95.6L2375.6 -79.2L2369.2 -87L2355.4 -78L2336.3 -80.9L2331.7 -67.1L2314.5 -46.9L2315.1 -38.4L2331.3 -33.8L2329.4 -3.3L2316.1 -2.6L2310 14.9L2316 23.9L2291 34.6L2286 58.5L2264.7 63.6L2260.4 84.8L2239.9 104.3L2234.6 89.9L2228.4 59.4L2220.5 12.9L2227.4 -16L2239.4 -28.5L2240.2 -38.3L2262.3 -43L2287.8 -69.3L2312.5 -90.8L2338.1 -107.5L2349.6 -137L2332.3 -135.2L2323.7 -118L2287.4 -95L2275.8 -120.7L2238.9 -113.6L2203.1 -78.6L2214.9 -65.8L2183 -60.3L2160.9 -58.2L2162 -73.3L2139.8 -76.5L2122.1 -66.2L2078.4 -69.8L2031.4 -63.6L1985.1 -22.8L1930.4 26.6L1952.9 29.2L1959.9 42.3L1973.8 47L1982.9 36.5L1998.6 37.9L2019.2 60.9L2019.7 78.6L2008.5 99.5L2007.4 124.5L2000.9 157.9L1979.4 188.2L1974.5 202.7L1955.2 227L1935.9 251.1L1926.7 263.5L1907.7 275.7L1898.7 276L1889.7 265.9L1870.5 281.2L1868.3 288.1L1862.8 286.9L1856.7 294L1852.4 301.1L1852.9 316.1L1845.6 320.7L1843 324.4L1837.6 330.6L1828.1 334L1821.9 339.6L1821.4 348.7L1819.8 351L1825.5 354.4L1833.6 363.5L1845.9 388.2L1849.4 401.8L1849.6 425.9L1844.2 437.4L1831.2 441.4L1819.8 450L1806.9 451.8L1805.3 440.5L1808 424.8L1801.7 403L1812.3 399.5L1802.5 381.6L1795.6 377.6L1793.8 381.6L1789.7 383.3L1789.1 379.3L1785.4 377.4L1781.6 374.1L1785.5 364.9L1788.9 362.5L1787.6 358.6L1791.2 347.3L1790.3 343.9L1781.9 341.6L1775.2 336.1L1755.2 342.1L1744.8 351.9L1729.3 357.6L1736.9 347.9L1734 339.8L1745.3 325.7L1737.7 314.7L1725.3 322.1L1709.1 336.7L1700.3 350.2L1686.3 351.2L1679 360.9L1686.6 375.1L1698.3 378.5L1698.7 387.9L1710 394L1726 379.1L1738.7 387.2L1747.9 387.8L1750.3 398.7L1730 404.6L1723.4 415.9L1709.5 426.3L1702.2 441L1717.6 452.4L1723.2 473L1731.8 492.2L1741.6 508.3L1741.3 523.8L1732.4 529.5L1735.8 540.6L1744.2 547.2L1742 564.2L1738.3 580.7L1730.4 582.6L1719.9 605.3L1708.3 632.7L1695.1 657.6L1675.4 676.9L1655.6 694.5L1639.5 697L1630.7 706.2L1625.8 699.4L1617.7 709.8L1597.8 720.3L1582.7 723.5L1577.8 745.6L1569.8 746.8L1566.1 731.6L1569.5 723.6L1550.3 716.8L1543.6 720.3L1524.5 738.1L1512.6 757.9L1509.5 772.4L1520.4 794.5L1533.7 821.8L1546.7 834.7L1555.4 851.5L1561.9 890.2L1560 927L1548.1 940.7L1531.7 954.2L1520.1 971.6L1502.3 991.1L1497.1 977.7L1501.1 963.5L1490.5 951.7L1478.5 948.6L1472.7 937.7L1465.5 916.1L1452.7 906.5L1440.5 906.9L1442.6 890.5L1430 890.6L1428.8 913.6L1421.1 944.1L1416.5 962.6L1417.5 977.7L1426.8 978.4L1432.6 997.5L1435.2 1015.6L1443.1 1027.5L1451.8 1030L1459.2 1040.8L1462.5 1042.8L1470.9 1055.4L1476.9 1069.4L1477.7 1083.5L1476.2 1093L1477.6 1100.2L1478.6 1112.5L1483.7 1118.3L1489.3 1136.8L1489 1143.9L1478.9 1145.3L1465.3 1129.8L1448.4 1113.2L1446.8 1102.5L1438.5 1088.5L1436.5 1071.2L1431.4 1059.8L1432.9 1044.6L1429.8 1035.7L1424.1 1027.7L1421.7 1017.4L1414.1 1005.6L1407.2 995.6L1404.9 1007.9L1402.1 996.3L1403.7 983.3L1407.9 963.2L1406.5 947.7L1410.9 931.7L1406.1 919.3L1407.3 896.5L1401.5 885.7L1396.8 860.7L1394.3 834.3L1388 816.9L1378.6 827.4L1362.4 842.3L1354.4 840.5L1345.6 835.6L1350.5 809.7L1347.5 790.1L1336.3 766L1338.1 758.4L1329.7 755.7L1319.5 738.7L1315.5 727.8L1314.7 717.1L1311.9 707.1L1306 694.9L1292.8 694.1L1294.1 702.7L1289.6 714.3L1283.5 710.1L1281.4 713.9L1277.4 711.6L1271.9 709.7L1269.9 717.4L1260.1 717.1L1242.5 721.4L1243.3 737.2L1235.7 749.5L1215.1 763.6L1199.1 788.2L1188.4 801.4L1174.2 815.1L1174.2 824.7L1167.1 829.9L1154.2 837.4L1147.5 838.5L1143.2 854.4L1146.2 881.6L1146.9 899L1140.9 918.8L1140.8 954.3L1133.4 955.4L1126.9 971.3L1131.3 978.2L1118.2 984.1L1113.5 998.3L1107.7 1004.4L1094.2 984.8L1087.6 955.5L1082.1 934.5L1077.1 924.6L1069.5 904.5L1065.9 878.3L1063.5 865.3L1050.5 836.6L1044.6 796L1040.3 769.3L1040.3 744L1037.6 724.4L1016.8 736.9L1006.7 734.4L988.1 709.1L994.9 701.5L990.7 693.3L973.9 675.5L963.5 670.2L959.2 655.2L948.2 639.3L921.8 643.2L898.6 643.6L878.5 646.6L851.6 640.2L836.1 635.4L820 632.7L813.9 607.1L807.1 603.3L796 607.1L781.6 617.2L764.2 610.3L749.8 594.2L736 588.3L726.5 568.4L715.9 540.5L708.3 543.9L699.2 537L693.9 545.2L685.4 544.1L688.4 553.4L687.1 558.2L691.6 573.9L697.2 592L704.3 596.7L706.7 604.1L716.5 612.8L717.3 621.5L715.9 628.4L717.7 635.5L721.8 641.3L723.7 648.2L725.8 653.3L724.9 638.1L728.8 627.1L732.7 624.9L737 631.4L737.3 643.7L734.1 656L736.9 664L739.4 662.9L739.9 668.7L751.1 665.4L762.9 665.9L771.6 666.6L781.3 652.4L792 639L801 626.1L805.1 619L806.9 620.8L805.6 629.4L803.7 633.3L805.7 649.7L812.1 664L820.1 671.6L830.6 674.4L839 678.2L845.4 690.2L849.3 697.1L854.4 699.8L854.4 704.4L849.2 716.9L846.9 722.8L840.9 729.4L835.5 743.7L829.1 742.6L826.1 747.6L823.8 758.3L825.6 772.2L824.2 774.8L817.6 774.7L808.7 782.5L807.3 792.7L804.1 797.1L795.2 797L789.6 802.2L789.6 810.7L782.7 816.5L774.9 814.5L765.3 821.6L758.7 822.7L748.4 828.4L745.6 837.7L745.3 844.8L731 853.6L708.2 863.4L695.4 878.1L689.1 879.2L684.9 878L676.5 886.7L667.4 890.7L655.4 891.8L651.8 893L648.6 898.5L644.9 900.1L642.7 905.4L635.6 904.9L631.1 907.7L621.2 906.7L617.5 894.5L617.9 883L615.5 876.9L612.8 861.4L608.6 852.8L611.5 851.8L610 842.2L611.8 838.2L611.2 829.1L609.3 820.1L605 813.9L603.9 805.5L596.5 798L588.9 780.5L584.8 763.5L575 749.1L568.6 745.7L559.1 725.7L557.5 711.2L558.1 698.8L549.9 675.6L543.2 667.4L535.5 663.1L530.8 651.1L531.5 646.4L527.6 635.6L523.4 630.9L517.9 615.3L509.1 598.5L501.9 584.1L494.7 584.2L497 572.7L497.6 565.4L499.4 557.1L498.9 554.1L494.9 562.5L491.8 578.3L487.9 589.2L484.6 592.8L479.8 586L473.4 576.7L463.2 546.8L461.7 548.6L467.6 570.7L476.4 591.7L487.2 624.3L492.5 635.7L497.1 647.5L509.9 670.6L507.1 674.3L507.5 687.9L524.1 706.6L526.7 710.9L531.3 731.4L528.2 735.2L530.2 756.7L535.5 781.7L540.9 786.8L548.7 794.6L557 818.8L561 838L568.8 848.2L588.3 867.9L596.2 879.8L604 891.9L608.4 899.1L615.4 905.4L618.8 911.8L618.4 920.5L610.2 925.5L616.4 931.2L621 935.1L623.8 943.7L630.2 952.5L637.3 952.6L650.8 947.2L666.3 944.8L678.9 938.2L686 936.9L691.1 933L699.3 932.3L703.8 931.9L710.4 928.8L718 926.7L724.8 919.6L730.2 919.5L730.5 925.3L729.2 937.4L729.2 948.4L726.2 956L722.2 978.6L715.3 1001.9L706.5 1028.6L694.2 1059.3L682 1082.7L665.2 1111.2L650.9 1128.1L629.6 1148.9L616.2 1164.8L600.6 1190.1L597.3 1201.2L594.1 1206.1L584.1 1214.5L580.6 1223.2L575.2 1224.7L573.2 1239.4L568.6 1247.9L565.8 1261.8L560 1268.7L553.5 1294.4L554.3 1306.3L563.4 1313.9L563.8 1319.4L559.9 1332L560.8 1338.4L559.8 1348.3L564.8 1361.4L570.7 1382.1L575.9 1386.6L578.2 1396L577.7 1416.8L579.4 1435.2L580 1467.9L582.5 1478.1L578.2 1493.1L572.7 1507.6L563.6 1520.5L550.5 1528.5L534.4 1538.6L518.3 1561.1L512.8 1564.9L502.8 1579.8L496.9 1584.6L495.8 1599.5L502.5 1615.3L505.3 1627.6L505.5 1633.8L508 1632.8L507.6 1653.3L505.3 1663L508.7 1666.6L506.6 1675.3L500.6 1682.7L488.8 1689.8L471.6 1701.1L465.4 1708.9L466.6 1717.6L470.2 1719.1L469 1730.1L465.4 1745.3L463.8 1762.7L460.1 1772.1L450.3 1782.6L447.5 1785.7L441.4 1796.3L437.5 1807L429.4 1822L413.2 1843.6L403.1 1856.2L392.4 1865.7L377.4 1873.8L370.2 1874.9L368.3 1880.7L359.6 1877.6L352.5 1881.6L337 1877.5L328.4 1880.1L322.5 1879L307.8 1887.2L295.5 1890.5L286.7 1898.4L280.2 1898.9L274.2 1891.5L269.4 1891.1L263.2 1881.8L262.5 1884.7L260.6 1879L260.7 1866.8L256.1 1852.8L260.7 1849L260.3 1832.9L250.9 1813.4L243.8 1795.6L233.5 1768.4L222.9 1752.6L217.3 1737.3L214.1 1717L210.6 1701.9L205.8 1669.6L205.5 1644.6L203.7 1633.2L198.1 1624.6L190.7 1607.3L183.2 1582.3L180.1 1569.1L168.5 1548.7L167.6 1532.7L166.3 1519.5L168.3 1501.2L173.2 1482L174 1473L178.6 1454.2L182 1445.6L190.2 1431.9L194.8 1422.6L196.3 1407.1L195.5 1395.3L191.2 1387.8L187.4 1375.1L183.9 1362.6L184.7 1358.3L189.1 1349.9L184.8 1329.8L181.8 1315.7L174.7 1302.5L176 1298.4L174 1292L170.2 1276.3L158.5 1254.1L143.8 1233L134.4 1215.7L125.7 1194.1L126.1 1187.2L129.3 1180.5L132.7 1165.3L135.6 1149.8L132.9 1146.6L137.9 1123.2L139.9 1106.6L134.4 1092.8L127.8 1089.3L124.9 1079.9L121.3 1076.9L121.4 1071.1L106.6 1078.7L101.2 1077.5L95.7 1082.2L84.3 1081.8L76.6 1068.7L71.9 1053.6L61.8 1039.8L51 1040.1L38.4 1040L26.7 1042.5L15.1 1046.9L-7.3 1059.2L-15.2 1066.4L-28.1 1072.4L-40.8 1066.5L-47.3 1066.7L-57.3 1062.6L-66.4 1062.9L-83.3 1066.5L-93.3 1072.5L-107.4 1080.2L-110.2 1079.7L-113.9 1079.8L-128.6 1069.9L-141.6 1053.9L-153.8 1042.5L-163.4 1029L-167.3 1027.5L-177.6 1019L-185 1007.9L-187.5 1000.2L-189.2 984.7L-195.5 972.4L-201.1 964.2L-204.7 961.5L-208.3 957.3L-209.9 948.1L-212 943.5L-216.1 940L-223.8 931.3L-229.8 929.9L-233.1 924.1L-233 920.9L-237.3 916.4L-238.2 911.9L-240.6 895.9L-238.8 886.6L-244.7 870.4L-251.8 862.9L-245.5 859L-238.6 844.3L-235.2 833.5L-236.4 822.3L-232.4 812L-230.7 792.3L-232.2 771.6L-234 761.2L-232.5 750.8L-236.2 740.8L-243.7 731.8L-243.1 723L-242.5 713.3L-237 707.6L-232.3 696.7L-233.3 689.6L-228.3 674.9L-220.3 661.6L-215.6 658.2L-211.8 646L-211.5 634.9L-206.3 622L-196.8 614.3L-187.7 593L-180.3 584.7L-167 582.3L-155.7 568.1L-148.6 562.5L-136.6 545L-140.2 519L-134.8 501L-132.9 490L-123.7 475.9L-109.4 466.3L-98.8 457.7L-89.2 436L-84.7 423.2L-74.2 423.3L-65.6 432.2L-52 430.7L-37.2 435.4L-31 435.6L-17.3 424.1L-1.8 420.5L7.2 411.9L21 405.5L45.2 401.8L68.8 400.1L76 403.2L89.5 395L104.7 394.8L110.5 399.6L120.3 398.4L135.8 389.9L145.9 392.5L145.4 403L157.6 395.4L158.6 399.4L151.4 409.6L151.3 419.3L156.3 424.5L154.4 442.6L145 453.1L147.7 464.5L155.1 464.8L158.7 474.8L164.1 478L180.9 485.3L186.9 483.4L198.9 486.9L217.8 496.3L224.5 514.9L237.3 518.9L257.4 527.7L272.7 538.1L279.6 532.6L286.5 523L283.1 507L287.6 496.8L297.9 487L307.8 484.2L327.1 488.5L331.9 497.8L337.3 497.9L341.8 501.5L356 503.9L359.5 510.8L378.5 510.5L392.3 516L406.4 522.2L413.1 525.5L424.1 518.8L429.9 512.8L442.5 511.1L452.7 513.7L456.6 524.1L459.9 517.3L471.3 522.2L482.5 523.4L489.5 518.1L493.6 511.3L492.7 510.1L496.5 500.3L499.4 484.5L501.4 479.2L501.8 479L506.9 462L514 447.2L514.3 446.5L512.9 430.5L516.4 421.9L511.2 412.4L516.6 404.6L507.9 406.4L495.9 401.6L486.1 413.6L464.4 415.9L452.9 404.7L437.4 404L434.1 412.7L424.3 415.2L410.5 404L394.9 404.4L386.4 383.6L376 372L382.9 355.8L373.9 345.7L389.7 325.8L411.7 324.9L417.7 309L444.9 311.8L462.1 298.3L478.8 292.3L502.4 291.9L527.3 306.6L547.8 314.7L564.5 311.5L576.8 313.4L593.6 302.4L595.8 293.5L592.2 279.2L584 271.5L576 269.1L570.8 262.7L552.6 245.1L536.3 237.2L523.9 224.9L534.3 221.5L546.2 204L538.2 195.8L559.3 187.2L558.9 182.7L546 186L534.6 187.7L525.1 194.5L511.7 195.6L499.5 203.4L500.3 216.4L507.3 221.4L521.9 220.2L519 227.6L503.4 231.3L484 243.4L476.1 239.1L479.2 229.3L463.6 223.2L466.2 219.2L479.8 212.2L475.7 207.4L453.5 202.1L452.5 194.3L439.3 196.9L434 208.4L422.9 223.9L423.2 229.2L416.3 233.8L412 231.8L408 257L400.6 265.7L395.4 280.6L399.9 292.6L401.6 300.6L414.1 307.3L411.5 312.5L394.5 313.6L388.5 320.1L376.5 331.4L372.1 321.6L372.2 317.3L363.5 316.7L356.1 314.7L338.8 320.2L348.7 331.9L341.4 335.3L333.5 335.3L325.9 324.6L323.3 329.2L326.4 341.7L333.6 351.5L328.2 356.1L336.2 365.7L343.2 371.8L343.4 383.6L330.2 378L334.4 388.7L325.4 390.9L330.8 409.3L321.3 409.6L309.6 400.5L304.2 383.8L301.7 369.9L296.2 360.3L288.8 348.3L287.9 342.4L285.4 340.9L285.1 336.3L277.2 329.3L276 319.3L277.2 305.1L279.1 298.6L276.8 295.3L273.7 293.7L269.7 286.9L263.5 282.7L250.1 275L241.8 267.4L228.8 261.2L216.8 245.8L219.7 244.2L213.1 235.5L212.9 228.4L203.7 225.1L199.3 234.1L195.1 227.1L195.4 219.9L195.9 219.5L199.1 217.6L187.7 214.6L176.1 222L176.9 232.4L175.1 238.3L179.8 249L193.2 259.5L200.4 276.8L216.3 293.7L227.5 293.5L231 298.1L227 302.3L239.8 309.9L250.3 316.2L262.5 327.1L264 331L261.3 338.5L253.4 328.7L241 325.3L235 338.8L245.3 346.6L243.6 357.5L237.6 358.7L230 376.6L224.1 378.3L224.1 371.9L227 360.6L230.1 356.2L224.6 344.1L220.2 333.5L214.3 330.9L210.1 321.9L200.9 318.1L194.7 309.7L184.1 308.3L172.9 298.9L159.9 285.3L150.1 273.2L145.7 252.6L138.6 250.2L127 243.3L120.4 246.1L112.1 255.8L106.2 257.3L93.3 269.1L65.1 263.5L44.3 270.3L42.7 282.8L43.4 295L29.9 308.9L11.6 313.3L10.3 320.4L1.5 331.9L-4 349L1.6 360.9L-6.7 370.2L-9.7 383.8L-20.5 388L-30.7 404.1L-48.8 404.4L-62.4 404L-71.4 411.4L-76.8 419.3L-83.8 417.6L-89.1 410.5L-93.2 398.5L-106.5 395.2L-112.2 400.6L-119.8 397.7L-127.1 400L-124.9 383.6L-126.3 370.8L-132.7 368.9L-136.1 360.9L-135 347.3L-129.3 339.7L-128.2 331.2L-125.3 318.6L-125.6 309.8L-128.4 302.3L-129.1 295.2L-128.3 280.3L-134.2 271.3L-114 256.2L-96.5 260L-77.3 259.8L-62.1 263.4L-50.3 262.3L-27.2 263L-19.8 250.4L-17 208.8L-31.8 186.8L-42.4 176.3L-64.2 168.2L-65.6 153L-47.1 148.4L-23.1 153.8L-27.6 130.1L-14.1 139.1L19.1 122.8L23.4 105.7L35.9 101.5L47.3 97.3L54.7 91.6L67.2 60.8L86.8 52L98.7 52.6L101.4 48.2L113.4 47.1L116 51.7L125.7 41.4L122.5 33.5L121.8 21.7L116 10.1L115.6 -11.3L118 -16.9L122.1 -23.2L134.6 -24.5L139.7 -30.3L151.1 -36.2L150.7 -25.4L146.4 -18.6L148.1 -12.8L155.9 -9.6L152.4 -1.7L148.1 -4L137.9 11.1L141.8 21.3L142 29.3L156.4 34.2L156.3 41.6L170.8 37.7L178.8 32L194.9 40.2L201.7 46.9L211.5 40.8L233.8 31.1L251.8 24L266 27.6L267.1 32.7L280.9 32.9L284.1 23.7L303.8 16.9L300.8 -0.6L301.3 -16.4L308.3 -29.5L321.8 -36.7L333.1 -21L344.6 -21.5L347.3 -37.5L349 -49.8L343.7 -47.2L334.7 -54.6L333.4 -66.7L351.5 -72.5L369.5 -75.5L385 -72.1L399.7 -72.7L416 -84.2L401 -94.1L375.1 -92.5L349.9 -84.8L326.7 -80.4L318.4 -91.8L304.6 -98.7L307.8 -119.3L300.8 -138.2L307.7 -150.3L320.6 -163.5L353.3 -186.1L362.8 -190.5L361.4 -199.4L341.5 -209.2L316.9 -203.3L303 -188.7L305.3 -175.9L282.6 -159.1L255 -141.1L244.6 -111.7L254.8 -96.9L268.4 -85.3L255.3 -61.8L240.4 -56.9L235 -21.8L226.9 -2.2L209.5 -4.2L201.4 12.4L184.9 13.3L180.3 -6.4L168.4 -30.2L157.6 -59.7L147.9 -72.6L119.8 -48.4L100.7 -43.5L80.9 -54.1L75.8 -76.6L71.3 -124.9L84.5 -138.3L122.2 -155.9L150.4 -177.4L176.5 -206.6L210.9 -247L234.8 -262.7L274 -288.9L305.4 -298.1L328.9 -297L350.7 -314.3L376.7 -313.4L402.4 -317.5L447 -302.2L428.6 -296.6L444.3 -283.5L459 -290.8L482.5 -278.1L521.6 -273.2L575.6 -249.5L586.6 -239.6L587.5 -225.7L571.7 -214.7L548.3 -209.1L484.5 -225L474 -222.3L497.3 -207L499.2 -175.9L517.6 -169.6L528.8 -164.2L530.6 -174.3L521.7 -183.6L531.1 -191.2L565.6 -178.2L577.7 -183.3L568.1 -198.6L601.3 -219L614.5 -217.8L627.9 -210.5L636.2 -224.9L624.3 -237.4L631.3 -249.9L620.8 -262.9L660.7 -256.1L668.9 -244.4L650.8 -241.8L650.9 -230.2L662.1 -223L684.2 -227.6L687.7 -240.9L717.6 -250.9L767.4 -268.8L778.1 -267.8L764.1 -255.1L781.8 -252.9L792 -260.1L818.8 -260.7L840 -269.3L856.3 -256.7L872.5 -270.6L857.6 -282.7L865 -289.6L907.2 -283.3L927 -276.7L978.7 -252.8L988.3 -263.8L973.8 -274.8L973.4 -279.3L956.1 -281.3L960.9 -291.2L953.2 -307.5L952.8 -314.2L979.1 -333.2L988.5 -352.2L999.1 -356.3L1036.9 -350.8L1039.9 -339.2L1026.4 -322.2L1035.3 -315.5L1039.9 -300.9L1036.6 -272.3L1052.4 -259.5L1046.2 -245.5L1018.3 -215.8L1034.6 -212.7L1040.3 -220.2L1056 -225.6L1059.8 -236L1072.2 -245.9L1063.8 -257.8L1070.5 -271.6L1054.9 -273.3L1051.4 -284.9L1062.9 -306L1044.3 -323L1069.9 -337.1L1066.6 -352L1073.7 -352.4L1081.2 -340.8L1075.6 -320.6L1090.8 -316.8L1084.3 -331.9L1108.2 -340.1L1137.9 -341.2L1164.3 -329.3L1151.6 -346.7L1150.1 -369L1175 -373.2L1209.4 -372.3L1240.3 -375L1228.7 -386L1245.2 -399.7L1261.6 -400.3L1289.4 -410.6L1327.2 -413.4L1331.9 -419.2L1369.4 -421.1L1381.1 -416.4L1413.2 -427.5L1439.4 -427.2L1443.4 -436.2L1457 -445.1L1490.7 -453.7L1515.2 -446.9L1495.8 -441.7L1528.1 -438.6L1532 -428.2L1545.1 -433.3L1586.8 -433L1619 -422.8L1630.5 -415L1626.9 -404.1L1611.1 -397.9L1573.6 -386.3L1562.9 -380.1L1580.6 -377.2L1601.7 -371.9L1614.5 -375.9L1621.8 -362.5L1628.1 -367.9L1651 -371.2L1696.8 -367.7L1700.3 -358L1760 -354.9L1760.8 -370.8L1791.1 -367.2L1813.9 -367.3L1837 -356.2L1843.6 -342.9L1835.1 -334.1L1853.1 -317.7L1875.5 -309.2L1889.3 -331.1L1912.3 -321.7L1936.6 -327.3L1964.3 -320.9L1974.7 -326.8L1998.1 -323.8L1987.8 -343.3L2006.7 -352.3L2135.7 -338.7L2147.9 -326.3L2185.2 -310.3L2243 -314.3L2271.4 -310.8L2283.3 -302.2L2281.6 -286.9L2299.2 -281L2318.3 -285.3L2343.6 -285.8L2370.6 -281.7L2397.6 -284L2422.5 -265.4L2440.2 -272.1L2428.7 -285.5L2435 -294.8L2480.6 -288.9L2510.3 -290.2L2551.4 -280.2L-2571.4 -271.1ZM701.6 307.7L708.8 322.6L715.5 323.6L719.9 329.2L708.2 330.8L705.6 347.1L703.2 354.4L698 359.3L698.3 369.7L702.9 385.1L716.4 389.5L726.3 399.9L746.6 403.5L768.9 398L770.3 393.1L767.7 378.3L769.7 356.5L758.6 349.4L762.3 335.1L752.8 333.9L755.9 316.2L769.4 321.4L782 314.7L771.6 302.1L767.5 290.1L755.9 295.5L754.5 310.8L750 297.3L749.2 292.2L752.7 283.5L750 276.2L733.5 269L727 250.3L719.1 245L718.6 238.2L732.5 240.1L733.1 224.9L745.2 221.5L757.7 224.6L760.3 204.2L757.7 191.3L743.4 192.3L731.3 187.2L714.8 196.4L701.5 200.8L694.9 213.1L681.1 216.6L666.9 238.2L679.9 258L678.5 272.1L694.1 296.7L701.6 307.7Z"/>
+            <g class="plot-grid">
+              <line x1="143" y1="0" x2="143" y2="460"/><line x1="286" y1="0" x2="286" y2="460"/>
+              <line x1="429" y1="0" x2="429" y2="460"/><line x1="571" y1="0" x2="571" y2="460"/>
+              <line x1="714" y1="0" x2="714" y2="460"/><line x1="857" y1="0" x2="857" y2="460"/>
+              <line x1="0" y1="21" x2="1000" y2="21"/><line x1="0" y1="125" x2="1000" y2="125"/>
+              <line x1="0" y1="230" x2="1000" y2="230"/><line x1="0" y1="335" x2="1000" y2="335"/>
+              <line x1="0" y1="439" x2="1000" y2="439"/>
+            </g>
+            <g class="plot-lbl">
+              <text x="147" y="454">10°E</text><text x="290" y="454">20°E</text><text x="433" y="454">30°E</text>
+              <text x="575" y="454">40°E</text><text x="718" y="454">50°E</text><text x="861" y="454">60°E</text>
+              <text x="6" y="17">55°N</text><text x="6" y="121">50°N</text><text x="6" y="226">45°N</text><text x="6" y="331">40°N</text>
+            </g>
+
+            <!-- tenders -->
+            <g>
+              <circle class="pt pt-tender" cx="923" cy="306" r="5"/><text class="pt-lbl dimm" x="880" y="290">Uzbekistan</text>
+              <circle class="pt pt-tender" cx="956" cy="167" r="5"/><text class="pt-lbl dimm" x="890" y="152">Kazakhstan</text>
+              <circle class="pt pt-tender" cx="619" cy="286" r="5"/><text class="pt-lbl dimm" x="632" y="290">Georgia</text>
+              <circle class="pt pt-tender" cx="357" cy="210" r="5"/><text class="pt-lbl dimm" x="368" y="204">Romania</text>
+              <circle class="pt pt-tender" cx="405" cy="180" r="5"/><text class="pt-lbl dimm" x="417" y="176">Moldova</text>
+              <circle class="pt pt-tender" cx="217" cy="228" r="5"/><text class="pt-lbl dimm" x="150" y="222">Croatia</text>
+              <circle class="pt pt-tender" cx="252" cy="253" r="5"/><text class="pt-lbl dimm" x="188" y="264">Bosnia</text>
+              <circle class="pt pt-tender" cx="277" cy="278" r="5"/><line class="leader" x1="277" y1="283" x2="260" y2="308"/><text class="pt-lbl dimm" x="170" y="318">Montenegro</text>
+              <circle class="pt pt-tender" cx="299" cy="280" r="5"/><line class="leader" x1="304" y1="283" x2="330" y2="300"/><text class="pt-lbl dimm" x="334" y="304">Kosovo</text>
+              <circle class="pt pt-tender" cx="311" cy="301" r="5"/><line class="leader" x1="313" y1="306" x2="324" y2="318"/><text class="pt-lbl dimm" x="328" y="322">N. Macedonia</text>
+            </g>
+
+            <!-- education -->
+            <g>
+              <circle class="pt pt-edu" cx="208" cy="54" r="5.5"/><text class="pt-lbl" x="220" y="50">Szczecin · Erasmus</text>
+              <circle class="pt pt-edu" cx="64" cy="80" r="5.5"/><text class="pt-lbl" x="76" y="76">Leiden (online)</text>
+              <circle class="pt pt-edu" cx="405" cy="393" r="5.5"/><text class="pt-lbl" x="417" y="398">Muğla · BSc/MSc</text>
+              <circle class="pt pt-edu" cx="424" cy="303" r="5.5"/><line class="leader" x1="428" y1="299" x2="452" y2="278"/><text class="pt-lbl" x="456" y="274">İTÜ · PMP &amp; FIDIC</text>
+            </g>
+
+            <!-- work -->
+            <g>
+              <circle class="pt pt-work" id="pt-kuzmin" cx="277" cy="230" r="7"/><line class="leader" x1="272" y1="225" x2="248" y2="200"/><text class="pt-lbl" id="lbl-kuzmin" x="118" y="196">Kuzmin · €345M hwy</text>
+              <circle class="pt pt-work" id="pt-belgrade" cx="292" cy="235" r="7"/><line class="leader" x1="297" y1="240" x2="318" y2="255"/><text class="pt-lbl" id="lbl-belgrade" x="322" y="260">Belgrade · HQ</text>
+              <circle class="pt pt-work" id="pt-istanbul" cx="414" cy="314" r="7"/><line class="leader" x1="409" y1="309" x2="386" y2="288"/><text class="pt-lbl" id="lbl-istanbul" x="300" y="284">İstanbul</text>
+              <circle class="pt pt-work" id="pt-kocaeli" cx="427" cy="317" r="7"/><line class="leader" x1="432" y1="321" x2="458" y2="336"/><text class="pt-lbl" id="lbl-kocaeli" x="462" y="341">Kocaeli · $500M mtwy</text>
+              <circle class="pt pt-work" id="pt-canakkale" cx="377" cy="331" r="7"/><line class="leader" x1="371" y1="335" x2="342" y2="352"/><text class="pt-lbl" id="lbl-canakkale" x="216" y="357">Çanakkale · 1915 Bridge</text>
+              <circle class="pt pt-work" id="pt-aydin" cx="398" cy="380" r="7"/><line class="leader" x1="393" y1="384" x2="368" y2="398"/><text class="pt-lbl" id="lbl-aydin" x="288" y="403">Aydın · €1.13B</text>
+            </g>
+
+            <!-- north arrow -->
+            <g transform="translate(966,32)">
+              <circle class="compass" r="14"/>
+              <path d="M0,-11 L4,6 L0,3 L-4,6 Z" fill="var(--mut)"/>
+              <text class="compass-n" x="-4" y="32">N</text>
+            </g>
+            <!-- scale bar: 200 km at 45°N ≈ 36.4 svg units -->
+            <g transform="translate(20,412)">
+              <line class="sbar" x1="0" y1="0" x2="36.4" y2="0"/>
+              <line class="sbar" x1="0" y1="-4" x2="0" y2="4"/>
+              <line class="sbar" x1="18.2" y1="-3" x2="18.2" y2="3"/>
+              <line class="sbar" x1="36.4" y1="-4" x2="36.4" y2="4"/>
+              <text class="plot-lbl" x="0" y="16">0</text>
+              <text class="plot-lbl" x="26" y="16">200 km</text>
+            </g>
+            <!-- DETAIL INSET: remote study, USA (N.T.S.) -->
+            <g>
+              <defs><clipPath id="clipus"><rect x="700" y="12" width="236" height="107"/></clipPath></defs>
+              <rect class="ins-frame" x="700" y="12" width="236" height="107"/>
+              <path class="land" clip-path="url(#clipus)" d="M923.2 132.5L922.2 133.4L919.6 133.3L917.5 133.5L917.3 131.9L917.8 131.4L920.7 131.4L922.5 131.7L923.2 132.5ZM882.7 133.7L881.6 134.3L879.6 133.8L877.6 132.5L878 131.6L879.5 131.4L880.3 131.5L882.7 131.8L884.6 132.7L885.2 133.7L882.7 133.7ZM898.2 126.6L901.3 127.2L901.7 126.5L904.5 126.6L906.6 127.5L907.6 127.4L908.2 128.7L910.2 128.6L910.1 129.6L911.7 129.8L913.4 131.1L912.1 132.5L910.4 131.8L908.7 131.9L907.6 131.7L906.9 132.4L905.5 132.6L905 131.7L903.8 132.3L902.4 134.7L901.5 134.1L901.3 133.1L898.9 132.5L897.2 132.8L895 132.5L893.4 133.2L891.5 132L891.8 130.9L895.1 131.4L897.8 131.7L899 130.9L897.4 129.3L897.4 128L895.2 127.4L896 126.4L898.2 126.6ZM872.8 116.3L874.2 117.6L877.6 117.2L878.8 118L881.8 120.2L884.1 121.8L885.2 121.8L887.4 122.5L887.1 123.5L889.8 123.7L892.5 125.1L892 126L889.7 126.4L887.2 126.6L884.8 126.3L879.7 126.6L882.1 124.7L880.6 123.7L878.3 123.5L877.1 122.5L876.2 120.4L874.2 120.6L870.9 119.6L869.8 118.9L865.1 118.3L863.9 117.6L865.2 116.7L861.7 116.5L859.1 118.4L857.7 118.4L857.1 119.3L855.4 119.7L853.9 119.4L855.7 118.3L856.5 117L858.1 116.2L860 115.5L862.7 115.2L863.5 114.8L866.6 115L869.4 115.1L872.8 116.3ZM880.4 112.7L879.6 112.9L878.7 110.8L877.3 109.8L878.1 107.6L879.2 107.7L880.4 110.7L880.4 112.7ZM879.4 102.7L875.5 103.2L875.3 101.9L877 101.6L879.3 101.7L879.4 102.7ZM882.4 102.6L881.7 105.2L881.1 104.7L881.1 102.8L879.5 101.4L879.5 101L882.4 102.6ZM930 31.4L932.6 31.9L936 31.8L934.2 33.3L932.9 33.5L928.3 32L927.4 30.8L928.8 29.7L930 31.4ZM936.7 22.3L935 22.4L930.3 21.3L927 19.6L928.2 19.3L932.9 20.2L936.6 21.7L936.7 22.3ZM716.1 24.5L714.3 24.9L708.4 23.3L707.3 22.1L704.1 20.8L703.5 19.8L699.8 19.1L698.4 17.2L698.7 16.4L702.5 17.2L704.7 17.7L708 18.1L709.2 19.3L711 21L714.6 22.5L716.1 24.5ZM957 16.7L954.6 19.8L956.9 18.6L959.3 19.4L958.1 20.6L961.3 21.6L962.9 20.7L966.5 21.8L965.4 24.4L967.9 23.8L968.3 25.7L969.4 27.9L967.9 31.1L966.3 31.2L964 30.5L964.7 27.6L963.7 27.1L959.6 30.2L957.5 30.1L960 28.4L956.6 27.6L952.7 27.8L945.8 27.7L945.2 26.6L947.5 25.4L945.9 24.4L948.9 22.3L952.6 16.6L954.8 14.5L957.9 13.3L959.6 13.5L958.9 14.4L957 16.7ZM683.2 4.7L686.6 4.4L685.5 8.5L688.6 11.4L687.2 11.4L685.1 9.7L683.7 8.1L681.9 7L681.3 5.4L681.5 4.3L683.2 4.7ZM874.3 -24.2L872.9 -22.4L871.3 -22.7L870.3 -23.7L871.9 -25L873.4 -25L874.3 -24.2ZM833.9 -50.4L833.9 -46.8L838.7 -49.6L843 -47.3L841.9 -44.6L845.4 -42.2L849.1 -44.8L851.7 -47.9L851.9 -51.8L857 -51.5L862.3 -51L867.1 -49.2L867.3 -47.4L864.6 -45.5L867.1 -43.6L866.7 -41.9L859.7 -39.4L854.7 -38.9L851 -39.9L849.9 -38.1L846.5 -35.1L845.4 -33.6L841.3 -31.2L836.2 -30.9L833.4 -29.4L833.1 -27.1L829 -26.6L824.6 -23.8L820.7 -19.7L819.3 -16.9L819.1 -12.8L824.4 -12.2L826 -8.8L827.7 -6.1L832.7 -6.9L839.3 -5.3L842.9 -3.9L845.4 -2.3L849.9 -1.3L853.7 0.2L859.6 0.4L863.5 0.8L862.9 3.9L864 7.4L866.6 11.4L872 14.8L874.7 13.7L876.6 10L874.8 4.4L872.2 2.5L878 0.8L882 -1.7L884 -4.2L883.7 -6.6L881.3 -9.6L876.9 -12.3L881.2 -16L879.6 -19.2L878.4 -24.8L880.9 -25.6L887 -24.7L890.7 -24.3L893.7 -25.3L897 -24L901.4 -22L902.5 -20.6L908.9 -20.3L908.8 -17.3L909.9 -12.8L913.2 -12.3L915.8 -10.2L921 -12.1L924.4 -16.1L926.8 -17.7L929.5 -14.5L934.2 -10L938.2 -5.7L936.7 -3.5L941.5 -1.5L944.7 0.6L950.4 1.5L952.7 2.6L954.1 5.7L956.9 6.1L958.3 7.5L958.6 11.5L956 12.8L953.4 14.1L947.5 15.3L943 18.3L937 18.8L929.3 18.1L924 18.1L920.3 18.3L917.3 20.9L912.7 22.5L907.6 27.2L903.4 30.5L906.5 29.9L912.2 25.2L919.7 22.2L925.1 21.9L928.2 23.6L924.9 26L926 29.9L927.2 32.6L931.8 34.3L937.7 33.8L941.3 29.8L941.5 32.4L943.9 33.7L939.4 36L931.5 38.1L928 39.6L924 42.2L921.3 41.9L921.1 38.9L927.3 35.9L921.6 36L917.6 36.5L918.2 37.6L914.4 39.4L910.8 40.6L907 41.7L904.9 44L904.5 44.6L904.4 46.5L905.6 48.4L907.1 48.5L906.7 47.1L907.8 47.9L907.5 49L905.1 49.5L903.4 49.5L900.7 50.1L899.2 50.3L897.1 50.4L894.1 51.5L899.4 50.8L900.4 51.5L895.4 52.6L893.2 52.6L893.3 52.1L892.2 53.1L893.2 53.3L892.5 55.8L889.8 58.6L889.6 57.7L888.8 57.5L887.6 56.6L888.4 58.5L889.2 59.1L889.3 60.5L888.2 61.9L886.2 64.7L885.8 64.6L886.9 62.2L885.1 60.8L884.7 57.8L884 59.4L884.8 61.6L882.5 61.1L884.9 62.2L885 65.6L886 65.9L886.4 67.1L886.9 70.7L884.6 73.3L880.9 74.4L878.6 76.5L876.8 76.7L875 78L874.5 79.2L870.6 81.5L868.5 83.2L866.9 85.3L866.3 87.9L866.9 90.3L868.1 93.4L869.7 95.9L869.7 97.5L871.4 101.6L871.3 104L871.2 105.4L870.3 107.6L869.2 108L867.4 107.6L866.9 106L865.5 105.2L863.6 102.1L862 99.4L861.4 98L862.2 95.6L861.2 93.7L858.4 90.7L857 90.1L853.4 91.8L852.7 91.6L851 89.9L848.8 89L844.7 89.5L841.5 89.1L838.8 89.3L837.3 89.8L838 90.8L837.9 92.3L838.7 93L838 93.5L836.7 92.9L835.3 93.6L832.7 93.5L830.1 91.6L826.9 92.1L824.3 91.2L822.1 91.5L819.1 92.3L815.9 95L812.3 96.5L810.3 98.2L809.5 99.8L809.5 102.3L809.7 104L810.3 105.2L809 108.3L808.3 110.9L808.1 115.7L807.7 117.4L808.3 119.4L809.5 121.1L810.2 123.9L812.5 126.5L813.4 128.6L814.8 130.3L818.6 131.3L820 132.8L823.2 131.8L825.9 131.4L828.6 130.8L830.8 130.1L833.1 128.7L834 126.6L834.3 123.6L834.9 122.6L837.3 121.6L841.1 120.8L844.2 120.9L846.4 120.6L847.3 121.4L847.2 123.1L845.2 125.2L844.4 127.4L845 128L844.5 129.6L843.6 132.3L842.7 131.4L842 131.5L842 132L842.7 132L842.6 133L842 134.5L842.3 135.1L841.9 136.4L841.8 138.5L841.1 139.5L840.4 139.6L839.7 140.8L840.9 141.4L841.2 140.9L842.2 141.4L843.4 140.9L844.4 140.8L845.3 140.9L847 141.3L848.6 141.2L849.8 140.8L850.2 140.4L851.3 140.6L852.2 140.8L853.1 140.7L853.8 140.4L855.4 140.9L856 141L857.1 141.7L858.1 142.5L859.4 143L860.4 144L859.9 145.1L860.3 146.4L859.4 147.6L859.1 149.1L858.9 150.6L859.1 151.6L859.2 153.2L858.7 153.5L858.3 155.1L858.6 156L857.9 156.9L858 157.9L858.6 158.4L859.5 160.4L860.9 161.8L862.5 163.3L863.8 164.6L863.7 165.4L865.2 165.5L866.5 166.1L868.2 165.9L869.8 165L871.9 164.3L873.2 163.2L875.1 163.4L877 163.9L878.6 164.5L879.8 165.6L881.1 166.5L882.9 166.7L885.6 164.2L887.1 163.8L887.1 162.6L887.8 159.6L889.8 157.9L892.1 157.9L892.4 157.1L895.2 157.4L898 155.6L899.4 154.8L901.1 153.1L902.4 153.3L903.3 154.3L902.6 155.5L902.5 156.3L900.4 156.7L901.6 158.3L901.6 160.2L900 162.3L901.3 165.1L902.9 164.9L903.7 162.3L902.6 161L902.4 158.3L906.8 156.9L906.3 155.2L907.6 154.1L908.9 156.6L911.4 156.6L913.7 158.6L913.9 159.8L917.1 159.9L920.9 159.5L922.9 161.1L925.7 161.5L927.7 160.4L927.7 159.5L932.1 159.3L936.4 159.2L933.4 160.3L934.6 162L937.5 162.3L940.2 164L940.8 166.9L942.6 166.8L944 167.6L946.4 168.9L948.6 171.3L948.7 173.1L950 173.2L951.9 174.9L953.3 176.2L957.6 176.9L958 176.2L960.9 176L964.8 176.9L966 177.3L968.6 178.2L972.4 181.2L973 182.6L974.2 182.5L975.1 184.4L977.1 190.7L979 191.3L979.1 193.7L976.4 196.7L977.5 197.7L983.8 198.3L984 201.9L986.7 199.5L991.2 200.8L997.1 203L998.9 205.1L998.3 207.1L1002.4 206L1009.4 207.9L1014.7 207.7L1020 210.7L1024.6 214.7L1027.4 215.7L1030.4 215.8L1031.7 217L1032.9 221.5L1033.5 223.7L1032.1 229.6L1030.3 231.9L1025.2 236.8L1023 240.9L1020.3 244L1019.4 244L1018.4 246.7L1018.7 253.3L1017.7 258.8L1017.3 261.2L1016.2 262.6L1015.5 267.4L1011.9 272L1011.3 275.7L1008.4 277.3L1007.6 279.4L1003.7 279.4L998 280.8L995.5 282.3L991.5 283.4L987.3 286.2L984.3 289.8L983.8 292.4L984.4 294.4L983.7 298L982.9 299.7L980.4 301.7L976.4 308L973.3 310.8L970.8 312.5L969.2 315.9L966.9 317.9L965.3 320.2L961.3 322.1L958.6 321.4L956.7 321.8L953.4 320.3L951 320.4L948.8 318.4L948.5 320.3L953.1 323.3L952.6 325.8L954.8 327.3L954.6 329.1L951.2 333.7L945.9 335.6L938.7 336.3L934.8 336L935.6 338.1L934.8 340.7L935.5 342.5L933.3 343.8L929.7 344.3L926.2 343L924.8 343.9L925.3 347.5L927.8 348.5L929.7 347.4L930.8 349.3L927.5 350.4L924.6 352.6L924.1 356.2L923.3 358.1L919.9 358.1L917.1 359.9L916 362.6L919.6 365.2L923 365.9L921.7 369.1L917.5 371.2L915.2 375.3L911.9 376.7L910.5 378.4L911.6 382.1L914 384.2L912.5 384L909.3 384L907.6 384.9L904.4 386.1L903.8 389.5L902.3 389.6L898.3 388.4L894.2 385.9L889.7 383.9L888.6 381.6L889.6 379.5L887.8 377.1L887.3 371.1L888.9 367.6L892.6 364.9L887.2 363.8L890.6 360.7L891.8 354.8L895.8 356L897.7 348.6L895.3 347.7L894.2 352.1L891.9 351.6L893 346.5L894.2 339.9L895.9 337.5L894.9 334L894.6 330L896.1 329.9L898.3 324.1L900.7 318.4L902.3 313.1L901.4 307.8L902.5 304.8L902.1 300.4L904.2 296.1L904.8 289.2L905.9 281.7L907.1 273.8L906.8 267.9L906.1 262.9L902.5 260.9L902.2 259.4L895.1 255.8L888.7 251.9L885.9 249.7L884.4 246.8L885 245.7L882 241.1L878.5 234.5L875.1 227.4L873.6 225.8L872.5 223.1L869.7 220.8L867.2 219.4L868.3 217.8L866.6 214.4L867.7 211.9L870.5 209.6L872.5 206.9L871.7 205.4L870.3 207L868.2 205.5L868.9 204.5L868.3 201.2L869.5 200.7L870.2 198.5L871.6 196.2L871.3 194.7L873.3 194L875.7 192.5L875.2 191.4L876.6 191.2L876.4 189.4L877.3 188.1L879 187.8L880.5 185.6L881.9 183.7L880.6 182.9L881.3 180.8L880.5 177.6L881.2 176.6L880.7 173.6L879.2 171.7L878 170.7L877.3 168.7L878.1 167.8L877.2 167.6L876.6 166.4L874.8 165.4L873.2 165.6L872.5 166.8L871.1 167.7L870.3 167.9L869.9 168.6L871.6 170.5L870.7 171L870.1 171.5L868.5 171.7L867.8 169.6L867.4 170.2L866.2 170L865.5 168.5L864 168.3L863.1 167.9L861.6 167.9L861.4 168.7L861 168.1L859.1 167.3L858.4 166.6L858.8 166L858.6 165.2L857.7 164.3L856.2 163.6L855 163.2L854.8 162.1L853.8 161.5L854.1 162.5L853.4 163.4L852.5 162.4L851.4 162L850.9 161.3L850.9 160.2L851.4 159.1L850.4 158.6L851.2 157.9L850 156.8L848.3 155.4L847.5 154.2L846 153L844.2 151.4L844.6 150.9L845.2 151.4L844.9 150L843.8 149.7L843.4 150.6L841.3 150.5L840 150.2L838.5 149.5L836.6 149.2L835.5 148.5L833.7 147.9L831.5 147.8L829.8 147.1L827.9 145.6L823.9 141.8L822 140.6L819.1 139.7L817.1 139.9L814.2 141.3L812.4 141.6L809.9 140.7L807.2 140L803.9 138.4L801.2 137.9L797.2 136.2L794.2 134.5L793.3 133.6L791.3 133.4L787.6 132.2L786.1 130.6L782.3 128.6L780.5 126.3L779.6 124.6L780.8 124.2L780.5 123.2L781.3 122.3L781.3 121.1L780.1 119.5L779.8 118L778.6 116.2L775.4 112.7L771.8 109.9L770.1 107.7L767 106.2L766.4 105.4L766.9 103.2L765.1 102.3L763 100.6L762.1 98.1L760.2 97.8L758.1 95.9L756.4 94.2L756.2 93.1L754.3 90.4L753 87.7L753.1 86.3L750.5 84.9L749.3 85L747.3 84L746.7 85.5L747.3 87.2L747.7 89.9L748.9 91.4L751.5 93.8L752.1 94.7L752.7 94.9L753.1 96.1L753.8 96.1L754.5 98.4L755.6 99.3L756.3 100.6L758.6 102.4L759.8 105.7L760.8 107.3L761.8 108.9L762 110.8L763.7 110.9L765.2 112.5L766.5 114.1L766.4 114.8L764.9 116.1L764.3 116.1L763.3 113.9L761 111.9L758.4 110.1L756.6 109.2L756.7 106.6L756.1 104.7L754.4 103.6L752 102L751.5 102.5L750.6 101.5L748.4 100.7L746.3 98.6L748 98.5L749.4 97.2L749.5 95.6L746.7 93L744.6 92.1L743.3 89.8L742 87.5L740.3 84.6L738.9 81.4L738.3 79.6L736 77.5L734.3 77.1L733.9 76.1L731.9 75.9L730.6 75L727.3 74.6L726.4 74L725.9 72.1L722.5 68.5L719.5 63.5L719.6 62.7L718 61.5L715.3 58.5L714.8 55.6L712.9 53.7L713.7 50.7L713.5 47.7L712.4 44.9L713.8 41.6L714.7 35.1L714 30.3L712.9 27.3L711.9 25.6L712.3 24.9L717.5 26.1L719.4 29.5L720.2 28.5L719.7 25.6L718.5 22.7L718 22.7L711.1 19.2L708.5 17.6L702 16.2L700 13L700.5 10.8L696 9.3L695.3 6.4L691 3.8L690.9 2L689 0.7L685.8 -0.5L684.8 -3.6L680.2 -6.5L678.3 -9.8L674.8 -10.1L669.2 -10.2L665 -11.2L657.6 -14.9L654.1 -15.6L647.9 -16.8L642.9 -16.5L635.9 -18.2L631.7 -19.7L627.7 -18.9L628.4 -16.5L626.4 -16.2L622.3 -15.5L619.2 -14.3L615.2 -13.5L614.7 -15.6L616.3 -19.1L620.1 -20.2L619.1 -21.1L614.6 -19.1L612.1 -16.8L607 -14.2L609.6 -12.5L606.2 -9.9L602.4 -8.4L598.8 -7.3L597.9 -5.8L592.3 -3.9L591.2 -2.2L587 -0.7L584.5 -1L581.2 0L577.6 1.2L574.6 2.4L568.5 3.4L567.9 2.8L571.8 1.2L575.3 0.1L579.1 -1.9L583.6 -2.3L585.3 -3.8L590.3 -5.9L591.1 -6.6L593.7 -7.9L594.3 -10.6L596.2 -12.7L592 -11.6L590.9 -12.2L588.9 -10.9L586.6 -12.7L585.6 -11.4L584.3 -13.2L580.7 -11.8L578.5 -11.8L578.2 -13.9L578.9 -15.2L576.6 -16.5L571.9 -15.8L568.9 -17.5L566.5 -18.3L566.4 -20.4L563.7 -21.9L565.1 -23.9L568 -25.9L569.3 -27.8L572.2 -28L574.6 -27.4L577.5 -29.2L580.1 -28.9L582.8 -30L582.1 -31.6L580.1 -32.2L582.8 -33.6L580.6 -33.6L576.8 -32.8L575.7 -32L572.9 -32.8L567.8 -32.4L562.6 -33.2L561.1 -34.7L556.6 -36.8L561.6 -38.2L569.6 -40L572.5 -40L572 -38.2L579.6 -38.3L576.7 -40.6L572.3 -41.9L569.7 -43.7L566.3 -45.2L561.4 -46.3L563.4 -48.2L569.7 -48.3L574.2 -50L575.1 -51.7L578.7 -53.4L582.2 -53.8L589 -55.4L592.3 -55.1L597.8 -57L603.2 -56.3L605.8 -54.7L607.4 -55.4L613.4 -55.2L613.2 -54.3L618.7 -53.7L622.3 -54.1L629.9 -53L636.7 -52.6L639.5 -52.2L644.3 -52.7L649.7 -51.7L653.6 -51.2L660.2 -50.3L665.9 -48.6L669.6 -48.3L672.7 -49.8L677.1 -50.9L682.4 -50.4L687.7 -52L693.6 -52.9L696 -51.4L698.7 -52.2L699.5 -53.9L702 -53.5L708 -50.3L712.8 -52.8L713.3 -50.1L717.7 -50.6L719 -51.7L723.3 -51.5L728.8 -50L737.2 -48.7L742.1 -48.1L745.6 -48.3L750.4 -46.5L745.4 -44.7L751.9 -44L761.5 -44.4L764.6 -45L768.4 -42.9L772.3 -44.7L768.6 -46.2L770.9 -47.4L775.3 -47.6L778.1 -47.9L781 -47.1L784.6 -45.1L788.6 -45.4L794.9 -43.8L800.5 -44.4L805.7 -44.3L805.3 -46.5L808.4 -47.1L814 -45.9L814 -42.5L816.3 -45.4L819.1 -45.3L820.7 -48.9L816.9 -51.1L812.7 -52.5L813 -56.5L817.3 -59.1L822 -58.5L825.6 -56.9L830.4 -52.9L827.3 -51.1L833.9 -50.4ZM848.2 -63.5L851 -61.2L854.3 -64.1L863.4 -65.6L869.5 -61.9L869 -59.6L876 -60.6L879.4 -62L887.3 -60.2L892.3 -58.5L892.7 -56.9L899.4 -57.8L903.1 -55.5L911.7 -54.1L914.8 -52.6L918.2 -49.3L911.7 -47.6L920.1 -45.3L925.8 -44.5L930.9 -41.2L936.5 -41L935.4 -38.5L929.1 -34.4L924.7 -35.9L919.1 -39.3L914.5 -38.9L914 -36.8L917.8 -34.8L922.7 -33.1L924.1 -32.2L926.5 -28.6L925.2 -26.1L920.7 -27L911.7 -29.9L916.8 -26.8L920.5 -24.7L921.1 -23.4L911.4 -24.8L903.7 -26.9L899.4 -28.6L900.6 -29.7L895.3 -31.5L890.1 -33.2L890.2 -32.2L879.8 -31.6L876.8 -32.8L879.2 -35.5L885.9 -35.5L893.2 -36L892 -37.3L893.3 -39L897.9 -42.5L896.9 -44.1L895.5 -45.3L890.1 -47L882.8 -48.3L885.1 -49.2L881.3 -51.4L878.2 -51.6L875.4 -52.8L873.4 -51.7L867 -51.3L854 -52.1L846.4 -53.1L840.6 -53.7L837.6 -54.9L841.4 -56.5L836.3 -56.6L835.1 -60.2L837.9 -63.4L841.6 -64.8L850.8 -65.8L848.2 -63.5Z"/>
+              <rect fill="none" stroke="var(--ink)" stroke-width="1.2" x="700" y="12" width="236" height="107"/>
+              <text class="ins-t" x="708" y="27" data-i="remote">DETAIL — REMOTE STUDY · N.T.S.</text>
+              <circle class="pt pt-edu" cx="720.9" cy="64" r="5"/>
+              <text class="ins-lbl" x="731" y="68">Stanford — ML Spec.</text>
+              <circle class="pt pt-edu" cx="858.3" cy="46.7" r="5"/>
+              <text class="ins-lbl" x="731" y="43">U. Michigan — Python</text>
+              <line class="leader" x1="845" y1="43" x2="854" y2="45"/>
+            </g>
+          </svg></div>
+          <div class="coord" id="coord" aria-hidden="true"></div>
+          <div class="legend">
+            <span class="lw"><i></i><span data-i="legW">Work &amp; projects</span></span>
+            <span class="le"><i></i><span data-i="legE">Education</span></span>
+            <span class="lt"><i></i><span data-i="legT">Tenders prepared</span></span>
+            <span class="fbnote" data-i="fbnote">LIVE MAP LOADS ON FURKANSENYUZ.COM — OFFLINE PLAN SHOWN</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- C: CAPABILITIES -->
+      <section id="caps">
+        <div class="dim"><h2><span class="k">C</span><span data-i="secC">CAPABILITIES — TWO DISCIPLINES, ONE DESK</span></h2><div class="ln"></div></div>
+        <div class="caps">
+          <div class="cap">
+            <h3><span>◼</span> <span data-i="capF">FIELD / CONSTRUCTION</span></h3>
+            <ul>
+              <li><div class="sk">Primavera P6 &amp; TILOS</div><div class="sd" data-i="sk4">Mega-project scheduling</div></li>
+              <li><div class="sk">Tender &amp; Cost</div><div class="sd" data-i="sk5">International market &amp; risk analysis</div></li>
+              <li><div class="sk">FIDIC &amp; Claims</div><div class="sd" data-i="sk6">Contract management &amp; dispute resolution</div></li>
+            </ul>
+          </div>
+          <div class="cap">
+            <h3><span>◻</span> <span data-i="capD">DIGITAL / AI</span></h3>
+            <ul>
+              <li><div class="sk">Python &amp; SQL</div><div class="sd" data-i="sk1">Automating BOQ &amp; cost analysis</div></li>
+              <li><div class="sk">ML &amp; AI APIs</div><div class="sd" data-i="sk2">Predictive models for claims</div></li>
+              <li><div class="sk">Power BI &amp; ERP</div><div class="sd" data-i="sk3">Data-driven decision making</div></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- D: PROJECTS -->
+      <section id="builds">
+        <div class="dim"><h2><span class="k">D</span><span data-i="secD">AI PROJECTS — DRAWING REGISTER</span></h2><div class="ln"></div></div>
+        <div class="dreg">
+          <div class="dreg-h"><span data-i="rgNo">DWG NO</span><span data-i="rgT">DRAWING TITLE</span><span data-i="rgS" style="text-align:right">STATUS</span></div>
+          <div class="reg-r">
+            <span class="rno">FS-AI-01</span>
+            <div><div class="rt">DCC RAG AI Assistant<span class="rtags" lang="en">RAG · LangChain · LLM</span></div>
+            <p data-i="p1">RAG assistant that queries Document Control Center archives — instant answers from project specs, drawings and contracts.</p></div>
+            <div class="rst"><span class="chip ok" data-i="stDeployed">Issued</span><a class="go" href="https://github.com/furkansenyuz/dcc-intelligence-hub-hv1" target="_blank" rel="noopener" data-i="viewCode">View code ↗</a></div>
+          </div>
+          <div class="reg-r">
+            <span class="rno">FS-AI-02</span>
+            <div><div class="rt"><span data-i="p2t">Tender Documentation Analysis</span><span class="rtags" lang="en">NLP · Python</span></div>
+            <p data-i="p2">Extracts key requirements, risks and compliance items from tender documents to accelerate bid preparation.</p></div>
+            <div class="rst"><span class="chip" data-i="stWip">Preliminary</span></div>
+          </div>
+          <div class="reg-r">
+            <span class="rno">FS-AI-03</span>
+            <div><div class="rt"><span data-i="p3t">Construction Claim Predictor</span><span class="rtags" lang="en">Python · Random Forest</span></div>
+            <p data-i="p3">ML model predicting potential delay claims from daily site reports.</p></div>
+            <div class="rst"><span class="chip" data-i="stWip2">Preliminary</span></div>
+          </div>
+          <div class="reg-r">
+            <span class="rno">FS-AI-04</span>
+            <div><div class="rt"><span data-i="p4t">Tender Cost Optimizer</span><span class="rtags" lang="en">Python · Automation</span></div>
+            <p data-i="p4">Automates BOQ pricing analysis and vendor bid comparison.</p></div>
+            <div class="rst"><span class="chip" data-i="stWip3">Preliminary</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- E: CREDENTIALS -->
+      <section id="creds">
+        <div class="dim"><h2><span class="k">E</span><span data-i="secE">EDUCATION &amp; CREDENTIALS</span></h2><div class="ln"></div></div>
+        <div class="creds">
+          <div class="cred"><span class="yr">2026 →</span><span class="ti" data-i="e1">Machine Learning Specialization</span><span class="org">Stanford / Andrew Ng</span></div>
+          <div class="cred"><span class="yr">2026</span><span class="ti" data-i="e10">AI &amp; Machine Learning — Data Analysis School</span><span class="org">YÖK · Marmara / ODTÜ / İTÜ / Boğaziçi</span></div>
+          <div class="cred"><span class="yr">2026</span><span class="ti" data-i="e11">AI &amp; Productivity Tools — Data Analysis School</span><span class="org">YÖK · Marmara / ODTÜ / İTÜ / Boğaziçi</span></div>
+          <div class="cred"><span class="yr">2026</span><span class="ti" data-i="e2">Python for Everybody (5-course)</span><span class="org">University of Michigan</span></div>
+          <div class="cred"><span class="yr">2023</span><span class="ti" data-i="e3">Project Management Expertise · 66h</span><span class="org">İTÜ</span></div>
+          <div class="cred"><span class="yr">2023</span><span class="ti" data-i="e4">Int. Construction Contracts &amp; Claims</span><span class="org">İTÜ</span></div>
+          <div class="cred"><span class="yr">2019</span><span class="ti" data-i="e5">TILOS Linear Project Management</span><span class="org">Grid Group</span></div>
+          <div class="cred"><span class="yr">2018</span><span class="ti" data-i="e6">Oracle Primavera P6 Advanced</span><span class="org">Akım Müh. / Oracle Partner</span></div>
+          <div class="cred"><span class="yr">—</span><span class="ti" data-i="e7">The Arbitration of Int. Disputes</span><span class="org">Leiden University</span></div>
+          <div class="cred"><span class="yr">2016 →</span><span class="ti" data-i="e8">MSc Geotechnical Eng. — AI in geotechnics</span><span class="org">Muğla SKU</span></div>
+          <div class="cred"><span class="yr">2011–16</span><span class="ti" data-i="e9">BSc Civil Engineering — honor student</span><span class="org">Muğla SKU</span></div>
+        </div>
+      </section>
+      <footer class="foot"><span>© 2026 Furkan Şenyüz — Civil Engineering × AI</span></footer>
+
     </div>
+  </div>
+</div>
 
-    <div id="cook"><button style="position:absolute;top:10px;right:15px;background:none;border:none;cursor:pointer" onclick="App.hCook()" aria-label="Close Cookie Banner"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button><p data-t="cookieText"></p><a href="#" onclick="App.priv(event)" data-t="privacyLink" style="color:var(--gold);text-decoration:underline;font-size:0.85rem"></a><div class="c-act"><button class="no" onclick="App.cons(false)" data-t="decline"></button><button class="yes" onclick="App.cons(true)" data-t="accept"></button></div></div>
+<button class="bub" id="bub" onclick="P.chat()" aria-label="Open AI assistant">AI</button>
+<div class="chatw" id="chatw" role="dialog" aria-label="AI assistant">
+  <div class="chat-h"><span>FS — <b data-i="chatT">AI ASSISTANT</b></span><button onclick="P.chat()" aria-label="Close chat">×</button></div>
+  <div class="msgs" id="msgs" role="log" aria-live="polite"><div class="msg bot" data-i="chatGreet">Hello! I'm Furkan's AI assistant — ask me anything about his projects or experience.</div></div>
+  <div class="c-inp">
+    <input type="text" id="cinp" data-i-ph="chatPh" placeholder="Ask something…" onkeypress="if(event.key==='Enter')P.send()">
+    <button onclick="P.send()" aria-label="Send">→</button>
+  </div>
+</div>
 
-    <noscript>
-        <div style="text-align:center; padding:50px; color:var(--gold);">
-            <h2>JavaScript Required</h2>
-            <p>Please enable JavaScript to view this interactive portfolio.</p>
-        </div>
-    </noscript>
+<div class="mod" id="mod" role="dialog" aria-modal="true" aria-labelledby="m-tit">
+  <div class="m-con">
+    <button class="m-x" onclick="P.cls()" aria-label="Close">×</button>
+    <h3 id="m-tit"><span>◼</span> <span data-i="mTitle">CONTACT</span></h3>
+    <div class="m-txt" id="m-txt" style="display:none"></div>
+    <form id="frm" action="https://formspree.io/f/mnjbavgw" method="POST">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="text" id="fname" name="name" class="frm-c" required data-i-ph="fName" placeholder="Name">
+      <input type="email" id="femail" name="email" class="frm-c" required data-i-ph="fEmail" placeholder="Email">
+      <textarea id="fmsg" name="message" class="frm-c" required rows="4" data-i-ph="fMsg" placeholder="Message"></textarea>
+      <button class="g-recaptcha frm-b" data-sitekey="6LeR6GMsAAAAADhs_VIncXqN9ZOlJzCWMLocd1jv" data-callback="onSubmit" data-error-callback="onErr" data-action="submit" data-i="fSend">Send message</button>
+      <p class="rc-note">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms of Service</a> apply.</p>
+      <div id="fst"></div>
+    </form>
+  </div>
+</div>
 
-    <script>
-        // PWA Service Worker (data: URLs are rejected by browsers, so it lives in sw.js)
-        if('serviceWorker'in navigator){navigator.serviceWorker.register('sw.js').catch(console.error)}
-        
-        function onSubmit(t){App.sub(t)}
-        function onErr(){ console.warn("ReCAPTCHA Error"); }
-        function sanitize(str) { const d = document.createElement('div'); d.textContent = str; return d.innerHTML; }
-        
-        window.App=(function(){
-            const C=window.CFG;
-            const MAP_DARK = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
-            const MAP_LIGHT = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
-            let l='en', map, lyrs={}, DATA;
-            const SUPPORTED=['en','tr','sr','de'];
-            // Map ISO country codes to the supported language they should default to.
-            const GEO_LANG={ TR:'tr', RS:'sr', ME:'sr', BA:'sr', DE:'de', AT:'de', CH:'de', LI:'de' };
+<div class="cook" id="cook">
+  <span data-i="cookieText">Cookies are used for anonymous traffic analytics only.</span>
+  <div class="c-act">
+    <button class="no" onclick="P.cons(false)" data-i="decline">Decline</button>
+    <button class="yes" onclick="P.cons(true)" data-i="accept">Accept</button>
+  </div>
+</div>
 
-            // Derive a supported language from the browser's preferred language.
-            function browserLang(){
-                const u=(navigator.language||navigator.userLanguage||'en').toLowerCase();
-                if(u.startsWith('tr')) return 'tr';
-                if(u.startsWith('sr')||u.startsWith('hr')||u.startsWith('bs')) return 'sr';
-                if(u.startsWith('de')) return 'de';
-                return 'en';
-            }
+<script>
+function onSubmit(t){P.sub(t)}
+function onErr(){}
+function esc(x){const d=document.createElement("div");d.textContent=x;return d.innerHTML}
+window.P=(function(){
+  const API="https://portfolio-backend-hu1r.onrender.com/chat";
+  const TR={
+    eyebrow:"İNŞAAT MÜHENDİSLİĞİ × YAPAY ZEKÂ",
+    role:"İnşaat Mühendisi & Yapay Zekâ Çözüm Geliştiricisi",
+    slogan:"<b>Beton</b> yolu ayakta tutar.<br><code>kod()</code> ne zaman biteceğini söyler.",
+    cv:"CV İndir",
+    st1:"Yıl sahada",st2:"Üretilen & teklif verilen iş",st3:"Ülkede ihale",st4:"Mega proje görevi",
+    secA:"SAHA KAYDI — 2016 → BUGÜN",
+    exp1:"Teknik Ofis Şefi",exp2:"İhale & Proje Yönetim Uzmanı",exp3:"Planlama & Maliyet Kontrol Şefi",
+    exp4:"Teknik Ofis Şefi",exp5:"Planlama & Maliyet Mühendisi",exp6:"Şantiye Şefi",
+    schedNote:"Doğrusal iş programı olarak çizildi — otoyolları TILOS & Primavera P6'da planladığım gibi. Detay için banda tıkla; konumu alttaki planda yanar.",
+    secB:"OPERASYON SAHASI — APLİKASYON PLANI",
+    remote:"DETAY — UZAKTAN EĞİTİM · ÖLÇEKSİZ",legW:"İş & projeler",legE:"Eğitim",legT:"Hazırlanan ihaleler",
+    secC:"YETKİNLİKLER — İKİ DİSİPLİN, TEK MASA",
+    capF:"SAHA / İNŞAAT",capD:"DİJİTAL / YAPAY ZEKÂ",
+    sk1:"Metraj & maliyet analizi otomasyonu",sk2:"Hak talepleri için tahmin modelleri",sk3:"Veri odaklı karar verme",
+    sk4:"Mega proje planlama",sk5:"Uluslararası pazar & risk analizi",sk6:"Sözleşme yönetimi & uyuşmazlık çözümü",
+    secD:"YAPAY ZEKÂ PROJELERİ — PAFTA LİSTESİ",rgNo:"PAFTA NO",rgT:"PAFTA ADI",rgS:"DURUM",fbnote:"CANLI HARİTA FURKANSENYUZ.COM\u0027DA YÜKLENİR — ÇEVRİMDIŞI PLAN GÖSTERİLİYOR",
+    stDeployed:"Yayında",stWip:"Ön proje",stWip2:"Ön proje",stWip3:"Ön proje",
+    p1:"Doküman Kontrol Merkezi arşivini sorgulayan RAG asistanı — şartname, çizim ve sözleşmelerden anında yanıt.",
+    p2t:"İhale Dokümanı Analizi",p2:"İhale dokümanlarından temel gereksinimleri, riskleri ve uygunluk maddelerini çıkarıp teklif hazırlığını hızlandırır.",
+    p3t:"İnşaat Hak Talebi Tahmincisi",p3:"Günlük saha raporlarından olası gecikme taleplerini tahmin eden ML modeli.",
+    p4t:"İhale Maliyet Optimizasyonu",p4:"Metraj fiyat analizini ve tedarikçi teklif karşılaştırmasını otomatikleştirir.",
+    viewCode:"Kodu gör ↗",
+    secE:"EĞİTİM & SERTİFİKALAR",
+    e1:"Makine Öğrenimi Uzmanlığı",e10:"Yapay Zekâ ve Makine Öğrenmesi — Veri Analizi Okulu",e11:"Yapay Zekâ ve Kolaylaştırıcı Araçlar — Veri Analizi Okulu",e2:"Herkes için Python (5 kurs)",e3:"Proje Yönetim Uzmanlığı · 66s",
+    e4:"Uluslararası İnşaat Sözleşmeleri & Hak Talepleri",e5:"TILOS Doğrusal Proje Yönetimi",e6:"Oracle Primavera P6 İleri Seviye",
+    e7:"Uluslararası Uyuşmazlık Tahkimi",e8:"YL Geoteknik Müh. — geoteknikte yapay zekâ",e9:"Lisans İnşaat Müh. — onur öğrencisi",
+    
+    
+    contactBtn:"İletişime geç",
+    chatT:"YAPAY ZEKÂ ASİSTANI",chatGreet:"Merhaba! Ben Furkan'ın yapay zekâ asistanıyım — projeleri veya deneyimi hakkında her şeyi sorabilirsin.",chatPh:"Bir şeyler sor…",
+    chatErr:"⚠️ Bağlantı kurulamadı — iletişim formunu kullanabilirsin.",
+    mTitle:"İLETİŞİM",fName:"İsim",fEmail:"E-posta",fMsg:"Mesaj",fSend:"Mesaj gönder",fSending:"Gönderiliyor…",
+    fOk:"İletildi — 24 saat içinde dönerim.",fErr:"Bir şeyler ters gitti.",
+    cookieText:"Çerezler yalnızca anonim ziyaret analizi için kullanılır.",accept:"Kabul et",decline:"Reddet",
+    detK:"DETAY — A.",
+    exps:[
+      {co:"Taşyapı — Kuzmin-Sremska Rača Otoyolu (€345M) · Mar 2024 → bugün",b:["Tüm hakedişlerin (IPC) ve sözleşme yönetiminin yürütülmesi.","Primavera P6'da hak talebi (claim) yönetim programları ve ilerleme raporları."]},
+      {co:"Taşyapı — Belgrad Genel Merkez · Ağu 2021 – Mar 2024",b:["10+ ülkede uçtan uca ihale dosyaları: metraj (BOQ) ve maliyetlendirme.","Proje kontrolleri — claim, bütçe, planlama — ve FIDIC Yellow Book 1999 sözleşme idaresi."]},
+      {co:"Fernas — Aydın-Denizli Otoyolu (€1.14B) · Oca – Ağu 2021",b:["Tüm ana imalatların master iş programı TILOS'ta oluşturuldu.","Projenin tüm raporlama sistemleri kuruldu."]},
+      {co:"Limak — Malkara-Çanakkale Otoyolu, 1915 Çanakkale Köprüsü dahil · Ağu – Ara 2019",b:["Teknik ofis sıfırdan kuruldu — tüm raporlama ve saha takip sistemleri.","Toprak işleri, sanat yapıları ve üstyapı için master plan hazırlandı."]},
+      {co:"Limak — Kuzey Marmara Otoyolu ($500M) · Oca 2018 – Ağu 2019",b:["Kritik imalatlar (tüneller, prefabrik kirişler) için detay programlar ve kaynak analizi.","Microsoft AX (ERP) ile birim maliyet, metraj ve kârlılık hesapları.","Tüm çelik köprü imalatlarının hakediş yönetimi."]},
+      {co:"Mat Yapı — 10.000 m² konut, 100 daire · İstanbul · Ara 2016 – Oca 2018",b:["Tüm saha operasyonları; Kazanılmış Değer Yönetimi (EVM) ile performans takibi.","10 m derinliğindeki kazı için şev stabilite planının tasarımı."]}
+    ]
+  };
+  const EN={
+    detK:"DETAIL — A.",
+    exps:[
+      {co:"Taşyapı — Kuzmin-Sremska Rača Highway (€345M) · Mar 2024 → present",b:["Managing all interim payment certificates (IPC) and contract administration.","Developing claim-management programs in Primavera P6 and delivering progress reports."]},
+      {co:"Taşyapı — Belgrade HQ · Aug 2021 – Mar 2024",b:["Prepared end-to-end tender documents — BOQ and costing — for projects in 10+ countries.","Managed project controls (claims, budget, planning) and FIDIC Yellow Book 1999 administration."]},
+      {co:"Fernas — Aydın-Denizli Motorway (€1.14B) · Jan – Aug 2021",b:["Created the master plan for all major works in TILOS.","Established all project reporting systems."]},
+      {co:"Limak — Malkara-Çanakkale Motorway, incl. 1915 Çanakkale Bridge · Aug – Dec 2019",b:["Built the technical office from scratch — all reporting and site-tracking systems.","Created the master plan for earthworks, structures and pavement."]},
+      {co:"Limak — Northern Marmara Motorway ($500M) · Jan 2018 – Aug 2019",b:["Detailed schedules for critical works — tunnels, prefabricated beams — with resource analysis.","Unit costs, material requirements and margins in Microsoft AX (ERP).","Managed progress payments for all steel bridge constructions."]},
+      {co:"Mat Yapı — 10,000 m² residential, 100 units · Istanbul · Dec 2016 – Jan 2018",b:["Ran all site operations with Earned Value Management (EVM) tracking.","Designed the slope-stability plan for a 10 m deep excavation."]}
+    ]
+  };
+  document.querySelectorAll("[data-i]").forEach(el=>{EN[el.dataset.i]=el.innerHTML});
+  Object.assign(EN,{chatPh:"Ask something…",fName:"Name",fEmail:"Email",fMsg:"Message",fSending:"Sending…",
+    fOk:"Sent — I will reply within 24h.",fErr:"Something went wrong.",
+    chatErr:"⚠️ Connection failed — use the contact form instead."});
+  let lang="en",sel=0;
 
-            // Decide the display language: a manual choice always wins; otherwise
-            // pick by the visitor's IP region, falling back to browser language,
-            // and English for anything out of scope.
-            async function detectLang(){
-                const saved=localStorage.getItem(C.LANG);
-                if(saved && SUPPORTED.includes(saved)) return saved;
-                try{
-                    const ctrl=new AbortController();
-                    const to=setTimeout(()=>ctrl.abort(), 2500);
-                    const r=await fetch(C.GEO,{signal:ctrl.signal});
-                    clearTimeout(to);
-                    if(r.ok){
-                        const d=await r.json();
-                        const cc=(d.country_code||d.country||'').toUpperCase();
-                        if(cc) return GEO_LANG[cc] || 'en';
-                    }
-                }catch(e){ /* geolocation unavailable: fall back below */ }
-                return browserLang();
-            }
+  function D(){return lang==="tr"?TR:EN}
+  function setLang(l){
+    lang=l;
+    document.querySelectorAll("[data-i]").forEach(el=>{
+      const v=D()[el.dataset.i];
+      if(typeof v==="string")el.innerHTML=v;
+    });
+    document.documentElement.lang=l;
+    document.querySelectorAll("[data-i-ph]").forEach(el=>{const v=D()[el.dataset.iPh];if(typeof v==="string")el.placeholder=v;});
+    const b=document.getElementById("langBtn");
+    b.textContent=l==="tr"?"EN":"TR";
+    b.setAttribute("aria-pressed",l==="tr");
+    syncThemeBtn();renderDetail();
+    if(lm){lm.removeControl(lmCtl);lmCtl=L.control.layers(null,lmLabels(),{collapsed:true}).addTo(lm);}
+  }
+  const ORDER=["light","dark","blueprint"];
+  const TNAMES={en:{light:"LIGHT",dark:"DARK",blueprint:"BLUEPRINT"},tr:{light:"AYDINLIK",dark:"KARANLIK",blueprint:"MAVİKOPYA"}};
+  function curTheme(){
+    const t=document.documentElement.getAttribute("data-theme");
+    if(t)return t;
+    return matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";
+  }
+  function syncThemeBtn(){
+    const b=document.getElementById("themeBtn");
+    const nxt=ORDER[(ORDER.indexOf(curTheme())+1)%3];
+    b.textContent=TNAMES[lang==="tr"?"tr":"en"][nxt];
+    b.setAttribute("aria-pressed",curTheme()!=="light");
+  }
+  function theme(){
+    document.documentElement.setAttribute("data-theme",ORDER[(ORDER.indexOf(curTheme())+1)%3]);
+    syncThemeBtn();
+    if(lm)lmTile.setUrl(curTheme()==="light"?MAP_LIGHT:MAP_DARK);
+  }
 
-            async function init(){
-                try {
-                    const res = await fetch('data.json');
-                    if(!res.ok) throw new Error('Data fetch failed');
-                    DATA = await res.json();
-                    
-                    document.getElementById('loader').style.opacity = 0;
-                    setTimeout(() => document.getElementById('loader').style.display = 'none', 500);
-                    
-                    document.getElementById('yr').innerText=new Date().getFullYear();
-                    
-                    // AUTO THEME DETECTION
-                    const saved = localStorage.getItem(C.THEME);
-                    const sysLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-                    if(saved === 'light' || (!saved && sysLight)) {
-                        document.body.classList.add('light-mode');
-                    }
-                    
-                    l = await detectLang();
-                    render(l);
-                    
-                    const obsMap=new IntersectionObserver(e=>{if(e[0].isIntersecting){initMap();obsMap.disconnect()}}); 
-                    obsMap.observe(document.getElementById('map'));
-                    
-                    const pObs=new IntersectionObserver(e=>{e.forEach(i=>{if(i.isIntersecting){i.target.classList.add('visible-item');pObs.unobserve(i.target)}})});
-                    document.querySelectorAll('.card').forEach(c=>pObs.observe(c));
+  /* detail panel */
+  function renderDetail(){
+    const d=D(),e=d.exps[sel];
+    const role=d["exp"+(sel+1)]||document.querySelectorAll(".rlbl b")[sel].textContent;
+    document.getElementById("detail").innerHTML=
+      `<div class="dk">${d.detK}${sel+1}</div><h3>${role}</h3><div class="dmeta">${e.co}</div>`+
+      `<ul>${e.b.map(x=>`<li>${x}</li>`).join("")}</ul>`;
+    const dl=document.getElementById("detail");
+    dl.classList.remove("swap");void dl.offsetWidth;dl.classList.add("swap");
+    document.querySelectorAll(".rbar").forEach((b,i)=>b.setAttribute("aria-pressed",i===sel));
+  }
 
-                    if(localStorage.getItem(C.CONSENT)===null) document.getElementById('cook').classList.add('shw');
+  /* schedule <-> plot linkage */
+  function hot(loc,on){
+    if(lm){if(on&&lmMarks[loc])lmMarks[loc].openPopup();return;}
+    const p=document.getElementById("pt-"+loc),t=document.getElementById("lbl-"+loc);
+    if(p)p.classList.toggle("hot",on);
+    if(t)t.classList.toggle("hot",on);
+  }
+  document.querySelectorAll(".rbar").forEach(b=>{
+    const loc=b.dataset.loc;
+    b.addEventListener("mouseenter",()=>hot(loc,true));
+    b.addEventListener("mouseleave",()=>hot(loc,false));
+    b.addEventListener("focus",()=>hot(loc,true));
+    b.addEventListener("blur",()=>hot(loc,false));
+    b.addEventListener("click",()=>{sel=+b.dataset.exp;renderDetail();
+      document.querySelectorAll(".pt.hot,.pt-lbl.hot").forEach(x=>x.classList.remove("hot"));
+      hot(loc,true);});
+  });
 
-                    // Tapping outside a skill tag closes any open tooltip (mobile has no hover-out).
-                    document.addEventListener('click',e=>{
-                        if(!e.target.closest('.tag')) document.querySelectorAll('.tag.active').forEach(x=>x.classList.remove('active'));
-                    });
-                } catch(e) {
-                    document.getElementById('loader').innerHTML = `<p style="color:var(--gold);margin-bottom:15px">⚠️ Connection Failed</p><button class="f-btn" onclick="location.reload()">Retry</button>`;
-                }
-            }
-            
-            function render(lg){
-                const tr = DATA.translations[lg];
-                document.documentElement.lang = lg;
-                if(tr.pageTitle) document.title = tr.pageTitle;
-                document.querySelectorAll('[data-t]').forEach(e => e.innerHTML = tr[e.dataset.t] || e.innerHTML);
-                document.querySelectorAll('[data-tip]').forEach(e => e.setAttribute('data-tooltip', tr[e.dataset.tip]));
-                ['name','email','msg'].forEach(i => document.getElementById(i).placeholder = tr[i==='msg'?'formMsg':(i==='name'?'formName':'formEmail')]);
-                document.getElementById('inp').placeholder = tr.chatPlaceholder || 'Ask something...';
-                document.getElementById('lang-btn').innerText = lg.toUpperCase();
 
-                const mk = (i, cls) => {
-                    const title = tr[i.key + 'Title'] || i.key;
-                    const desc = tr[i.key + 'Desc'] || '';
-                    return `<div class="t-item ${cls||''} item-box visible-item" data-cat="${i.cat}">
-                        <h4>${title}</h4><span class="co">${i.company}</span>
-                        <div class="meta"><span>${i.loc}</span><span>${i.date}</span></div>
-                        ${i.subtext ? `<small style="display:block;margin-bottom:8px;opacity:0.9"><i>${i.subtext}</i></small>` : ''}
-                        <ul>${desc}</ul>
-                    </div>`;
-                };
-                
-                document.getElementById('exp').innerHTML = DATA.experience.map(i => mk(i)).join('');
-                document.getElementById('edu').innerHTML = DATA.education.map(i => mk(i, 'edu')).join('');
-                
-                const actBtn = document.querySelector('.f-btn.active');
-                if(actBtn) filt(actBtn.getAttribute('onclick').split("'")[1]);
-                
-                if(map){ map.removeControl(window.mc); addLC(lg); }
-            }
+  /* surveyor's coordinate readout */
+  const svgEl=document.querySelector("#ops svg"),co=document.getElementById("coord");
+  function fmtCo(x,y){
+    const lon=x/1000*70,lat=56-y/460*22;
+    return `φ ${Math.abs(lat).toFixed(2)}°${lat>=0?"N":"S"} · λ ${Math.abs(lon).toFixed(2)}°${lon>=0?"E":"W"}`;
+  }
+  svgEl.addEventListener("mousemove",e=>{const[x,y]=vbXY(e);co.textContent=fmtCo(x,y);});
+  svgEl.addEventListener("mouseleave",()=>{co.textContent=""});
 
-            function filt(c){
-                document.querySelectorAll('.f-btn').forEach(b=>b.classList.remove('active'));
-                document.querySelector(`button[onclick="App.filt('${c}')"]`).classList.add('active');
-                [...document.querySelectorAll('.item-box')].forEach(i=>{
-                    if(c==='all'||i.dataset.cat===c){i.classList.remove('hidden-item');i.classList.add('visible-item')}
-                    else{i.classList.remove('visible-item');i.classList.add('hidden-item')}
-                });
-            }
+  function vbXY(e){const r=svgEl.getBoundingClientRect();return[(e.clientX-r.left)/r.width*1000,(e.clientY-r.top)/r.height*460];}
 
-            function lang(){
-                const i=SUPPORTED.indexOf(l);
-                l=SUPPORTED[(i+1)%SUPPORTED.length];
-                localStorage.setItem(C.LANG, l); // remember explicit choice over IP detection
-                render(l);
-            }
+  /* live Leaflet map — same as furkansenyuz.com; falls back to the drawn plan offline */
+  const MAP_DARK="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png";
+  const MAP_LIGHT="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png";
+  const PIN="https://cdn.jsdelivr.net/gh/pointhi/leaflet-color-markers@master/img/marker-icon-2x-";
+  const LOCS=[
+    {k:"kuzmin",t:"Kuzmin",lat:45.02,lng:19.40,ty:"work",d:"Tasyapi Construction"},
+    {k:"belgrade",t:"Belgrade (HQ)",lat:44.78,lng:20.44,ty:"work",d:"Tasyapi Construction"},
+    {k:"aydin",t:"Aydin",lat:37.83,lng:27.84,ty:"work",d:"Fernas Group"},
+    {k:"canakkale",t:"Canakkale",lat:40.15,lng:26.41,ty:"work",d:"1915 Bridge"},
+    {k:"kocaeli",t:"Kocaeli",lat:40.85,lng:29.88,ty:"work",d:"Northern Marmara Motorway"},
+    {k:"istanbul",t:"Istanbul",lat:41.00,lng:28.97,ty:"work",d:"Mat Yapi / ITU"},
+    {t:"ITU",lat:41.10,lng:29.02,ty:"edu",d:"Istanbul Technical University"},
+    {t:"Mugla",lat:37.21,lng:28.36,ty:"edu",d:"BSc Civil Engineering"},
+    {t:"Szczecin",lat:53.42,lng:14.55,ty:"edu",d:"Erasmus"},
+    {t:"Stanford (Online)",lat:37.42,lng:-122.16,ty:"edu",d:"Andrew Ng ML"},
+    {t:"Michigan (Online)",lat:42.27,lng:-83.74,ty:"edu",d:"Python Data Science"},
+    {t:"Leiden (Online)",lat:52.16,lng:4.49,ty:"edu",d:"Arbitration Cert."},
+    {t:"Uzbekistan",lat:41.37,lng:64.58,ty:"tender",d:"Infrastructure Tender"},
+    {t:"Kazakhstan",lat:48.01,lng:66.92,ty:"tender",d:"Infrastructure Tender"},
+    {t:"Georgia",lat:42.31,lng:43.35,ty:"tender",d:"Infrastructure Tender"},
+    {t:"Romania",lat:45.94,lng:24.96,ty:"tender",d:"Highway Tender"},
+    {t:"Moldova",lat:47.41,lng:28.36,ty:"tender",d:"Road Tender"},
+    {t:"Croatia",lat:45.1,lng:15.2,ty:"tender",d:"Railway Tender"},
+    {t:"Bosnia",lat:43.91,lng:17.67,ty:"tender",d:"Motorway Tender"},
+    {t:"Montenegro",lat:42.70,lng:19.37,ty:"tender",d:"Tunnel Tender"},
+    {t:"Kosovo",lat:42.60,lng:20.90,ty:"tender",d:"Road Tender"},
+    {t:"Macedonia",lat:41.60,lng:21.74,ty:"tender",d:"Highway Tender"}
+  ];
+  let lm=null,lmTile=null,lmCtl=null,lmGroups=null;
+  const lmMarks={};
+  function lmLabels(){
+    const t=lang==="tr";
+    return {
+      [`<span style='color:#38bdf8'>${t?"İş & Projeler":"Work & Projects"}</span>`]:lmGroups.work,
+      [`<span style='color:#2ecc71'>${t?"Eğitim":"Education"}</span>`]:lmGroups.edu,
+      [`<span style='color:#f97316'>${t?"İhaleler":"Tenders"}</span>`]:lmGroups.tender
+    };
+  }
+  function initLeaflet(){
+    if(!window.L||lm)return;
+    document.querySelector(".plot-wrap").classList.add("live");
+    lm=L.map("lmap",{zoomSnap:.25,scrollWheelZoom:false});
+    lmTile=L.tileLayer(curTheme()==="light"?MAP_LIGHT:MAP_DARK,{attribution:"&copy; CARTO"}).addTo(lm);
+    lmGroups={work:L.featureGroup(),edu:L.featureGroup(),tender:L.featureGroup()};
+    const all=[];
+    LOCS.forEach(o=>{
+      const c=o.ty==="edu"?"green":(o.ty==="tender"?"orange":"blue");
+      const m=L.marker([o.lat,o.lng],{icon:new L.Icon({iconUrl:PIN+c+".png",iconSize:[25,41],iconAnchor:[12,41]})}).bindPopup(`<b>${o.t}</b><br>${o.d}`);
+      lmGroups[o.ty].addLayer(m);all.push(m);
+      if(o.k)lmMarks[o.k]=m;
+    });
+    Object.values(lmGroups).forEach(g=>g.addTo(lm));
+    lmCtl=L.control.layers(null,lmLabels(),{collapsed:true}).addTo(lm);
+    lm.invalidateSize();
+    lm.fitBounds(L.featureGroup(all).getBounds(),{padding:[30,30],animate:false});
+  }
+  (function(){
+    const css=document.createElement("link");
+    css.rel="stylesheet";css.href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+    document.head.appendChild(css);
+    const js=document.createElement("script");
+    js.src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
+    js.onload=initLeaflet; /* onerror: offline plan stays */
+    document.head.appendChild(js);
+  })();
 
-            let warmed=false;
-            function chat(){
-                const w=document.getElementById('win'); w.classList.toggle('act'); document.getElementById('bub').classList.toggle('act');
-                if(w.classList.contains('act')){
-                    document.getElementById('inp').focus();
-                    // Wake the (free-tier) chat backend while the user is typing to avoid cold-start timeouts.
-                    if(!warmed){ warmed=true; try{ fetch(new URL(C.API).origin,{mode:'no-cors'}).catch(()=>{}); }catch(e){} }
-                }
-            }
+  /* dividers draw in */
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}}),{threshold:.4});
+  document.querySelectorAll(".dim").forEach(d=>io.observe(d));
 
-            async function send(){
-                const inp=document.getElementById('inp'), msgs=document.getElementById('msgs'), txt=inp.value.trim();
-                if(!txt)return;
-                msgs.innerHTML+=`<div class="msg usr">${sanitize(txt)}</div>`;inp.value='';
-                msgs.scrollTop=msgs.scrollHeight;
-                
-                const ld=document.createElement('div'); ld.className='msg bot typing'; ld.innerHTML='...'; msgs.appendChild(ld);
-                msgs.scrollTop=msgs.scrollHeight;
-                
-                try{
-                    const fd=new FormData(); fd.append('message',txt);
-                    const res=await fetch(C.API,{method:'POST',body:fd});
-                    if(!res.ok)throw 0;
-                    const d=await res.json(); msgs.removeChild(ld); msgs.innerHTML+=`<div class="msg bot">${sanitize(d.reply)}</div>`;
-                }catch(e){
-                    msgs.removeChild(ld); msgs.innerHTML+=`<div class="msg bot">⚠️ Connection failed. <a href="#" style="color:var(--txt);text-decoration:underline;font-weight:bold" onclick="App.cont(event)">Email me</a></div>`;
-                }
-                msgs.scrollTop=msgs.scrollHeight;
-            }
+  /* mobile: open the schedule at today (right edge) */
+  const sw=document.getElementById("schedWrap");
+  if(sw.scrollWidth>sw.clientWidth)sw.scrollLeft=sw.scrollWidth;
 
-            function initMap(){
-                const isLight = document.body.classList.contains('light-mode');
+  if((navigator.language||"").toLowerCase().startsWith("tr"))setLang("tr");else{syncThemeBtn();renderDetail();}
+  /* chat */
+  let warmed=false;
+  function chat(){
+    const w=document.getElementById("chatw");
+    w.classList.toggle("act");
+    if(w.classList.contains("act")){
+      document.getElementById("cinp").focus();
+      if(!warmed){warmed=true;try{fetch(new URL(API).origin,{mode:"no-cors"}).catch(()=>{});}catch(e){}}
+    }
+  }
+  async function send(){
+    const inp=document.getElementById("cinp"),ms=document.getElementById("msgs"),txt=inp.value.trim();
+    if(!txt)return;
+    ms.insertAdjacentHTML("beforeend",`<div class="msg usr">${esc(txt)}</div>`);
+    inp.value="";ms.scrollTop=ms.scrollHeight;
+    const ld=document.createElement("div");ld.className="msg bot";ld.textContent="…";ms.appendChild(ld);ms.scrollTop=ms.scrollHeight;
+    try{
+      const fd=new FormData();fd.append("message",txt);
+      const r=await fetch(API,{method:"POST",body:fd});
+      if(!r.ok)throw 0;
+      const d=await r.json();ld.remove();
+      ms.insertAdjacentHTML("beforeend",`<div class="msg bot">${esc(d.reply)}</div>`);
+    }catch(e){
+      ld.remove();
+      ms.insertAdjacentHTML("beforeend",`<div class="msg bot">${D().chatErr||"⚠️ Connection failed — use the contact form instead."}</div>`);
+    }
+    ms.scrollTop=ms.scrollHeight;
+  }
+  /* contact */
+  let cap=false;
+  function loadCaptcha(){
+    if(cap)return;cap=true;
+    const sc=document.createElement("script");
+    sc.src="https://www.google.com/recaptcha/api.js";sc.async=true;sc.defer=true;
+    document.head.appendChild(sc);
+  }
+  function cont(e){if(e)e.preventDefault();loadCaptcha();document.getElementById("fst").style.display="none";document.getElementById("mod").classList.add("act");}
+  function cls(){document.getElementById("mod").classList.remove("act");}
+  function sub(tok){
+    const d=D(),f=document.getElementById("frm"),b=f.querySelector("button.frm-b"),st=document.getElementById("fst");
+    b.disabled=true;b.textContent=d.fSending||"Sending…";st.style.display="none";
+    const fd=new FormData(f);fd.append("g-recaptcha-response",tok);
+    fetch(f.action,{method:"POST",body:fd,headers:{Accept:"application/json"}}).then(r=>{
+      if(r.ok){f.reset();st.textContent=d.fOk||"Sent — I will reply within 24h.";st.style.color="var(--edu)";setTimeout(cls,2500);}
+      else{st.textContent=d.fErr||"Something went wrong.";st.style.color="#e05252";}
+      st.style.display="block";
+    }).catch(()=>{st.textContent=d.fErr||"Something went wrong.";st.style.color="#e05252";st.style.display="block";})
+    .finally(()=>{b.disabled=false;b.textContent=d.fSend||"Send message";});
+  }
+  /* cookies / consent */
+  function cons(g){
+    localStorage.setItem("fs_consent",g);
+    if(window.gtag)gtag("consent","update",{analytics_storage:g?"granted":"denied"});
+    document.getElementById("cook").classList.remove("shw");
+  }
+  const sv=localStorage.getItem("fs_consent");
+  if(sv===null)document.getElementById("cook").classList.add("shw");
+  else if(sv==="true"&&window.gtag)gtag("consent","update",{analytics_storage:"granted"});
 
-                lyrs = {
-                    work: L.featureGroup(),
-                    edu: L.featureGroup(),
-                    tender: L.featureGroup()
-                };
+  return{lang:()=>setLang(lang==="tr"?"en":"tr"),theme,chat,send,cont,cls,sub,cons};
+})();
+</script>
 
-                const markers = [];
-                DATA.locations.forEach(loc=>{
-                    const iconUrl = `https://cdn.jsdelivr.net/gh/pointhi/leaflet-color-markers@master/img/marker-icon-2x-${loc.ty==='edu'?'green':(loc.ty==='tender'?'orange':'blue')}.png`;
-                    const marker = L.marker([loc.lat,loc.lng],{icon:new L.Icon({iconUrl,iconSize:[25,41],iconAnchor:[12,41]})})
-                    .bindPopup(`<b>${loc.t}</b><br>${loc.desc}`);
-                    lyrs[loc.ty].addLayer(marker);
-                    markers.push(marker);
-                });
-
-                map = L.map('map', {zoomSnap:0.25, scrollWheelZoom:false});
-                L.tileLayer(isLight ? MAP_LIGHT : MAP_DARK, {attribution:'&copy; CARTO'}).addTo(map);
-                ['work','edu','tender'].forEach(k=>lyrs[k].addTo(map));
-
-                const bounds = L.featureGroup(markers).getBounds();
-                map.invalidateSize();
-                if(bounds.isValid()) {
-                    map.fitBounds(bounds, {padding:[30,30], animate:false});
-                } else {
-                    map.setView([41.0, 29.0], 3);
-                }
-
-                addLC(l);
-            }
-            function addLC(lg){
-                const tr = DATA.translations[lg];
-                window.mc=L.control.layers(null,{
-                    [`<span style='color:#38bdf8'>${tr.legendWork}</span>`]:lyrs.work,
-                    [`<span style='color:#2ecc71'>${tr.legendEdu}</span>`]:lyrs.edu,
-                    [`<span style='color:#fbbf24'>${tr.legendTender}</span>`]:lyrs.tender
-                },{collapsed:true}).addTo(map);
-            }
-
-            let captchaLoaded=false;
-            function loadCaptcha(){
-                if(captchaLoaded) return;
-                captchaLoaded=true;
-                const s=document.createElement('script');
-                s.src='https://www.google.com/recaptcha/api.js'; s.async=true; s.defer=true;
-                document.head.appendChild(s);
-            }
-
-            function openM(t,c,isF=false){
-                document.getElementById('m-tit').innerText=t;
-                document.getElementById('m-txt').innerHTML=c; document.getElementById('m-txt').style.display=isF?'none':'block';
-                document.getElementById('frm').style.display=isF?'block':'none'; document.getElementById('m-btn').style.display=isF?'none':'inline-block';
-                document.getElementById('mod').classList.add('act');
-            }
-            function cls(){document.getElementById('mod').classList.remove('act');}
-            
-            function sub(tok){
-                const tr=DATA.translations[l];
-                const f=document.getElementById('frm'), b=f.querySelector('button'), st=document.getElementById('fst');
-                b.disabled=true; b.innerText=tr.formSending; st.style.display='none';
-                const showStatus=(msg,color)=>{ st.textContent=msg; st.style.color=color; st.style.display='block'; };
-                const fd=new FormData(f); fd.append("g-recaptcha-response",tok);
-                fetch(f.action,{method:'POST',body:fd,headers:{'Accept':'application/json'}}).then(r=>{
-                    if(r.ok){ f.reset(); showStatus(tr.formSuccess,'var(--green)'); setTimeout(cls,3000); }
-                    else { showStatus(tr.formError,'#ef4444'); }
-                }).catch(()=>showStatus(tr.formError,'#ef4444'))
-                .finally(()=>{ b.disabled=false; b.innerText=tr.formSend; });
-            }
-
-            return{
-                init,lang,filt,chat,send,cls,sub,errCap:onErr,key:e=>{if(e.key==='Enter')send()},
-                tip:t=>{
-                    const on=!t.classList.contains('active');
-                    document.querySelectorAll('.tag.active').forEach(x=>x.classList.remove('active'));
-                    if(on)t.classList.add('active');
-                },
-                
-                theme:()=>{
-                    document.body.classList.toggle('light-mode');
-                    const isLight = document.body.classList.contains('light-mode');
-                    localStorage.setItem(C.THEME, isLight ? 'light' : 'dark');
-                    if(map) map.eachLayer((layer) => { 
-                        if (layer instanceof L.TileLayer) { 
-                            layer.setUrl(isLight ? MAP_LIGHT : MAP_DARK); 
-                        } 
-                    });
-                },
-                
-                cont:e=>{e.preventDefault();loadCaptcha();document.getElementById('fst').style.display='none';openM(DATA.translations[l].contactBtn,'',true)},
-                priv:e=>{e.preventDefault();openM(DATA.translations[l].privacyTitle,DATA.translations[l].privacyText)},
-                cons:g=>{localStorage.setItem(C.CONSENT,g);gtag('consent','update',{'analytics_storage':g?'granted':'denied','ad_storage':g?'granted':'denied','ad_user_data':g?'granted':'denied','ad_personalization':g?'granted':'denied'});App.hCook()},
-                hCook:()=>document.getElementById('cook').classList.remove('shw')
-            };
-        })();
-        document.addEventListener("DOMContentLoaded",App.init);
-    </script>
+<script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(console.error)}</script>
 </body>
 </html>

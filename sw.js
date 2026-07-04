@@ -1,10 +1,8 @@
-const CACHE = 'fs-v62';
+const CACHE = 'fs-v70';
 const ASSETS = [
   '/',
   'index.html',
-  'data.json',
-  'profile.jpg',
-  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
+  'CV_FS_2026.pdf',
   'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css',
   'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'
 ];
@@ -27,10 +25,8 @@ self.addEventListener('fetch', e => {
   const req = e.request;
   if (req.method !== 'GET') return;
   const u = new URL(req.url);
-  // Network-first for the page shell and data so content stays fresh;
-  // cache-first for everything else (fonts, tiles, icons).
-  const fresh = u.origin === location.origin &&
-    (req.mode === 'navigate' || u.pathname === '/' || u.pathname.endsWith('.html') || u.pathname.endsWith('.json'));
+  // Network-first for the page shell so content stays fresh; cache-first for the rest.
+  const fresh = u.origin === location.origin && (req.mode === 'navigate' || u.pathname === '/' || u.pathname.endsWith('.html'));
   if (fresh) {
     e.respondWith(
       fetch(req).then(r => {

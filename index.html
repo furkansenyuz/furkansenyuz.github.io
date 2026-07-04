@@ -425,6 +425,11 @@
                     document.querySelectorAll('.card').forEach(c=>pObs.observe(c));
 
                     if(localStorage.getItem(C.CONSENT)===null) document.getElementById('cook').classList.add('shw');
+
+                    // Tapping outside a skill tag closes any open tooltip (mobile has no hover-out).
+                    document.addEventListener('click',e=>{
+                        if(!e.target.closest('.tag')) document.querySelectorAll('.tag.active').forEach(x=>x.classList.remove('active'));
+                    });
                 } catch(e) {
                     document.getElementById('loader').innerHTML = `<p style="color:var(--gold);margin-bottom:15px">⚠️ Connection Failed</p><button class="f-btn" onclick="location.reload()">Retry</button>`;
                 }
@@ -579,7 +584,11 @@
 
             return{
                 init,lang,filt,chat,send,cls,sub,errCap:onErr,key:e=>{if(e.key==='Enter')send()},
-                tip:t=>t.classList.toggle('active'),
+                tip:t=>{
+                    const on=!t.classList.contains('active');
+                    document.querySelectorAll('.tag.active').forEach(x=>x.classList.remove('active'));
+                    if(on)t.classList.add('active');
+                },
                 
                 theme:()=>{
                     document.body.classList.toggle('light-mode');

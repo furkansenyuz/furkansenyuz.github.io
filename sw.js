@@ -1,4 +1,4 @@
-const CACHE = 'fs-v76';
+const CACHE = 'fs-v77';
 const ASSETS = [
   '/',
   'index.html',

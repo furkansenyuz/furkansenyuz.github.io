@@ -447,7 +447,7 @@ html{scrollbar-color:var(--line2) transparent}
     <div class="bar">
       <a class="wm" href="#">FURKAN <b>ŞENYÜZ</b></a>
       <div class="ctrl">
-        <button id="langBtn" aria-pressed="false" onclick="P.lang()">TR</button>
+        <button id="langBtn" aria-label="Change language" onclick="P.lang()">EN</button>
         <button id="themeBtn" aria-pressed="false" onclick="P.theme()">DARK</button>
       </div>
     </div>
@@ -674,24 +674,6 @@ html{scrollbar-color:var(--line2) transparent}
             <div><div class="rt">DCC RAG AI Assistant<span class="rtags" lang="en">RAG · LangChain · LLM</span></div>
             <p data-i="p1">RAG assistant that queries Document Control Center archives — instant answers from project specs, drawings and contracts.</p></div>
             <div class="rst"><span class="chip ok" data-i="stDeployed">Issued</span><a class="go" href="https://github.com/furkansenyuz/dcc-intelligence-hub-hv1" target="_blank" rel="noopener" data-i="viewCode">View code ↗</a></div>
-          </div>
-          <div class="reg-r">
-            <span class="rno">FS-AI-02</span>
-            <div><div class="rt"><span data-i="p2t">Tender Documentation Analysis</span><span class="rtags" lang="en">NLP · Python</span></div>
-            <p data-i="p2">Extracts key requirements, risks and compliance items from tender documents to accelerate bid preparation.</p></div>
-            <div class="rst"><span class="chip" data-i="stWip">Preliminary</span></div>
-          </div>
-          <div class="reg-r">
-            <span class="rno">FS-AI-03</span>
-            <div><div class="rt"><span data-i="p3t">Construction Claim Predictor</span><span class="rtags" lang="en">Python · Random Forest</span></div>
-            <p data-i="p3">ML model predicting potential delay claims from daily site reports.</p></div>
-            <div class="rst"><span class="chip" data-i="stWip2">Preliminary</span></div>
-          </div>
-          <div class="reg-r">
-            <span class="rno">FS-AI-04</span>
-            <div><div class="rt"><span data-i="p4t">Tender Cost Optimizer</span><span class="rtags" lang="en">Python · Automation</span></div>
-            <p data-i="p4">Automates BOQ pricing analysis and vendor bid comparison.</p></div>
-            <div class="rst"><span class="chip" data-i="stWip3">Preliminary</span></div>
           </div>
         </div>
       </section>
@@ -932,7 +914,8 @@ window.P=(function(){
     document.querySelectorAll("[data-i-ph]").forEach(el=>{const v=T(el.dataset.iPh);if(typeof v==="string")el.placeholder=v;});
     document.querySelectorAll("[data-i-al]").forEach(el=>{const v=T(el.dataset.iAl);if(typeof v==="string")el.setAttribute("aria-label",v);});
     const b=document.getElementById("langBtn");
-    b.textContent=LANGS[(LANGS.indexOf(l)+1)%LANGS.length].toUpperCase();
+    b.textContent=l.toUpperCase();
+    b.setAttribute("aria-label",{en:"Change language",tr:"Dili değiştir",sr:"Promeni jezik",de:"Sprache ändern"}[l]||"Change language");
     syncThemeBtn();renderDetail();
     if(lm){lm.removeControl(lmCtl);lmCtl=L.control.layers(null,lmLabels(),{collapsed:true}).addTo(lm);}
   }

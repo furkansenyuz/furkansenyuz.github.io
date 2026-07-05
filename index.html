@@ -946,7 +946,7 @@ window.P=(function(){
       `<ul>${e.b.map(x=>`<li>${x}</li>`).join("")}</ul>`;
     const dl=document.getElementById("detail");
     dl.classList.remove("swap");void dl.offsetWidth;dl.classList.add("swap");
-    document.querySelectorAll(".rbar").forEach((b,i)=>b.setAttribute("aria-pressed",i===sel));
+    document.querySelectorAll(".rbar").forEach(b=>b.setAttribute("aria-pressed",+b.dataset.exp===sel));
   }
 
   /* schedule <-> plot linkage */

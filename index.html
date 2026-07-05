@@ -43,6 +43,9 @@
     <meta property="twitter:description" content="Concrete holds the road up. code() tells you when it's done.">
     <meta property="twitter:image" content="https://furkansenyuz.com/profile.jpg">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14181E">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F6F5F1">
     <meta name="robots" content="index, follow, max-image-preview:large">
@@ -95,25 +98,19 @@
   --card:#1A2027; --stamp-ok:#F5B324; --stamp-wip:#6E7680;
   --grid:rgba(233,231,224,.045); --hot:#F5B324; --land:#1F2731; --lndln:#3D4854; --duo:#C9CFD7;
 }
-:root[data-theme="blueprint"]{
-  --paper:#1C4382; --ink:#EAF2FF; --mut:#A9C2E9; --line:rgba(234,242,255,.18); --line2:rgba(234,242,255,.34);
-  --acc:#FFE08A; --acc-ink:#FFE08A;
-  --work:#FFE08A; --edu:#A5EBBE; --tender:#9FD2FF;
-  --card:#23509B; --stamp-ok:#FFE08A; --stamp-wip:#A9C2E9;
-  --grid:rgba(234,242,255,.07); --hot:#FFFFFF; --land:#24549F; --lndln:rgba(234,242,255,.38); --duo:#D3E2F6;
-}
+
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
   background:var(--paper); color:var(--ink);
-  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   font-size:16px; line-height:1.65;
   -webkit-font-smoothing:antialiased;
 }
-.mono{font-family:ui-monospace,"SF Mono","Cascadia Code",Consolas,"Roboto Mono",monospace}
+.mono{font-family:"IBM Plex Mono",ui-monospace,"SF Mono",monospace}
 a{color:var(--acc-ink)}
 a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,.rbar:focus-visible,.chip:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:2px}
-.skip{position:absolute;left:12px;top:-48px;z-index:1000;background:var(--acc);color:#14181E;font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:9px 16px;text-decoration:none;transition:top .2s}
+.skip{position:absolute;left:12px;top:-48px;z-index:1000;background:var(--acc);color:#14181E;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:9px 16px;text-decoration:none;transition:top .2s}
 .skip:focus{top:12px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 
@@ -136,7 +133,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .bar{
   display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
   padding:14px clamp(20px,5vw,64px);border-bottom:1.5px solid var(--ink);
-  font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
   background:var(--paper);
 }
 .bar .wm{color:var(--ink);text-decoration:none;letter-spacing:.2em}
@@ -152,15 +149,15 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 
 /* ---------- hero ---------- */
 .hero{display:grid;grid-template-columns:1fr auto;gap:clamp(24px,5vw,72px);align-items:end;padding-top:clamp(40px,7vw,84px)}
-.eyebrow{font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mut);margin-bottom:22px}
+.eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mut);margin-bottom:22px}
 .eyebrow em{font-style:normal;color:var(--acc-ink)}
-h1.hname{font-size:clamp(3rem,8.5vw,5.4rem);font-weight:800;letter-spacing:-.03em;line-height:.95;text-transform:uppercase;text-wrap:balance}
-h1.hname span{display:block;font-weight:250;letter-spacing:-.015em}
-.role{font-family:ui-monospace,monospace;font-size:clamp(.8rem,1.6vw,.95rem);letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-top:18px}
+h1.hname{font-size:clamp(3rem,8.5vw,5.4rem);font-weight:700;letter-spacing:-.03em;line-height:.95;text-transform:uppercase;text-wrap:balance}
+h1.hname span{display:block;font-weight:300;letter-spacing:-.015em}
+.role{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:clamp(.8rem,1.6vw,.95rem);letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-top:18px}
 .slogan{margin-top:26px;font-size:clamp(1.1rem,2.5vw,1.55rem);line-height:1.45;font-weight:300}
 .slogan b{font-weight:800}
-.slogan code{font-family:ui-monospace,monospace;font-weight:600;color:var(--acc-ink);font-size:.92em}
-.links{display:flex;gap:22px;margin-top:34px;flex-wrap:wrap;font-family:ui-monospace,monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.slogan code{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:600;color:var(--acc-ink);font-size:.92em}
+.links{display:flex;gap:22px;margin-top:34px;flex-wrap:wrap;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
 .links a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line2);padding-bottom:3px;transition:color .2s,border-color .2s}
 .links a:hover{color:var(--acc-ink);border-color:var(--acc)}
 .links a.cta{color:var(--paper);background:var(--ink);border:none;padding:10px 18px}
@@ -177,13 +174,14 @@ h1.hname span{display:block;font-weight:250;letter-spacing:-.015em}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);border:1.5px solid var(--ink);margin-top:clamp(40px,6vw,64px);background:var(--card)}
 .stat{padding:18px 20px 16px;border-right:1px solid var(--line)}
 .stat:last-child{border-right:none}
-.stat .n{font-family:ui-monospace,monospace;font-size:clamp(1.4rem,3vw,2rem);font-weight:600;font-variant-numeric:tabular-nums;color:var(--acc-ink)}
-.stat .l{font-family:ui-monospace,monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-top:4px}
+.stat .n{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:clamp(1.4rem,3vw,2rem);font-weight:600;font-variant-numeric:tabular-nums;color:var(--acc-ink)}
+.stat .l{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-top:4px}
 
 
 /* ---------- hero bridge elevation ---------- */
 .brg{margin-top:clamp(30px,5vw,52px)}
 .brg svg{display:block;width:100%;height:auto}
+.brg-cap{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;fill:var(--mut);letter-spacing:.2em}
 .gnd{stroke:var(--line2);stroke-width:1}
 .twr{stroke:var(--ink);stroke-width:2.4;transform-box:fill-box;transform-origin:bottom;transform:scaleY(0);animation:rise2 .7s ease .45s forwards}
 @keyframes rise2{to{transform:scaleY(1)}}
@@ -203,7 +201,7 @@ section{padding-top:clamp(48px,7vw,80px)}
 .dim .ln::before,.dim .ln::after{content:"";position:absolute;top:-3.5px;border:4px solid transparent}
 .dim .ln::before{left:-1px;border-right:7px solid var(--line2)}
 .dim .ln::after{right:-1px;border-left:7px solid var(--line2)}
-.dim h2{font-family:ui-monospace,monospace;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;white-space:nowrap}
+.dim h2{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;white-space:nowrap}
 .dim h2 .k{color:var(--acc-ink);margin-right:10px}
 
 /* ---------- schedule ---------- */
@@ -211,7 +209,7 @@ section{padding-top:clamp(48px,7vw,80px)}
 .sched{min-width:820px;position:relative;padding:34px 0 10px}
 .grid-y{position:absolute;inset:0;pointer-events:none}
 .grid-y i{position:absolute;top:0;bottom:0;width:1px;background:var(--line)}
-.grid-y span{position:absolute;top:8px;transform:translateX(-50%);font-family:ui-monospace,monospace;font-size:10px;letter-spacing:.08em;color:var(--mut);font-variant-numeric:tabular-nums}
+.grid-y span{position:absolute;top:8px;transform:translateX(-50%);font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.08em;color:var(--mut);font-variant-numeric:tabular-nums}
 .row{position:relative;height:58px}
 .rbar{
   position:absolute;top:10px;height:24px;background:var(--work);opacity:.9;
@@ -221,16 +219,16 @@ section{padding-top:clamp(48px,7vw,80px)}
 .rbar.prep{background:var(--stamp-wip);opacity:.7}
 .rbar[aria-pressed="true"]{opacity:1;outline:1.5px solid var(--ink);outline-offset:2px}
 .rbar.now::after{content:"";position:absolute;right:-9px;top:3px;border:4px solid transparent;border-left:9px solid var(--work)}
-.rlbl{position:absolute;top:36px;font-family:ui-monospace,monospace;font-size:10.5px;letter-spacing:.05em;color:var(--ink);white-space:nowrap}
+.rlbl{position:absolute;top:36px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10.5px;letter-spacing:.05em;color:var(--ink);white-space:nowrap}
 .rlbl b{font-weight:600}
 .rlbl .co{color:var(--mut)}
-.sched-note{font-family:ui-monospace,monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);padding:10px 14px;border-top:1px solid var(--line)}
+.sched-note{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);padding:10px 14px;border-top:1px solid var(--line)}
 
 /* detail panel */
 .detail{border:1.5px solid var(--ink);border-top:none;background:var(--card);padding:18px clamp(16px,3vw,28px) 20px}
-.detail .dk{font-family:ui-monospace,monospace;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--acc-ink);margin-bottom:8px}
+.detail .dk{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--acc-ink);margin-bottom:8px}
 .detail h3{font-size:1.05rem;font-weight:700}
-.detail .dmeta{font-family:ui-monospace,monospace;font-size:11px;color:var(--mut);letter-spacing:.06em;margin:2px 0 10px}
+.detail .dmeta{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;color:var(--mut);letter-spacing:.06em;margin:2px 0 10px}
 .detail ul{list-style:none}
 .detail li{padding-left:18px;position:relative;color:var(--mut);font-size:.93rem;margin-bottom:4px}
 .detail li::before{content:"—";position:absolute;left:0;color:var(--acc-ink)}
@@ -250,25 +248,25 @@ section{padding-top:clamp(48px,7vw,80px)}
 .plot-scroll>svg{display:block;width:100%;height:auto}
 .land{fill:var(--land);stroke:var(--lndln);stroke-width:.8}
 .plot-grid{stroke:var(--line);stroke-width:1}
-.plot-lbl{font-family:ui-monospace,monospace;font-size:11px;fill:var(--mut);letter-spacing:.08em}
-.pt-lbl{font-family:ui-monospace,monospace;font-size:11.5px;fill:var(--ink)}
+.plot-lbl{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;fill:var(--mut);letter-spacing:.08em}
+.pt-lbl{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11.5px;fill:var(--ink)}
 .pt-lbl.dimm{fill:var(--mut)}
 .leader{stroke:var(--line2);stroke-width:1}
 .compass{stroke:var(--mut);fill:none;stroke-width:1.2}
-.compass-n{font-family:ui-monospace,monospace;font-size:12px;fill:var(--mut)}
+.compass-n{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;fill:var(--mut)}
 .sbar{stroke:var(--ink);stroke-width:1}
 .ins-frame{fill:var(--card);stroke:var(--ink);stroke-width:1.2}
-.ins-t{font-family:ui-monospace,monospace;font-size:9px;fill:var(--ink);letter-spacing:.16em;font-weight:600}
-.ins-lbl{font-family:ui-monospace,monospace;font-size:10px;fill:var(--ink)}
+.ins-t{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:9px;fill:var(--ink);letter-spacing:.16em;font-weight:600}
+.ins-lbl{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;fill:var(--ink)}
 .pt{transform-box:fill-box;transform-origin:center;transition:transform .2s;pointer-events:all}
 .pt-work{fill:var(--work)}
 .pt-edu{fill:var(--edu)}
 .pt-tender{fill:none;stroke:var(--tender);stroke-width:1.6}
 .pt.hot{transform:scale(1.8)}
 .pt-lbl.hot{font-weight:700;fill:var(--hot)}
-.coord{position:absolute;right:14px;bottom:54px;font-family:ui-monospace,monospace;font-size:10px;letter-spacing:.12em;color:var(--mut);pointer-events:none;font-variant-numeric:tabular-nums}
+.coord{position:absolute;right:14px;bottom:54px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.12em;color:var(--mut);pointer-events:none;font-variant-numeric:tabular-nums}
 @media(hover:none){.coord{display:none}}
-.legend{display:flex;gap:26px;flex-wrap:wrap;padding:12px 16px;border-top:1px solid var(--line);font-family:ui-monospace,monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.legend{display:flex;gap:26px;flex-wrap:wrap;padding:12px 16px;border-top:1px solid var(--line);font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
 .legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:8px;vertical-align:-1px}
 .legend .lw i{background:var(--work)}
 .legend .le i{background:var(--edu)}
@@ -277,47 +275,47 @@ section{padding-top:clamp(48px,7vw,80px)}
 /* ---------- capabilities ---------- */
 .caps{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,36px)}
 .cap{border:1.5px solid var(--ink);background:var(--card)}
-.cap h3{font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:12px 18px;border-bottom:1px solid var(--line)}
+.cap h3{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:12px 18px;border-bottom:1px solid var(--line)}
 .cap h3 span{color:var(--acc-ink)}
 .cap ul{list-style:none}
 .cap li{padding:14px 18px;border-bottom:1px solid var(--line)}
 .cap li:last-child{border-bottom:none}
 .cap .sk{font-weight:600;font-size:.98rem}
-.cap .sd{font-family:ui-monospace,monospace;font-size:11px;color:var(--mut);letter-spacing:.04em;margin-top:2px}
+.cap .sd{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;color:var(--mut);letter-spacing:.04em;margin-top:2px}
 
 /* ---------- projects: drawing register ---------- */
 .dreg{border:1.5px solid var(--ink);background:var(--card)}
-.dreg-h{display:grid;grid-template-columns:104px 1fr 190px;gap:18px;padding:10px 18px;border-bottom:1px solid var(--ink);font-family:ui-monospace,monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut)}
+.dreg-h{display:grid;grid-template-columns:104px 1fr 190px;gap:18px;padding:10px 18px;border-bottom:1px solid var(--ink);font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut)}
 .reg-r{display:grid;grid-template-columns:104px 1fr 190px;gap:18px;padding:17px 18px;border-bottom:1px solid var(--line);align-items:center;transition:background .15s}
 .reg-r:last-child{border-bottom:none}
 .reg-r:hover{background:var(--paper)}
-.rno{font-family:ui-monospace,monospace;font-size:11px;color:var(--acc-ink);letter-spacing:.08em;font-variant-numeric:tabular-nums}
+.rno{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;color:var(--acc-ink);letter-spacing:.08em;font-variant-numeric:tabular-nums}
 .rt{font-weight:700;font-size:1.02rem;letter-spacing:-.01em}
-.rtags{font-family:ui-monospace,monospace;font-size:10px;color:var(--mut);letter-spacing:.1em;text-transform:uppercase;margin-left:10px;white-space:nowrap}
+.rtags{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;color:var(--mut);letter-spacing:.1em;text-transform:uppercase;margin-left:10px;white-space:nowrap}
 .reg-r p{color:var(--mut);font-size:.92rem;margin-top:3px;max-width:62ch}
 .rst{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
-.chip{font-family:ui-monospace,monospace;font-size:9.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;border:1.5px solid var(--stamp-wip);color:var(--stamp-wip);padding:4px 10px;border-radius:2px;background:repeating-linear-gradient(45deg,transparent 0 5px,var(--grid) 5px 10px);white-space:nowrap}
+.chip{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:9.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;border:1.5px solid var(--stamp-wip);color:var(--stamp-wip);padding:4px 10px;border-radius:2px;background:repeating-linear-gradient(45deg,transparent 0 5px,var(--grid) 5px 10px);white-space:nowrap}
 .chip.ok{border-color:var(--stamp-ok);color:var(--stamp-ok);background:none}
-.dreg .go{font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--line2);padding-bottom:2px}
+.dreg .go{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--line2);padding-bottom:2px}
 .dreg .go:hover{color:var(--acc-ink);border-color:var(--acc)}
 
 /* ---------- credentials ---------- */
 .creds{border:1.5px solid var(--ink);background:var(--card)}
 .cred{display:grid;grid-template-columns:110px 1fr auto;gap:10px 20px;align-items:baseline;padding:13px 18px;border-bottom:1px solid var(--line)}
 .cred:last-child{border-bottom:none}
-.cred .yr{font-family:ui-monospace,monospace;font-size:11px;color:var(--acc-ink);letter-spacing:.08em;font-variant-numeric:tabular-nums}
+.cred .yr{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;color:var(--acc-ink);letter-spacing:.08em;font-variant-numeric:tabular-nums}
 .cred .ti{font-weight:600;font-size:.95rem}
-.cred .org{font-family:ui-monospace,monospace;font-size:11px;color:var(--mut);letter-spacing:.04em;text-align:right}
+.cred .org{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;color:var(--mut);letter-spacing:.04em;text-align:right}
 
 /* ---------- footer ---------- */
-.foot{margin-top:clamp(56px,8vw,88px);border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:center;font-family:ui-monospace,monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.foot{margin-top:clamp(56px,8vw,88px);border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:center;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
 
 /* ---------- chat ---------- */
-.bub{position:fixed;bottom:26px;right:26px;width:56px;height:56px;z-index:960;transition:transform .2s,bottom .25s;background:var(--acc);color:#14181E;border:1.5px solid var(--ink);font-family:ui-monospace,monospace;font-weight:700;font-size:15px;letter-spacing:.08em;cursor:pointer;z-index:900;transition:transform .2s}
+.bub{position:fixed;bottom:26px;right:26px;width:56px;height:56px;z-index:960;transition:transform .2s,bottom .25s;background:var(--acc);color:#14181E;border:1.5px solid var(--ink);font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:700;font-size:15px;letter-spacing:.08em;cursor:pointer;z-index:900;transition:transform .2s}
 .bub:hover{transform:translateY(-3px)}
 .chatw{position:fixed;bottom:96px;right:26px;width:min(370px,calc(100vw - 32px));height:520px;max-height:72dvh;background:var(--card);border:1.5px solid var(--ink);display:flex;flex-direction:column;z-index:900;opacity:0;visibility:hidden;transform:translateY(14px);transition:.25s}
 .chatw.act{opacity:1;visibility:visible;transform:none}
-.chat-h{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1.5px solid var(--ink);font-family:ui-monospace,monospace;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+.chat-h{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1.5px solid var(--ink);font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
 .chat-h b{color:var(--acc-ink)}
 .chat-h button{background:none;border:none;color:var(--mut);font-size:16px;cursor:pointer;padding:2px 6px}
 .msgs{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
@@ -334,12 +332,12 @@ section{padding-top:clamp(48px,7vw,80px)}
 .mod.act{opacity:1;visibility:visible}
 .m-con{background:var(--card);border:1.5px solid var(--ink);width:min(460px,100%);padding:30px clamp(20px,4vw,34px);position:relative;transform:translateY(14px);transition:.25s;max-height:88dvh;overflow-y:auto}
 .mod.act .m-con{transform:none}
-.m-con h3{font-family:ui-monospace,monospace;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;margin-bottom:18px}
+.m-con h3{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;margin-bottom:18px}
 .m-con h3 span{color:var(--acc-ink)}
 .m-x{position:absolute;top:14px;right:14px;background:none;border:none;color:var(--mut);font-size:18px;cursor:pointer}
 .frm-c{width:100%;background:var(--paper);border:1px solid var(--line2);color:var(--ink);padding:12px 14px;font-size:.95rem;font-family:inherit;margin-bottom:12px;outline:none}
 .frm-c:focus{border-color:var(--acc)}
-.frm-b{width:100%;background:var(--ink);color:var(--paper);border:none;padding:13px;font-family:ui-monospace,monospace;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;cursor:pointer}
+.frm-b{width:100%;background:var(--ink);color:var(--paper);border:none;padding:13px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;cursor:pointer}
 .frm-b:hover{background:var(--acc);color:#14181E}
 .frm-b:disabled{opacity:.6;cursor:wait}
 #fst{font-size:.85rem;margin-top:10px;display:none}
@@ -351,10 +349,10 @@ section{padding-top:clamp(48px,7vw,80px)}
 .cook{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1.5px solid var(--ink);padding:14px clamp(16px,4vw,32px);z-index:940;display:none;align-items:center;gap:14px 22px;flex-wrap:wrap;font-size:.85rem;color:var(--mut)}
 .cook.shw{display:flex}
 body:has(#cook.shw) .bub{bottom:96px}
-.cook .ck-l{font-family:ui-monospace,monospace;font-size:10px;letter-spacing:.16em;color:var(--acc-ink);flex-shrink:0}
+.cook .ck-l{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.16em;color:var(--acc-ink);flex-shrink:0}
 .cook{border-top:1.5px solid var(--acc)}
 .cook .c-act{margin-left:auto;display:flex;gap:10px}
-.cook button{font-family:ui-monospace,monospace;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:8px 16px;cursor:pointer}
+.cook button{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:8px 16px;cursor:pointer}
 .cook .yes{background:var(--acc);border:1.5px solid var(--ink);color:#14181E}
 .cook .no{background:none;border:1px solid var(--line2);color:var(--mut)}
 .cook a{color:var(--acc-ink)}
@@ -367,7 +365,7 @@ html{scrollbar-color:var(--line2) transparent}
 *::-webkit-scrollbar-thumb{background:var(--line2);border:3px solid var(--paper);border-radius:8px}
 *::-webkit-scrollbar-thumb:hover{background:var(--acc)}
 /* V2 availability line */
-.avail{display:flex;align-items:center;gap:9px;margin-top:14px;font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+.avail{display:flex;align-items:center;gap:9px;margin-top:14px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
 .avail .dot{width:8px;height:8px;border-radius:50%;background:var(--edu);box-shadow:0 0 0 0 var(--edu);animation:pulse 2.4s ease-out infinite;flex-shrink:0}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(63,125,78,.5)}70%{box-shadow:0 0 0 7px rgba(63,125,78,0)}100%{box-shadow:0 0 0 0 rgba(63,125,78,0)}}
 /* V3 stat hover */
@@ -379,7 +377,7 @@ html{scrollbar-color:var(--line2) transparent}
 .dim h2 .k{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border:1.2px solid var(--acc);color:var(--acc-ink);margin-right:12px;font-size:11px;border-radius:2px;vertical-align:middle}
 /* V1 chat chips */
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
-.chip{font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.04em;background:var(--paper);border:1px solid var(--line2);color:var(--ink);padding:8px 12px;cursor:pointer;transition:border-color .2s,color .2s;border-radius:2px}
+.chip{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.04em;background:var(--paper);border:1px solid var(--line2);color:var(--ink);padding:8px 12px;cursor:pointer;transition:border-color .2s,color .2s;border-radius:2px}
 .chip:hover{border-color:var(--acc);color:var(--acc-ink)}
 /* V7 social links */
 .links a[target]{transition:color .2s,border-color .2s}
@@ -441,7 +439,7 @@ html{scrollbar-color:var(--line2) transparent}
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
-<noscript><div style="background:#B36A00;color:#fff;font-family:ui-monospace,monospace;font-size:13px;text-align:center;padding:12px 16px">This portfolio is interactive — please enable JavaScript for the map, AI assistant and language switch. Core content is available below.</div></noscript>
+<noscript><div style="background:#B36A00;color:#fff;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;text-align:center;padding:12px 16px">This portfolio is interactive — please enable JavaScript for the map, AI assistant and language switch. Core content is available below.</div></noscript>
 <div class="sheet">
   <div class="frame">
     <span class="reg tl"></span><span class="reg tr"></span><span class="reg bl"></span><span class="reg br"></span>
@@ -479,7 +477,7 @@ html{scrollbar-color:var(--line2) transparent}
 
       <!-- FIG. 02 — bridge elevation, drawn on load -->
       <div class="brg rise dd4" aria-hidden="true">
-        <svg viewBox="0 0 1000 180" preserveAspectRatio="xMidYMax meet">
+        <svg viewBox="0 0 1000 180" preserveAspectRatio="xMidYMax meet"><text class="brg-cap" x="20" y="14">1915 ÇANAKKALE</text>
           <line class="gnd" x1="34" y1="128" x2="86" y2="128"/><line class="gnd" x1="914" y1="128" x2="966" y2="128"/>
           <line class="gnd" x1="42" y1="128" x2="34" y2="138"/><line class="gnd" x1="51" y1="128" x2="43" y2="138"/><line class="gnd" x1="60" y1="128" x2="52" y2="138"/><line class="gnd" x1="69" y1="128" x2="61" y2="138"/><line class="gnd" x1="78" y1="128" x2="70" y2="138"/><line class="gnd" x1="922" y1="128" x2="914" y2="138"/><line class="gnd" x1="931" y1="128" x2="923" y2="138"/><line class="gnd" x1="940" y1="128" x2="932" y2="138"/><line class="gnd" x1="949" y1="128" x2="941" y2="138"/><line class="gnd" x1="958" y1="128" x2="950" y2="138"/>
           <g class="twr"><line x1="276" y1="14" x2="276" y2="148"/><line x1="284" y1="14" x2="284" y2="148"/><line x1="272" y1="46" x2="288" y2="46"/><line x1="272" y1="84" x2="288" y2="84"/></g>
@@ -494,10 +492,10 @@ html{scrollbar-color:var(--line2) transparent}
 
       <!-- STATS -->
       <div class="stats rise dd5">
-        <div class="stat"><div class="n">9+</div><div class="l" data-i="st1">Years in the field</div></div>
-        <div class="stat"><div class="n">€2B+</div><div class="l" data-i="st2">Projects delivered &amp; tendered</div></div>
+        <div class="stat"><div class="n">2016 →</div><div class="l" data-i="st1">In civil engineering</div></div>
+        <div class="stat"><div class="n">€2B+</div><div class="l" data-i="st2">Project value worked on</div></div>
         <div class="stat"><div class="n">10+</div><div class="l" data-i="st3">Countries tendered</div></div>
-        <div class="stat"><div class="n">6</div><div class="l" data-i="st4">Mega-project postings</div></div>
+        <div class="stat"><div class="n">5</div><div class="l" data-i="st4">Mega projects</div></div>
       </div>
 
       <!-- A: EXPERIENCE -->
@@ -773,7 +771,7 @@ window.P=(function(){
     role:"İnşaat Mühendisi & Yapay Zekâ Çözüm Geliştiricisi",
     slogan:"<b>Beton</b> yolu ayakta tutar.<br><code>kod()</code> ne zaman biteceğini söyler.",
     cv:"CV İndir",
-    st1:"Yıl sahada",st2:"Üretilen & teklif verilen iş",st3:"Ülkede ihale",st4:"Mega proje görevi",
+    st1:"İnşaat mühendisliğinde",st2:"Üzerinde çalışılan proje değeri",st3:"Ülkede ihale",st4:"Mega proje",
     secA:"SAHA KAYDI — 2016 → BUGÜN",
     exp1:"Teknik Ofis Şefi",exp2:"İhale & Proje Yönetim Uzmanı",exp3:"Planlama & Maliyet Kontrol Şefi",
     exp4:"Teknik Ofis Şefi",exp5:"Planlama & Maliyet Mühendisi",exp6:"Şantiye Şefi",exp7:"Sınav Hazırlığı",
@@ -798,7 +796,7 @@ window.P=(function(){
     
     contactBtn:"İletişime geç",avail:"Kuzmin, Sırbistan · seçili uluslararası projelere açık",q1:"Sırbistan deneyimi?",q2:"Yapay zekâ projeleri",q3:"FIDIC & hak talepleri",chatAL:"Yapay zekâ asistanına soru sor",
     chatT:"YAPAY ZEKÂ ASİSTANI",chatGreet:"Merhaba! Ben Furkan'ın yapay zekâ asistanıyım — projeleri veya deneyimi hakkında her şeyi sorabilirsin.",chatPh:"Bir şeyler sor…",
-    chatErr:"⚠️ Bağlantı kurulamadı — iletişim formunu kullanabilirsin.",
+    chatErr:"⚠️ Yapay zekâ uyanıyor — birkaç saniye içinde tekrar gönder ya da iletişim formunu kullan.",
     mTitle:"İLETİŞİM",fName:"İsim",fEmail:"E-posta",fMsg:"Mesaj",fSend:"Mesaj gönder",fSending:"Gönderiliyor…",
     fOk:"İletildi — 24 saat içinde dönerim.",fErr:"Bir şeyler ters gitti.",
     cookieText:"Çerezler yalnızca anonim ziyaret analizi için kullanılır.",accept:"Kabul et",decline:"Reddet",
@@ -814,17 +812,17 @@ window.P=(function(){
     ]
   };
   const SR={
-    avail:"Kuzmin, Srbija · otvoren za odabrane međunarodne projekte",q1:"Iskustvo u Srbiji?",q2:"AI projekti",q3:"FIDIC i zahtevi",chatAL:"Postavite pitanje AI asistentu",
-    role:"Građevinski Inženjer & AI Developer",
+    avail:"Kuzmin, Srbija · otvoren za odabrane međunarodne projekte",q1:"Iskustvo u Srbiji?",q2:"AI projekti",q3:"FIDIC i odštetni zahtevi",chatAL:"Postavite pitanje AI asistentu",
+    role:"Građevinski Inženjer & Programer AI Rešenja",
     slogan:"<b>Beton</b> drži put.<br><code>kod()</code> kaže kada će biti gotov.",
     cv:"Preuzmi CV",contactBtn:"Kontaktirajte me",
-    st1:"Godina na terenu",st2:"Izvedeni i tenderisani projekti",st3:"Zemalja — tenderi",st4:"Mega projekata",
+    st1:"U građevinarstvu",st2:"Vrednost obrađenih projekata",st3:"Zemalja — tenderi",st4:"Mega projekti",
     secA:"TERENSKI DOSIJE — 2016 → DANAS",
     exp1:"Šef Tehničke Službe",exp2:"Specijalista za Tendere i PM",exp3:"Šef Planiranja i Kontrole Troškova",
     exp4:"Šef Tehničke Službe",exp5:"Inženjer Planiranja i Troškova",exp6:"Šef Gradilišta",exp7:"Priprema za ispit",
     secB:"PODRUČJE OPERACIJA — SITUACIONI PLAN",
     legW:"Posao i projekti",legE:"Obrazovanje",legT:"Pripremljeni tenderi",
-    fbnote:"INTERAKTIVNA MAPA SE UČITAVA NA SAJTU — PRIKAZAN JE OFLAJN PLAN",
+    fbnote:"MAPA UŽIVO SE UČITAVA NA SAJTU — PRIKAZAN JE OFLAJN PLAN",
     secC:"KOMPETENCIJE — DVE DISCIPLINE, JEDAN STO",
     capF:"TEREN / GRAĐEVINA",capD:"DIGITALNO / AI",
     sk1:"Automatizacija predmera i analize troškova",sk2:"Prediktivni modeli za odštetne zahteve",sk3:"Odlučivanje zasnovano na podacima",
@@ -839,11 +837,11 @@ window.P=(function(){
     secE:"OBRAZOVANJE I SERTIFIKATI",
     e1:"Specijalizacija mašinskog učenja",e2:"Python za sve (5 kurseva)",e3:"Ekspertiza upravljanja projektima · 66h",
     e4:"Međunarodni građevinski ugovori i odštetni zahtevi",e5:"TILOS linearno planiranje",e6:"Oracle Primavera P6 — napredni",
-    e7:"Arbitraža međunarodnih sporova",e8:"Master, Geotehnika — AI u geotehnici",e9:"Građevinarstvo — diplomirao sa pohvalom",
+    e7:"Arbitraža međunarodnih sporova",e8:"Master, Geotehnika — AI u geotehnici",e9:"Građevinarstvo — diploma sa pohvalom",
     e10:"AI i mašinsko učenje — Škola analize podataka",e11:"AI i alati produktivnosti — Škola analize podataka",
     contact_x:"",chatT:"AI ASISTENT",
     chatGreet:"Zdravo! Ja sam Furkanov AI asistent — pitajte me o njegovim projektima ili iskustvu.",
-    chatPh:"Pitajte nešto…",chatErr:"⚠️ Veza nije uspela — koristite kontakt formu.",
+    chatPh:"Pitajte nešto…",chatErr:"⚠️ Veštačka inteligencija se budi — pošaljite ponovo za nekoliko sekundi ili koristite kontakt formu.",
     mTitle:"KONTAKT",fName:"Ime",fEmail:"E-pošta",fMsg:"Poruka",fSend:"Pošalji poruku",fSending:"Slanje…",
     fOk:"Poslato — odgovoriću u roku od 24h.",fErr:"Došlo je do greške.",
     cookieText:"Kolačići se koriste samo za anonimnu analitiku poseta.",accept:"Prihvati",decline:"Odbij",
@@ -851,7 +849,7 @@ window.P=(function(){
     exps:[
       {co:"Tasyapi — autoput Kuzmin–Sremska Rača (€345M) · mart 2024 → danas",b:["Upravljanje privremenim situacijama (IPC) i administracija ugovora.","Programi upravljanja odštetnim zahtevima u Primaveri P6 i izveštaji o napretku."]},
       {co:"Tasyapi — Beograd, sedište · avg 2021 – mart 2024",b:["Kompletna tenderska dokumentacija (predmer, kalkulacije) za projekte u 10+ zemalja.","Kontrola projekata i administracija ugovora po FIDIC Yellow Book 1999."]},
-      {co:"Fernas — autoput Aydin–Denizli (€1,14 mlrd) · jan – avg 2021",b:["Master plan svih glavnih radova izrađen u TILOS-u.","Uspostavljeni svi sistemi projektnog izveštavanja."]},
+      {co:"Fernas — autoput Aydin–Denizli (€1,14 mlrd) · jan – avg 2021",b:["Master terminski plan svih glavnih radova izrađen u TILOS-u.","Uspostavljeni svi sistemi projektnog izveštavanja."]},
       {co:"Limak — autoput Malkara–Čanakkale, uklj. most 1915 Čanakkale · avg – dec 2019",b:["Tehnička služba uspostavljena od nule — izveštavanje i praćenje gradilišta.","Master plan za zemljane radove, objekte i kolovoznu konstrukciju."]},
       {co:"Limak — Severnomarmarski autoput ($500M) · jan 2018 – avg 2019",b:["Detaljni planovi za kritične radove — tuneli, prefabrikovani nosači.","Jedinične cene, količine i marže u Microsoft AX (ERP).","Privremene situacije za sve čelične mostove."]},
       {co:"Mat Yapi — 10.000 m² stambeno, 100 stanova · Istanbul · dec 2016 – jan 2018",b:["Vođenje svih radova uz praćenje po Earned Value Management (EVM).","Projekat stabilnosti kosine za iskop dubine 10 m."]},
@@ -862,8 +860,8 @@ window.P=(function(){
     avail:"Kuzmin, Serbien · offen für ausgewählte internationale Projekte",q1:"Erfahrung in Serbien?",q2:"KI-Projekte",q3:"FIDIC & Nachträge",chatAL:"Stellen Sie dem KI-Assistenten eine Frage",
     role:"Bauingenieur & KI-Lösungsentwickler",
     slogan:"<b>Beton</b> trägt die Straße.<br><code>code()</code> sagt dir, wann sie fertig ist.",
-    cv:"Lebenslauf laden",contactBtn:"Kontakt aufnehmen",
-    st1:"Jahre im Feld",st2:"Gebaut & ausgeschrieben",st3:"Länder — Ausschreibungen",st4:"Großprojekt-Stationen",
+    cv:"Lebenslauf herunterladen",contactBtn:"Kontakt aufnehmen",
+    st1:"Im Bauwesen",st2:"Bearbeitetes Projektvolumen",st3:"Länder — Ausschreibungen",st4:"Großprojekte",
     secA:"FELDAKTE — 2016 → HEUTE",
     exp1:"Leiter Technisches Büro",exp2:"Spezialist Ausschreibung & PM",exp3:"Leiter Terminplanung & Kostenkontrolle",
     exp4:"Leiter Technisches Büro",exp5:"Termin- & Kostenplaner",exp6:"Bauleiter",exp7:"Prüfungsvorbereitung",
@@ -873,22 +871,22 @@ window.P=(function(){
     secC:"KOMPETENZEN — ZWEI DISZIPLINEN, EIN SCHREIBTISCH",
     capF:"FELD / BAU",capD:"DIGITAL / KI",
     sk1:"Automatisierung von Mengen- & Kostenanalysen",sk2:"Prädiktive Modelle für Nachträge",sk3:"Datengestützte Entscheidungen",
-    sk4:"Terminplanung von Großprojekten",sk5:"Int. Markt- & Risikoanalyse",sk6:"Vertrags- & Nachtragsmanagement",
+    sk4:"Terminplanung von Großprojekten",sk5:"Int. Markt- & Risikoanalyse",sk6:"Vertragsmanagement & Streitbeilegung",
     secD:"KI-PROJEKTE — ZEICHNUNGSREGISTER",rgNo:"ZCHNG-NR.",rgT:"BEZEICHNUNG",rgS:"STATUS",
     stDeployed:"Freigegeben",stWip:"Vorabzug",stWip2:"Vorabzug",stWip3:"Vorabzug",
-    p1:"RAG-basierter KI-Assistent, der die Dokumentenarchive durchsucht — sofortige Antworten aus Spezifikationen, Zeichnungen und Verträgen.",
-    p2:"Extrahiert zentrale Anforderungen, Risiken und Compliance-Punkte aus Ausschreibungsunterlagen.",
+    p1:"RAG-basierter KI-Assistent, der das Dokumentenkontrollarchiv durchsucht — sofortige Antworten aus Spezifikationen, Zeichnungen und Verträgen.",
+    p2:"Extrahiert zentrale Anforderungen, Risiken und Compliance-Punkte aus Ausschreibungsunterlagen und beschleunigt die Angebotserstellung.",
     p3:"ML-Modell zur Vorhersage möglicher Verzugsansprüche aus täglichen Baustellenberichten.",
     p4:"Automatisiert die LV-Preisanalyse und den Angebotsvergleich.",
     viewCode:"Code ansehen ↗",
     secE:"AUSBILDUNG & ZERTIFIKATE",
     e1:"Spezialisierung Maschinelles Lernen",e2:"Python für Alle (5 Kurse)",e3:"Projektmanagement-Expertise · 66h",
     e4:"Int. Bauverträge & Nachtragsmanagement",e5:"TILOS Lineare Terminplanung",e6:"Oracle Primavera P6 — Fortgeschritten",
-    e7:"Schiedsgerichtsbarkeit int. Streitigkeiten",e8:"Master, Geotechnik — KI in der Geotechnik",e9:"Bauingenieurwesen — mit Auszeichnung",
-    e10:"KI & Maschinelles Lernen — Data Analysis School",e11:"KI & Produktivitätstools — Data Analysis School",
+    e7:"Schiedsgerichtsbarkeit bei int. Streitigkeiten",e8:"Master, Geotechnik — KI in der Geotechnik",e9:"Bauingenieurwesen — mit Auszeichnung",
+    e10:"KI & Maschinelles Lernen — Schule für Datenanalyse",e11:"KI & Produktivitätstools — Schule für Datenanalyse",
     chatT:"KI-ASSISTENT",
     chatGreet:"Hallo! Ich bin Furkans KI-Assistent — fragen Sie mich alles über seine Projekte oder Erfahrung.",
-    chatPh:"Fragen Sie etwas…",chatErr:"⚠️ Verbindung fehlgeschlagen — nutzen Sie das Kontaktformular.",
+    chatPh:"Fragen Sie etwas…",chatErr:"⚠️ Die KI wacht auf — bitte in ein paar Sekunden erneut senden oder das Kontaktformular nutzen.",
     mTitle:"KONTAKT",fName:"Name",fEmail:"E-Mail",fMsg:"Nachricht",fSend:"Nachricht senden",fSending:"Senden…",
     fOk:"Gesendet — Antwort innerhalb von 24h.",fErr:"Etwas ist schiefgelaufen.",
     cookieText:"Cookies werden nur für anonyme Besucheranalyse verwendet.",accept:"Akzeptieren",decline:"Ablehnen",
@@ -918,7 +916,7 @@ window.P=(function(){
   document.querySelectorAll("[data-i]").forEach(el=>{EN[el.dataset.i]=el.innerHTML});
   Object.assign(EN,{chatPh:"Ask something…",chatAL:"Ask the AI assistant a question",fName:"Name",fEmail:"Email",fMsg:"Message",fSending:"Sending…",
     fOk:"Sent — I will reply within 24h.",fErr:"Something went wrong.",
-    chatErr:"⚠️ Connection failed — use the contact form instead."});
+    chatErr:"⚠️ The AI is waking up — please resend in a few seconds, or use the contact form."});
   let lang="en",sel=0;
   const LANGS=["en","tr","sr","de"];
   const DICTS={en:EN,tr:TR,sr:SR,de:DE};
@@ -938,8 +936,8 @@ window.P=(function(){
     syncThemeBtn();renderDetail();
     if(lm){lm.removeControl(lmCtl);lmCtl=L.control.layers(null,lmLabels(),{collapsed:true}).addTo(lm);}
   }
-  const ORDER=["light","dark","blueprint"];
-  const TNAMES={en:{light:"LIGHT",dark:"DARK",blueprint:"BLUEPRINT"},tr:{light:"AYDINLIK",dark:"KARANLIK",blueprint:"MAVİKOPYA"},sr:{light:"SVETLA",dark:"TAMNA",blueprint:"BLUEPRINT"},de:{light:"HELL",dark:"DUNKEL",blueprint:"BLAUPAUSE"}};
+  const ORDER=["light","dark"];
+  const TNAMES={en:{light:"LIGHT",dark:"DARK"},tr:{light:"AYDINLIK",dark:"KARANLIK"},sr:{light:"SVETLA",dark:"TAMNA"},de:{light:"HELL",dark:"DUNKEL"}};
   function curTheme(){
     const t=document.documentElement.getAttribute("data-theme");
     if(t)return t;
@@ -947,12 +945,12 @@ window.P=(function(){
   }
   function syncThemeBtn(){
     const b=document.getElementById("themeBtn");
-    const nxt=ORDER[(ORDER.indexOf(curTheme())+1)%3];
+    const nxt=ORDER[(ORDER.indexOf(curTheme())+1)%ORDER.length];
     b.textContent=(TNAMES[lang]||TNAMES.en)[nxt];
     b.setAttribute("aria-pressed",curTheme()!=="light");
   }
   function theme(){
-    document.documentElement.setAttribute("data-theme",ORDER[(ORDER.indexOf(curTheme())+1)%3]);
+    document.documentElement.setAttribute("data-theme",ORDER[(ORDER.indexOf(curTheme())+1)%ORDER.length]);
     syncThemeBtn();
     if(lm)lmTile.setUrl(curTheme()==="light"?MAP_LIGHT:MAP_DARK);
   }
@@ -1095,8 +1093,10 @@ window.P=(function(){
     }catch(e){}
     setLang(l||browserLang());
   })();
+  setTimeout(warmBackend,1500);
   /* chat */
   let warmed=false;
+  function warmBackend(){if(warmed)return;warmed=true;try{fetch(new URL(API).origin,{mode:"no-cors"}).catch(()=>{});}catch(e){}}
   function ask(btn){
     const inp=document.getElementById("cinp");
     inp.value=btn.textContent.trim();
@@ -1108,7 +1108,7 @@ window.P=(function(){
     w.classList.toggle("act");
     if(w.classList.contains("act")){
       document.getElementById("cinp").focus();
-      if(!warmed){warmed=true;try{fetch(new URL(API).origin,{mode:"no-cors"}).catch(()=>{});}catch(e){}}
+      warmBackend();
     }
   }
   async function send(){

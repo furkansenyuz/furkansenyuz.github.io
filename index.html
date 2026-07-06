@@ -937,6 +937,7 @@ window.P=(function(){
     if(lm){
       const nt=L.tileLayer(curTheme()==="light"?MAP_LIGHT:MAP_DARK,{attribution:"&copy; CARTO"}).addTo(lm);
       nt.once("load",()=>{if(lmTile&&lmTile!==nt)lm.removeLayer(lmTile);lmTile=nt;});
+      lm.invalidateSize();
     }
   }
 
@@ -996,8 +997,6 @@ window.P=(function(){
     {t:"ITU",lat:41.10,lng:29.02,ty:"edu",d:"Istanbul Technical University"},
     {t:"Mugla",lat:37.21,lng:28.36,ty:"edu",d:"BSc Civil Engineering"},
     {t:"Szczecin",lat:53.42,lng:14.55,ty:"edu",d:"Erasmus"},
-    {t:"Stanford (Online)",lat:37.42,lng:-122.16,ty:"edu",d:"Andrew Ng ML"},
-    {t:"Michigan (Online)",lat:42.27,lng:-83.74,ty:"edu",d:"Python Data Science"},
     {t:"Leiden (Online)",lat:52.16,lng:4.49,ty:"edu",d:"Arbitration Cert."},
     {t:"Uzbekistan",lat:41.37,lng:64.58,ty:"tender",d:"Infrastructure Tender"},
     {t:"Kazakhstan",lat:48.01,lng:66.92,ty:"tender",d:"Infrastructure Tender"},
@@ -1049,6 +1048,7 @@ window.P=(function(){
   }
   const lmIO=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){loadLeaflet();lmIO.disconnect();}})},{rootMargin:"600px"});
   lmIO.observe(document.getElementById("ops"));
+  addEventListener("resize",()=>{if(lm)lm.invalidateSize();});
 
   /* dividers draw in */
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}}),{threshold:.4});

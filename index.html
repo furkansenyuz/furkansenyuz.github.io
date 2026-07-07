@@ -205,7 +205,7 @@ section{padding-top:clamp(48px,7vw,80px)}
 .dim h2 .k{color:var(--acc-ink);margin-right:10px}
 
 /* ---------- schedule ---------- */
-.sched-wrap{overflow-x:auto;border:1.5px solid var(--ink);background:var(--card)}
+.sched-wrap{overflow-x:auto;border:1.5px solid var(--ink);background:linear-gradient(90deg,var(--card) 30%,transparent) 0 0/48px 100% no-repeat local,linear-gradient(90deg,transparent,var(--card) 70%) 100% 0/48px 100% no-repeat local,radial-gradient(farthest-side at 0 50%,rgba(0,0,0,.16),transparent) 0 0/16px 100% no-repeat scroll,radial-gradient(farthest-side at 100% 50%,rgba(0,0,0,.16),transparent) 100% 0/16px 100% no-repeat scroll,var(--card)}
 .sched{min-width:820px;position:relative;padding:34px 0 10px}
 .grid-y{position:absolute;inset:0;pointer-events:none}
 .grid-y i{position:absolute;top:0;bottom:0;width:1px;background:var(--line)}
@@ -240,9 +240,9 @@ section{padding-top:clamp(48px,7vw,80px)}
 #lmap{display:none;height:500px;background:var(--card)}
 .plot-wrap.live #lmap{display:block}
 .plot-wrap.live .plot-scroll,.plot-wrap.live .coord,.plot-wrap.live .fbnote{display:none}
-.plot-wrap.live .legend .lw i{background:#38bdf8}
-.plot-wrap.live .legend .le i{background:#2ecc71}
-.plot-wrap.live .legend .lt i{background:#f97316;border:none}
+.plot-wrap.live .legend .lw i{background:#F5B324}
+.plot-wrap.live .legend .le i{background:#6FBF84}
+.plot-wrap.live .legend .lt i{background:#71B6DF;border:none}
 .fbnote{margin-left:auto;font-size:9.5px;color:var(--mut);letter-spacing:.1em}
 .plot-scroll{overflow-x:auto}
 .plot-scroll>svg{display:block;width:100%;height:auto}
@@ -322,6 +322,10 @@ section{padding-top:clamp(48px,7vw,80px)}
 .msg{border:1px solid var(--line2);padding:10px 13px;font-size:.92rem;line-height:1.5;max-width:86%}
 .msg.bot{border-left:3px solid var(--acc);align-self:flex-start;background:var(--paper)}
 .msg.usr{border-right:3px solid var(--mut);align-self:flex-end}
+.msg.typing{display:inline-flex;gap:5px;align-items:center;width:auto;align-self:flex-start}
+.msg.typing i{width:6px;height:6px;border-radius:50%;background:var(--acc);opacity:.5;animation:typing 1s infinite}
+.msg.typing i:nth-child(2){animation-delay:.15s}.msg.typing i:nth-child(3){animation-delay:.3s}
+@keyframes typing{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:.95;transform:translateY(-3px)}}
 .c-inp{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}
 .c-inp input{flex:1;background:var(--paper);border:1px solid var(--line2);color:var(--ink);padding:10px 14px;font-size:.95rem;outline:none}
 .c-inp input:focus{border-color:var(--acc)}
@@ -399,6 +403,7 @@ html{scrollbar-color:var(--line2) transparent}
   .pt,.rbar{transition:none}
   .avail .dot{animation:none}
   .chip,.qchip,.stat,.stat::after{transition:none}
+  .msg.typing i{animation:none}
   .detail.swap>*{animation:none}
   html{scroll-behavior:auto}
 }
@@ -406,7 +411,7 @@ html{scrollbar-color:var(--line2) transparent}
 /* ---------- responsive ---------- */
 @media(max-width:860px){
   .ctrl button{padding:8px 13px}
-  .rbar::before{content:"";position:absolute;inset:-11px 0}
+  .rbar::before{content:"";position:absolute;inset:-11px -10px}
   .dim h2{white-space:normal;font-size:11px;letter-spacing:.16em}
   .plot-scroll svg{min-width:720px}
   #lmap{height:340px}
@@ -946,8 +951,9 @@ window.P=(function(){
   function renderDetail(){
     const d=D(),e=(d.exps||EN.exps)[sel];
     const role=T("exp"+(sel+1))||document.querySelectorAll(".rlbl b")[sel].textContent;
+    const rows=[...document.querySelectorAll(".row .rbar")],vi=rows.findIndex(b=>+b.dataset.exp===sel),num=vi>=0?vi+1:sel+1;
     document.getElementById("detail").innerHTML=
-      `<div class="dk">${d.detK}${sel+1}</div><h3>${role}</h3><div class="dmeta">${e.co}</div>`+
+      `<div class="dk">${d.detK}${num}</div><h3>${role}</h3><div class="dmeta">${e.co}</div>`+
       `<ul>${e.b.map(x=>`<li>${x}</li>`).join("")}</ul>`;
     const dl=document.getElementById("detail");
     dl.classList.remove("swap");void dl.offsetWidth;dl.classList.add("swap");
@@ -1029,10 +1035,10 @@ window.P=(function(){
     lmTile=L.tileLayer(curTheme()==="light"?MAP_LIGHT:MAP_DARK,{attribution:"&copy; CARTO"}).addTo(lm);
     let tileOk=false;lmTile.on("load",()=>{tileOk=true;});setTimeout(()=>{if(!tileOk)document.querySelector(".plot-wrap").classList.remove("live");},6000);
     lmGroups={work:L.featureGroup(),edu:L.featureGroup(),tender:L.featureGroup()};
-    const all=[];
+    const all=[],MCOL={work:"#F5B324",edu:"#6FBF84",tender:"#71B6DF"};
     LOCS.forEach(o=>{
-      const c=o.ty==="edu"?"green":(o.ty==="tender"?"orange":"blue");
-      const m=L.marker([o.lat,o.lng],{icon:new L.Icon({iconUrl:PIN+c+".png",iconSize:[25,41],iconAnchor:[12,41]})}).bindPopup(`<b>${o.t}</b><br>${o.d}`,{autoPan:false});
+      const col=MCOL[o.ty]||"#F5B324";
+      const m=L.circleMarker([o.lat,o.lng],{radius:6,color:col,weight:2,fillColor:col,fillOpacity:.85,opacity:1}).bindPopup(`<b>${o.t}</b><br>${o.d}`,{autoPan:false});
       lmGroups[o.ty].addLayer(m);all.push(m);
       if(o.k)lmMarks[o.k]=m;
     });
@@ -1107,17 +1113,20 @@ window.P=(function(){
     const _c=document.getElementById("chips");if(_c)_c.remove();
     ms.insertAdjacentHTML("beforeend",`<div class="msg usr">${esc(txt)}</div>`);
     inp.value="";ms.scrollTop=ms.scrollHeight;
-    const ld=document.createElement("div");ld.className="msg bot";ld.textContent="…";ms.appendChild(ld);ms.scrollTop=ms.scrollHeight;
+    const ld=document.createElement("div");ld.className="msg bot typing";ld.innerHTML="<i></i><i></i><i></i>";ms.appendChild(ld);ms.scrollTop=ms.scrollHeight;
+    const warmMsg={en:"Waking the AI up…",tr:"Yapay zekâ uyanıyor…",sr:"Pokrećem AI asistenta…",de:"KI wird gestartet…"};
+    const warmT=setTimeout(()=>{ld.classList.remove("typing");ld.textContent=warmMsg[lang]||warmMsg.en;},8000);
+    const ctrl=new AbortController(),killT=setTimeout(()=>ctrl.abort(),35000);
     try{
       const fd=new FormData();fd.append("message",txt);
-      const r=await fetch(API,{method:"POST",body:fd});
+      const r=await fetch(API,{method:"POST",body:fd,signal:ctrl.signal});
       if(!r.ok)throw 0;
       const d=await r.json();ld.remove();
-      ms.insertAdjacentHTML("beforeend",`<div class="msg bot">${esc(d.reply)}</div>`);
+      ms.insertAdjacentHTML("beforeend",`<div class="msg bot">${esc(d.reply||"")}</div>`);
     }catch(e){
       ld.remove();
       ms.insertAdjacentHTML("beforeend",`<div class="msg bot">${T("chatErr")||"⚠️ Connection failed — use the contact form instead."}</div>`);
-    }
+    }finally{clearTimeout(warmT);clearTimeout(killT);}
     ms.scrollTop=ms.scrollHeight;
   }
   /* contact */

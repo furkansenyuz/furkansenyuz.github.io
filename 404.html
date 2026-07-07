@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>404 — Sheet not found · Furkan Şenyüz</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F6F5F1;--ink:#24272B;--mut:#5B5E64;--line:#DBD9D0;--line2:#C9C7BD;--acc:#B36A00;--acc-ink:#8A5200;--card:#FDFCF9;--grid:rgba(36,39,43,.05)}
+@media (prefers-color-scheme: dark){
+:root{--paper:#14181E;--ink:#E9E7E0;--mut:#99A0A9;--line:#2A313B;--line2:#39424E;--acc:#F5B324;--acc-ink:#F5B324;--card:#181D25;--grid:rgba(233,231,224,.045)}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{min-height:100svh;display:grid;place-items:center;padding:24px;
+  background:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px),var(--paper);
+  background-size:48px 48px,48px 48px,auto;color:var(--ink);font-family:"IBM Plex Sans",system-ui,sans-serif}
+.sheet{max-width:560px;width:100%;border:1.5px solid var(--ink);background:var(--card);position:relative;padding:clamp(30px,7vw,54px)}
+.sheet::before{content:"";position:absolute;inset:8px;border:1px solid var(--line);pointer-events:none}
+.k{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10.5px;letter-spacing:.26em;color:var(--acc-ink);text-transform:uppercase}
+h1{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:clamp(3.4rem,14vw,5.5rem);font-weight:600;letter-spacing:.04em;line-height:1;margin:14px 0 6px}
+h2{font-size:clamp(1.1rem,3.5vw,1.45rem);font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
+p{color:var(--mut);font-weight:300;line-height:1.6;font-size:.95rem}
+p.tr{font-size:.85rem;margin-top:4px}
+.back{display:inline-block;margin-top:26px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+  padding:12px 18px;background:var(--acc);color:#14181E;text-decoration:none;font-weight:600;position:relative;z-index:1}
+.back:hover{filter:brightness(1.05)}
+.back:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.tb{display:flex;justify-content:space-between;gap:10px;margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:9px;letter-spacing:.16em;color:var(--mut);text-transform:uppercase;flex-wrap:wrap}
+</style>
+</head>
+<body>
+  <main class="sheet">
+    <div class="k">Drawing register — no match</div>
+    <h1>404</h1>
+    <h2>Sheet not found.</h2>
+    <p>This drawing is not in the register. It may have been superseded, withdrawn, or never issued.</p>
+    <p class="tr">Aradığınız pafta kayıtlarda yok — ana paftaya dönün.</p>
+    <a class="back" href="/">← Back to the sheet index</a>
+    <div class="tb"><span>FS — FURKAN ŞENYÜZ</span><span>SHEET 404 · N.T.S.</span><span>© 2026</span></div>
+  </main>
+</body>
+</html>

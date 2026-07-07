@@ -302,7 +302,13 @@ section{padding-top:clamp(48px,7vw,80px)}
 .cred .org{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;color:var(--mut);letter-spacing:.04em;text-align:right}
 
 /* ---------- footer ---------- */
-.foot{margin-top:clamp(56px,8vw,88px);border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:center;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.foot{margin-top:clamp(56px,8vw,88px)}
+.tb{display:grid;grid-template-columns:2.6fr 1.1fr 1.1fr .6fr .8fr .8fr;border:1.5px solid var(--ink);background:var(--card)}
+.tb-c{display:flex;flex-direction:column;gap:5px;padding:11px 14px;border-left:1px solid var(--line);min-width:0}
+.tb-c:first-child{border-left:none}
+.tb-l{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:8.5px;letter-spacing:.18em;color:var(--mut);text-transform:uppercase}
+.tb-v{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10.5px;letter-spacing:.1em;color:var(--ink);text-transform:uppercase;white-space:nowrap}
+.tb-p .tb-v{white-space:normal}
 
 /* ---------- chat ---------- */
 .bub{position:fixed;bottom:26px;right:26px;width:56px;height:56px;z-index:960;transition:transform .2s,bottom .25s;background:var(--acc);color:#14181E;border:1.5px solid var(--ink);font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:700;font-size:15px;letter-spacing:.08em;cursor:pointer}
@@ -416,6 +422,11 @@ html{scrollbar-color:var(--line2) transparent}
   .rtags{display:block;margin:4px 0 0;white-space:normal}
   .cred{grid-template-columns:58px 1fr;gap:8px 12px}
   .cred .yr{white-space:nowrap}
+  .tb{grid-template-columns:1fr 1fr}
+  .tb-p{grid-column:1/-1}
+  .tb-c{border-left:none;border-top:1px solid var(--line)}
+  .tb-c:first-child{border-top:none}
+  .tb-c:nth-child(2n+1):not(:first-child){border-left:1px solid var(--line)}
   .cred .org{grid-column:2;text-align:left}
 }
 
@@ -684,13 +695,22 @@ html{scrollbar-color:var(--line2) transparent}
           <div class="cred"><span class="yr">2023</span><span class="ti" data-i="e4">Int. Construction Contracts &amp; Claims</span><span class="org">İTÜ</span></div>
           <div class="cred"><span class="yr">2019</span><span class="ti" data-i="e5">TILOS Linear Project Management</span><span class="org">Grid Group</span></div>
           <div class="cred"><span class="yr">2018</span><span class="ti" data-i="e6">Oracle Primavera P6 Advanced</span><span class="org">Akım Müh. / Oracle Partner</span></div>
-          <div class="cred"><span class="yr">—</span><span class="ti" data-i="e7">The Arbitration of Int. Disputes</span><span class="org">Leiden University</span></div>
+          <div class="cred"><span class="yr">Cert.</span><span class="ti" data-i="e7">The Arbitration of Int. Disputes</span><span class="org">Leiden University</span></div>
           <div class="cred"><span class="yr">2016 →</span><span class="ti" data-i="e8">MSc Geotechnical Eng. — AI in geotechnics</span><span class="org">Muğla SKU</span></div>
           <div class="cred"><span class="yr">2011–16</span><span class="ti" data-i="e9">BSc Civil Engineering — honor student</span><span class="org">Muğla SKU</span></div>
         </div>
       </section>
       </main>
-      <footer class="foot"><span>© 2026 Furkan Şenyüz — Civil Engineering × AI</span></footer>
+      <footer class="foot">
+        <div class="tb">
+          <div class="tb-c tb-p"><span class="tb-l" data-i="ftProj">PROJECT</span><span class="tb-v">Furkan Şenyüz — Civil Engineering × AI</span></div>
+          <div class="tb-c"><span class="tb-l" data-i="ftDrawn">DRAWN BY</span><span class="tb-v">F. Şenyüz</span></div>
+          <div class="tb-c"><span class="tb-l" data-i="ftSheet">SHEET</span><span class="tb-v">FS-2026-01</span></div>
+          <div class="tb-c"><span class="tb-l" data-i="ftRev">REV</span><span class="tb-v">C</span></div>
+          <div class="tb-c"><span class="tb-l" data-i="ftScale">SCALE</span><span class="tb-v">N.T.S.</span></div>
+          <div class="tb-c"><span class="tb-l" data-i="ftDate">DATE</span><span class="tb-v">© 2026</span></div>
+        </div>
+      </footer>
 
     </div>
   </div>
@@ -747,6 +767,7 @@ window.P=(function(){
     
     cv:"CV İndir",
     st1:"İnşaat mühendisliğinde",st2:"Üzerinde çalışılan proje değeri",st3:"İhaleye girilen ülke",st4:"Mega proje",
+    ftProj:"PROJE",ftDrawn:"ÇİZEN",ftSheet:"PAFTA",ftRev:"REV",ftScale:"ÖLÇEK",ftDate:"TARİH",
     secA:"SAHA KAYDI — 2016 → BUGÜN",
     exp1:"Teknik Ofis Şefi",exp2:"İhale & Proje Yönetim Uzmanı",exp3:"Planlama & Maliyet Kontrol Şefi",
     exp4:"Teknik Ofis Şefi",exp5:"Planlama & Maliyet Mühendisi",exp6:"Şantiye Şefi",exp7:"Sınav Hazırlığı",
@@ -792,6 +813,7 @@ window.P=(function(){
     
     cv:"Preuzmi CV",contactBtn:"Kontaktirajte me",
     st1:"U građevinarstvu",st2:"Vrednost obrađenih projekata",st3:"Zemalja — tenderi",st4:"Mega projekti",
+    ftProj:"PROJEKAT",ftDrawn:"CRTAO",ftSheet:"LIST",ftRev:"REV",ftScale:"RAZMERA",ftDate:"DATUM",
     secA:"TERENSKI DOSIJE — 2016 → DANAS",
     exp1:"Šef Tehničke Službe",exp2:"Specijalista za Tendere i PM",exp3:"Šef Planiranja i Kontrole Troškova",
     exp4:"Šef Tehničke Službe",exp5:"Inženjer Planiranja i Troškova",exp6:"Šef Gradilišta",exp7:"Priprema za ispit",
@@ -837,6 +859,7 @@ window.P=(function(){
     
     cv:"Lebenslauf herunterladen",contactBtn:"Kontakt aufnehmen",
     st1:"Im Bauwesen",st2:"Bearbeitetes Projektvolumen",st3:"Länder — Ausschreibungen",st4:"Großprojekte",
+    ftProj:"PROJEKT",ftDrawn:"GEZEICHNET",ftSheet:"BLATT",ftRev:"REV",ftScale:"MASSSTAB",ftDate:"DATUM",
     secA:"FELDAKTE — 2016 → HEUTE",
     exp1:"Leiter Technisches Büro",exp2:"Spezialist Ausschreibung & PM",exp3:"Leiter Terminplanung & Kostenkontrolle",
     exp4:"Leiter Technisches Büro",exp5:"Termin- & Kostenplaner",exp6:"Bauleiter",exp7:"Prüfungsvorbereitung",
@@ -879,6 +902,7 @@ window.P=(function(){
   const EN={
     detK:"DETAIL — A.",
     st1:"In civil engineering",st2:"Project value worked on",st3:"Countries tendered in",st4:"Mega projects",
+    ftProj:"PROJECT",ftDrawn:"DRAWN BY",ftSheet:"SHEET",ftRev:"REV",ftScale:"SCALE",ftDate:"DATE",
     exps:[
       {co:"Taşyapı — Kuzmin-Sremska Rača Highway (€345M) · Mar 2024 → present",b:["Managing all interim payment certificates (IPC) and contract administration.","Developing claim-management programs in Primavera P6 and delivering progress reports."]},
       {co:"Taşyapı — Belgrade HQ · Aug 2021 – Mar 2024",b:["Prepared end-to-end tender documents — BOQ and costing — for projects in 10+ countries.","Managed project controls (claims, budget, planning) and FIDIC Yellow Book 1999 administration."]},

@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Road — Furkan Şenyüz</title>
+<meta name="description" content="A career, drawn in kilometres. Follow one motorway alignment from the first excavation in 2016 to the road that learns — the story of Furkan Şenyüz.">
+<link rel="canonical" href="https://furkansenyuz.com/yol/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://furkansenyuz.com/yol/">
+<meta property="og:title" content="The Road — Furkan Şenyüz">
+<meta property="og:description" content="A career, drawn in kilometres. Scroll to begin surveying.">
+<meta property="og:image" content="https://furkansenyuz.com/profile.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#14181E; --bg2:#171C23; --ink:#E9E7E0; --mut:#99A0A9;
+  --acc:#F5B324; --acc-dim:#8A6510; --line:#2A313B; --line2:#39424E;
+  --card:#181D25; --hzrd:#F5B324; --grid:rgba(233,231,224,.045);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:
+    linear-gradient(var(--grid) 1px,transparent 1px),
+    linear-gradient(90deg,var(--grid) 1px,transparent 1px),var(--bg);
+  background-size:56px 56px,56px 56px,auto;
+  color:var(--ink);font-family:"IBM Plex Sans",system-ui,sans-serif;
+  overflow-x:hidden;
+}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+a{color:var(--acc);text-decoration:none}
+a:hover{text-decoration:underline}
+::selection{background:var(--acc);color:#14181E}
+.skip{position:absolute;left:-999px;top:0;background:var(--acc);color:#14181E;padding:8px 14px;z-index:99;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.skip:focus{left:8px}
+
+/* ============ HUD ============ */
+.hud{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;justify-content:space-between;align-items:center;
+  padding:14px clamp(16px,4vw,42px);pointer-events:none;
+  background:linear-gradient(180deg,rgba(20,24,30,.97) 55%,rgba(20,24,30,.82));
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+}
+.hud>*{pointer-events:auto}
+.hud .brand{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.2em;color:var(--ink)}
+.hud .brand b{color:var(--acc)}
+.hud .right{display:flex;align-items:center;gap:14px}
+.hud .km{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;color:var(--acc);
+  border:1px solid var(--line2);padding:6px 10px;background:var(--bg);min-width:110px;text-align:center;font-variant-numeric:tabular-nums}
+.hud button{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;background:none;
+  border:1px solid var(--line2);color:var(--mut);padding:6px 10px;cursor:pointer}
+.hud button[aria-pressed="true"]{color:#14181E;background:var(--acc);border-color:var(--acc)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+
+/* ============ HERO ============ */
+.hero{min-height:100svh;display:grid;place-content:center;text-align:center;padding:110px 20px 60px;position:relative}
+.hero .kicker{font-family:"IBM Plex Mono",monospace;font-size:clamp(10px,1.4vw,12px);letter-spacing:.34em;color:var(--mut);text-transform:uppercase}
+.hero h1{font-size:clamp(2.4rem,7.5vw,5rem);font-weight:700;letter-spacing:-.02em;line-height:1.04;margin:18px 0 14px;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--acc)}
+.hero .sub{color:var(--mut);font-weight:300;font-size:clamp(1rem,2vw,1.15rem);max-width:34em;margin:0 auto}
+.hero .sub b{color:var(--ink);font-weight:600}
+.hero .cue{margin-top:56px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.22em;color:var(--acc);text-transform:uppercase}
+.hero .cue::after{content:"";display:block;width:1px;height:52px;margin:14px auto 0;background:linear-gradient(var(--acc),transparent);animation:drip 1.8s ease-in-out infinite}
+@keyframes drip{0%{transform:scaleY(.2);transform-origin:top}60%{transform:scaleY(1)}100%{opacity:0;transform:scaleY(1)}}
+.hero .skiplnk{display:inline-block;margin-top:26px;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.14em;color:var(--mut)}
+
+/* ============ TRACK & ROUTE ============ */
+.track{position:relative;max-width:1060px;margin:0 auto;padding:40px 0 20px}
+svg.route{position:absolute;top:0;left:0;height:100%;pointer-events:none;overflow:visible}
+.route .plan{fill:none;stroke:var(--line2);stroke-width:1.5;stroke-dasharray:7 7}
+.route .built{fill:none;stroke:var(--acc);stroke-width:3;stroke-linecap:round;filter:drop-shadow(0 0 6px rgba(245,179,36,.45))}
+.route .st{fill:var(--bg);stroke:var(--line2);stroke-width:1.5}
+.route .st.on{fill:var(--acc);stroke:var(--acc)}
+
+/* checkpoints */
+.cp{position:relative;display:grid;grid-template-columns:var(--gutter,190px) 1fr;padding:clamp(56px,12vh,120px) clamp(16px,4vw,42px)}
+.cp .chain{grid-column:1;align-self:start;justify-self:center;text-align:center;padding-top:4px}
+.cp .chain .kmv{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;color:var(--acc);display:block}
+.cp .chain .yr{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.14em;color:var(--mut);display:block;margin-top:4px}
+.cp .card{grid-column:2;max-width:640px;opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.cp.on .card{opacity:1;transform:none}
+.no-js .cp .card{opacity:1;transform:none}
+.cp .tag{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.26em;color:var(--mut);text-transform:uppercase}
+.cp h2{font-size:clamp(1.5rem,3.4vw,2.2rem);font-weight:700;letter-spacing:-.01em;margin:10px 0 12px;text-wrap:balance}
+.cp p{color:var(--mut);font-weight:300;line-height:1.65;max-width:56ch}
+.cp p b{color:var(--ink);font-weight:600}
+.cp .fig{margin:26px 0 4px;border:1.5px solid var(--line2);background:var(--card);padding:18px}
+.cp .fig svg{display:block;width:100%;height:auto}
+.cp .cap{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.18em;color:var(--mut);text-transform:uppercase;margin-top:10px}
+.figline{stroke:var(--ink);stroke-width:1.6;fill:none}
+.figacc{stroke:var(--acc);stroke-width:2;fill:none}
+.figmut{stroke:var(--mut);stroke-width:1.2;fill:none}
+.figtxt{font-family:"IBM Plex Mono",monospace;font-size:10px;fill:var(--mut);letter-spacing:.12em}
+.figtxt.a{fill:var(--acc)}
+.hatch{stroke:var(--mut);stroke-width:1}
+
+/* draw-on-reveal for figure strokes */
+.cp .draw{stroke-dasharray:1200;stroke-dashoffset:1200;transition:stroke-dashoffset 1.6s ease .15s}
+.cp.on .draw{stroke-dashoffset:0}
+.no-js .cp .draw{stroke-dashoffset:0}
+
+/* detour */
+.cp.detour .card{border-left:3px solid var(--hzrd);padding-left:22px}
+.sign{width:88px;height:88px;margin:0 0 16px;position:relative}
+.sign .dia{position:absolute;inset:8px;transform:rotate(45deg);background:var(--hzrd);border:3px solid #14181E;box-shadow:0 0 0 1.5px var(--hzrd)}
+.sign .ex{position:absolute;inset:0;display:grid;place-content:center;font-weight:700;font-size:34px;color:#14181E;z-index:1}
+.barrier{height:14px;margin:18px 0 4px;background:repeating-linear-gradient(-45deg,var(--hzrd) 0 14px,#14181E 14px 28px);border:1.5px solid var(--line2)}
+
+/* paving progress */
+.pave{position:relative;height:34px;border:1.5px solid var(--line2);background:var(--bg2);overflow:hidden}
+.pave .fill{position:absolute;inset:0;width:0%;background:linear-gradient(90deg,#3a3f47,#4a505a);transition:width 2.2s ease .2s}
+.cp.on .pave .fill{width:72%}
+.no-js .pave .fill{width:72%}
+.pave .cl{position:absolute;top:50%;left:0;right:0;height:0;border-top:2px dashed var(--acc);transform:translateY(-50%);opacity:.9}
+.pave .pct{position:absolute;right:10px;top:50%;transform:translateY(-50%);font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--acc);letter-spacing:.12em}
+
+/* big number */
+.bignum{font-family:"IBM Plex Mono",monospace;font-size:clamp(2rem,5vw,3rem);color:var(--acc);letter-spacing:.02em;font-variant-numeric:tabular-nums}
+
+/* ============ DOSSIER ============ */
+.dossier{max-width:760px;margin:40px auto 0;padding:0 clamp(16px,4vw,42px) 90px}
+.dcard{border:1.5px solid var(--ink);background:var(--card);padding:clamp(26px,5vw,46px);position:relative}
+.dcard::before{content:"";position:absolute;inset:8px;border:1px solid var(--line);pointer-events:none}
+.dcard .tag{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.26em;color:var(--acc);text-transform:uppercase}
+.dcard h2{font-size:clamp(1.6rem,3.6vw,2.3rem);margin:12px 0 10px}
+.dcard p{color:var(--mut);font-weight:300;line-height:1.65}
+.dbtns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;position:relative;z-index:1}
+.dbtns a{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;padding:12px 18px;border:1.5px solid var(--line2);color:var(--ink)}
+.dbtns a:hover{border-color:var(--acc);color:var(--acc);text-decoration:none}
+.dbtns a.pri{background:var(--acc);color:#14181E;border-color:var(--acc);font-weight:600}
+.dbtns a.pri:hover{color:#14181E;filter:brightness(1.06)}
+
+/* ============ TITLE BLOCK ============ */
+.tb{max-width:1060px;margin:0 auto 26px;display:grid;grid-template-columns:2.4fr 1.1fr 1.2fr .6fr .8fr .9fr;border:1.5px solid var(--line2);background:var(--bg2)}
+.tb-c{padding:9px 12px;border-left:1px solid var(--line);min-width:0}
+.tb-c:first-child{border-left:none}
+.tb-l{display:block;font-family:"IBM Plex Mono",monospace;font-size:7.5px;letter-spacing:.2em;color:var(--mut);text-transform:uppercase}
+.tb-v{display:block;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--ink);text-transform:uppercase;margin-top:3px;white-space:nowrap}
+.tbwrap{padding:0 clamp(16px,4vw,42px)}
+
+/* ============ MOBILE ============ */
+@media(max-width:760px){
+  .cp{--gutter:56px;padding-left:10px;padding-right:16px}
+  .cp .chain .kmv{font-size:9.5px;writing-mode:vertical-rl;letter-spacing:.16em}
+  .cp .chain .yr{display:none}
+  .hud .brand span{display:none}
+  .tb{grid-template-columns:1fr 1fr}
+  .tb-c:first-child{grid-column:1/-1}
+  .tb-c{border-left:none;border-top:1px solid var(--line)}
+  .tb-c:first-child{border-top:none}
+  .tb-c:nth-child(2n+1):not(:first-child){border-left:1px solid var(--line)}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .hero .cue::after{animation:none}
+  .cp .card{opacity:1;transform:none;transition:none}
+  .cp .draw{stroke-dashoffset:0;transition:none}
+  .pave .fill{width:72%;transition:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#dossier" data-i="skipA">Skip to the dossier</a>
+
+<header class="hud">
+  <a class="brand" href="/" aria-label="Back to furkansenyuz.com">F.<b>ŞENYÜZ</b> <span data-i="hudT">— THE ROAD</span></a>
+  <div class="right">
+    <span class="km" id="km" aria-hidden="true">KM 0+000</span>
+    <button id="lEN" onclick="setL('en')" aria-pressed="true">EN</button>
+    <button id="lTR" onclick="setL('tr')" aria-pressed="false">TR</button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div>
+    <div class="kicker" data-i="kick">Furkan Şenyüz · Civil Engineer &amp; AI Developer</div>
+    <h1 data-i="h1">How do you build <em>a road?</em></h1>
+    <p class="sub" data-i="sub">One alignment. Ten years. From the first excavation to a road that learns. <b>This is a career, drawn in kilometres.</b></p>
+    <div class="cue" data-i="cue">Scroll to begin surveying</div>
+    <a class="skiplnk" href="#dossier" data-i="skipB">In a hurry? Jump to the dossier ↓</a>
+  </div>
+</section>
+
+<!-- ============ TRACK ============ -->
+<div class="track" id="track">
+  <svg class="route" aria-hidden="true"><path class="plan" d=""/><path class="built" d=""/></svg>
+
+  <!-- CP1 -->
+  <section class="cp" id="cp1">
+    <div class="chain"><span class="kmv">KM 0+000</span><span class="yr">2016</span></div>
+    <div class="card">
+      <div class="tag" data-i="c1t">Checkpoint 01 · İstanbul · Mat Yapı</div>
+      <h2 data-i="c1h">Every road starts with a hole in the ground.</h2>
+      <p data-i="c1p">December 2016. A site chief fresh out of civil engineering, running a 10,000 m² residential build — and designing the slope-stability plan for a <b>10-metre-deep excavation</b>. All site operations tracked with Earned Value Management, from day one.</p>
+      <div class="fig"><svg viewBox="0 0 560 150" role="img" aria-label="Excavation cross-section, 10 metres deep">
+        <line class="figmut" x1="0" y1="30" x2="560" y2="30"/>
+        <path class="figline draw" d="M60 30 L200 130 L420 130 L540 30"/>
+        <g class="hatch"><line x1="70" y1="34" x2="60" y2="44"/><line x1="90" y1="48" x2="80" y2="58"/><line x1="110" y1="62" x2="100" y2="72"/><line x1="130" y1="76" x2="120" y2="86"/><line x1="150" y1="90" x2="140" y2="100"/><line x1="170" y1="104" x2="160" y2="114"/><line x1="190" y1="118" x2="180" y2="128"/></g>
+        <line class="figacc draw" x1="470" y1="30" x2="470" y2="130"/>
+        <line class="figmut" x1="462" y1="30" x2="478" y2="30"/><line class="figmut" x1="462" y1="130" x2="478" y2="130"/>
+        <text class="figtxt a" x="484" y="84">10 m</text>
+        <text class="figtxt" x="205" y="122">EVM · SLOPE STABILITY</text>
+      </svg><div class="cap" data-i="c1c">Section A-A · excavation support · N.T.S.</div></div>
+    </div>
+  </section>
+
+  <!-- CP2 -->
+  <section class="cp" id="cp2">
+    <div class="chain"><span class="kmv">KM 12+400</span><span class="yr">2018–19</span></div>
+    <div class="card">
+      <div class="tag" data-i="c2t">Checkpoint 02 · Kocaeli · Limak — Northern Marmara Motorway ($500M)</div>
+      <h2 data-i="c2h">The road crosses water.</h2>
+      <p data-i="c2p">Tunnels and prefabricated beams on the critical path — detailed schedules, resource analysis, unit costs in Microsoft AX. And the part he still talks about: <b>managing progress payments for every steel bridge on the motorway.</b></p>
+      <div class="fig"><svg viewBox="0 0 560 130" role="img" aria-label="Steel truss bridge over water">
+        <line class="figline draw" x1="20" y1="88" x2="540" y2="88"/>
+        <path class="figacc draw" d="M60 88 L110 48 L160 88 L210 48 L260 88 L310 48 L360 88 L410 48 L460 88"/>
+        <path class="figline draw" d="M60 48 L460 48" stroke-dasharray="none"/>
+        <line class="figmut" x1="105" y1="88" x2="105" y2="108"/><line class="figmut" x1="255" y1="88" x2="255" y2="108"/><line class="figmut" x1="415" y1="88" x2="415" y2="108"/>
+        <path class="figmut" d="M20 112 q 14 -7 28 0 t 28 0 t 28 0 t 28 0 t 28 0 t 28 0 t 28 0 t 28 0 t 28 0 t 28 0 t 28 0 t 28 0 t 28 0 t 28 0 t 28 0 t 28 0 t 28 0 t 28 0"/>
+        <text class="figtxt" x="24" y="34">STEEL SPANS · TUNNELS · PREFAB BEAMS</text>
+      </svg><div class="cap" data-i="c2c">Elevation · steel truss spans · N.T.S.</div></div>
+    </div>
+  </section>
+
+  <!-- CP3 -->
+  <section class="cp" id="cp3">
+    <div class="chain"><span class="kmv">KM 47+000</span><span class="yr">2019</span></div>
+    <div class="card">
+      <div class="tag" data-i="c3t">Checkpoint 03 · Çanakkale · Limak — Malkara-Çanakkale Motorway</div>
+      <h2 data-i="c3h">Then the road met the sea — and jumped it.</h2>
+      <p data-i="c3p">The motorway feeding the <b>1915 Çanakkale Bridge</b> — the longest mid-span suspension bridge on Earth. He built the technical office from scratch: every reporting system, every site-tracking sheet, and the master plan for earthworks, structures and pavement.</p>
+      <div class="fig"><svg viewBox="0 0 560 150" role="img" aria-label="Suspension bridge line drawing">
+        <line class="figline draw" x1="10" y1="118" x2="550" y2="118"/>
+        <line class="figline draw" x1="150" y1="118" x2="150" y2="34"/><line class="figline draw" x1="410" y1="118" x2="410" y2="34"/>
+        <path class="figacc draw" d="M20 70 Q 85 40 150 36 Q 280 118 410 36 Q 475 40 540 70"/>
+        <g class="figmut"><line x1="190" y1="70" x2="190" y2="118"/><line x1="235" y1="94" x2="235" y2="118"/><line x1="280" y1="103" x2="280" y2="118"/><line x1="325" y1="94" x2="325" y2="118"/><line x1="370" y1="70" x2="370" y2="118"/></g>
+        <text class="figtxt a" x="228" y="28">1915 ÇANAKKALE</text>
+      </svg><div class="cap" data-i="c3c">Elevation · main crossing · N.T.S.</div></div>
+    </div>
+  </section>
+
+  <!-- CP4 · DETOUR -->
+  <section class="cp detour" id="cp4" data-detour>
+    <div class="chain"><span class="kmv" data-i="c4km">DETOUR</span><span class="yr">2020</span></div>
+    <div class="card">
+      <div class="sign" aria-hidden="true"><span class="dia"></span><span class="ex">!</span></div>
+      <div class="tag" data-i="c4t">2020 · Türkiye · Road closed</div>
+      <h2 data-i="c4h">Every honest road map shows the detour.</h2>
+      <p data-i="c4p">January to September 2020: full-time preparation for the KPSS, Türkiye's public-personnel selection examination. Nine months off the alignment — <b>marked on the record, not painted over.</b> Then the road reopened.</p>
+      <div class="barrier" aria-hidden="true"></div>
+      <div class="cap" data-i="c4c">Temporary traffic management · self-imposed</div>
+    </div>
+  </section>
+
+  <!-- CP5 -->
+  <section class="cp" id="cp5">
+    <div class="chain"><span class="kmv">KM 89+600</span><span class="yr">2021</span></div>
+    <div class="card">
+      <div class="tag" data-i="c5t">Checkpoint 04 · Aydın · Fernas — Aydın-Denizli Motorway (€1.14B)</div>
+      <h2 data-i="c5h">A billion-euro road fits on one chart.</h2>
+      <p data-i="c5p">Eight months as Planning &amp; Cost Control Chief. The whole motorway — every major work — laid out as a <b>time-distance master plan in TILOS</b>, plus every reporting system the project ran on.</p>
+      <div class="fig"><svg viewBox="0 0 560 150" role="img" aria-label="Time-distance chart">
+        <line class="figmut" x1="50" y1="16" x2="50" y2="126"/><line class="figmut" x1="50" y1="126" x2="540" y2="126"/>
+        <path class="figacc draw" d="M60 118 L200 40"/>
+        <path class="figline draw" d="M120 122 L330 58"/>
+        <path class="figacc draw" d="M240 120 L455 34"/>
+        <path class="figline draw" d="M350 122 L530 70"/>
+        <text class="figtxt" x="56" y="14">TIME</text><text class="figtxt" x="490" y="142">KM</text>
+        <text class="figtxt a" x="330" y="24">TILOS MASTER PLAN</text>
+      </svg><div class="cap" data-i="c5c">Time-distance diagram · all major works</div></div>
+    </div>
+  </section>
+
+  <!-- CP6 -->
+  <section class="cp" id="cp6">
+    <div class="chain"><span class="kmv">KM 130+000</span><span class="yr">2021–24</span></div>
+    <div class="card">
+      <div class="tag" data-i="c6t">Checkpoint 05 · Belgrade · Taşyapı HQ</div>
+      <h2 data-i="c6h">New country. Ten new corridors on the table.</h2>
+      <p data-i="c6p">Three years of tendering and project management from Belgrade: <b>end-to-end tender files — BOQ and costing — for projects in 10+ countries</b>, project controls across claims, budget and planning, and FIDIC Yellow Book 1999 administration.</p>
+      <div class="fig"><svg viewBox="0 0 560 150" role="img" aria-label="Corridors radiating from one point">
+        <circle class="figacc" cx="120" cy="75" r="5" fill="var(--acc)"/>
+        <g class="figmut" stroke-dasharray="5 6">
+          <line class="draw" x1="128" y1="70" x2="530" y2="18"/><line class="draw" x1="128" y1="73" x2="535" y2="46"/>
+          <line class="draw" x1="130" y1="76" x2="540" y2="76"/><line class="draw" x1="128" y1="79" x2="535" y2="104"/>
+          <line class="draw" x1="128" y1="82" x2="528" y2="132"/><line class="draw" x1="126" y1="68" x2="480" y2="8"/>
+        </g>
+        <text class="figtxt" x="88" y="100">BELGRADE</text>
+        <text class="figtxt a" x="440" y="142">10+ COUNTRIES</text>
+      </svg><div class="cap" data-i="c6c">Route options study · tenders prepared</div></div>
+    </div>
+  </section>
+
+  <!-- CP7 -->
+  <section class="cp" id="cp7">
+    <div class="chain"><span class="kmv">KM 172+300</span><span class="yr">2024 →</span></div>
+    <div class="card">
+      <div class="tag" data-i="c7t">Checkpoint 06 · Kuzmin, Serbia · Taşyapı — Kuzmin–Sremska Rača (€345M)</div>
+      <h2 data-i="c7h">Today: paving in progress.</h2>
+      <p data-i="c7p">Technical Office Chief on a live €345M highway to the Sava bridge. Every interim payment certificate, all contract administration, claim-management programs in Primavera P6 — <b>the section under his name is still being laid.</b></p>
+      <div class="pave" role="img" aria-label="Paving progress bar, work in progress"><div class="fill"></div><div class="cl"></div><span class="pct" data-i="c7pct">IN PROGRESS</span></div>
+      <div class="cap" data-i="c7c">Wearing course · laid daily since Mar 2024</div>
+    </div>
+  </section>
+
+  <!-- CP8 -->
+  <section class="cp" id="cp8">
+    <div class="chain"><span class="kmv">KM ∞</span><span class="yr">2025 →</span></div>
+    <div class="card">
+      <div class="tag" data-i="c8t">Checkpoint 07 · The same road, smarter</div>
+      <h2 data-i="c8h">Then he taught the road to read.</h2>
+      <p data-i="c8p">A highway generates paper the way it generates dust. So he built <b>DCC — a document-intelligence platform</b> over the project's <b>~24,000 FIDIC letters</b>: hybrid pgvector search, claim threading, a Gemini assistant. Deployed. In daily use. On the same road he's building.</p>
+      <div class="fig">
+        <div class="bignum"><span id="cnt">0</span> <span style="font-size:.45em" data-i="c8u">letters, searchable in seconds</span></div>
+        <svg viewBox="0 0 560 70" role="img" aria-label="Road becoming circuit traces" style="margin-top:12px">
+          <path class="figacc draw" d="M10 35 L200 35 L225 15 L305 15 L330 35 L560 35"/>
+          <path class="figmut draw" d="M225 55 L305 55 L330 35"/>
+          <circle cx="225" cy="15" r="3.5" fill="var(--acc)"/><circle cx="305" cy="15" r="3.5" fill="var(--acc)"/>
+          <circle cx="225" cy="55" r="3" fill="var(--mut)"/><circle cx="305" cy="55" r="3" fill="var(--mut)"/>
+        </svg>
+        <div class="cap" data-i="c8c">RAG · pgvector · Gemini — as-built intelligence</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ DOSSIER ============ -->
+<section class="dossier" id="dossier">
+  <div class="dcard">
+    <div class="tag" data-i="dt">End of alignment · KM 172+300 → open</div>
+    <h2 data-i="dh">The road continues.</h2>
+    <p data-i="dp">Ten years of highways, bridges and tenders — now with an AI layer on top. If your project needs someone who can read both a bill of quantities and a stack trace, the site office is one click away.</p>
+    <div class="dbtns">
+      <a class="pri" href="https://furkansenyuz.com/" data-i="b1">Visit the site office ↗</a>
+      <a href="/CV_FS_2026.pdf" data-i="b2">Download CV</a>
+      <a href="mailto:furkan@furkansenyuz.com" data-i="b3">Write to him</a>
+      <a href="https://www.linkedin.com/in/furkansenyuz" rel="noopener" target="_blank">LinkedIn</a>
+      <a href="https://github.com/furkansenyuz" rel="noopener" target="_blank">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<div class="tbwrap"><footer class="tb">
+  <div class="tb-c"><span class="tb-l" data-i="ftProj">Project</span><span class="tb-v">The Road — Furkan Şenyüz</span></div>
+  <div class="tb-c"><span class="tb-l" data-i="ftDrawn">Drawn by</span><span class="tb-v">F. Şenyüz</span></div>
+  <div class="tb-c"><span class="tb-l" data-i="ftSheet">Sheet</span><span class="tb-v">FS-YOL-01</span></div>
+  <div class="tb-c"><span class="tb-l" data-i="ftRev">Rev</span><span class="tb-v">A</span></div>
+  <div class="tb-c"><span class="tb-l" data-i="ftScale">Scale</span><span class="tb-v">N.T.S.</span></div>
+  <div class="tb-c"><span class="tb-l" data-i="ftDate">Date</span><span class="tb-v">© 07.2026</span></div>
+</footer></div>
+
+<script>
+document.documentElement.classList.remove("no-js");
+/* ============ i18n ============ */
+const EN={};document.querySelectorAll("[data-i]").forEach(e=>{EN[e.dataset.i]=e.innerHTML});
+const TR={
+  skipA:"Dosyaya atla",hudT:"— YOL",
+  kick:"Furkan Şenyüz · İnşaat Mühendisi & Yapay Zekâ Geliştiricisi",
+  h1:"Bir yol <em>nasıl yapılır?</em>",
+  sub:"Tek güzergâh. On yıl. İlk kazıdan, öğrenen bir yola. <b>Bu, kilometre kilometre çizilmiş bir kariyer.</b>",
+  cue:"Aplikasyona başlamak için kaydır",
+  skipB:"Acelen mi var? Dosyaya atla ↓",
+  c1t:"Kontrol Noktası 01 · İstanbul · Mat Yapı",
+  c1h:"Her yol, zemindeki bir çukurla başlar.",
+  c1p:"Aralık 2016. Okuldan yeni çıkmış bir şantiye şefi; 10.000 m² konut inşaatını yönetiyor — ve <b>10 metre derinlikteki kazının</b> şev stabilite planını kendisi tasarlıyor. Tüm saha operasyonları ilk günden Kazanılmış Değer Yönetimi (EVM) ile izleniyor.",
+  c1c:"A-A kesiti · kazı iksası · ölçeksiz",
+  c2t:"Kontrol Noktası 02 · Kocaeli · Limak — Kuzey Marmara Otoyolu ($500M)",
+  c2h:"Yol suyu geçiyor.",
+  c2p:"Kritik hatta tüneller ve prefabrik kirişler — detay programlar, kaynak analizi, Microsoft AX'te birim maliyetler. Ve hâlâ anlattığı kısım: <b>otoyoldaki tüm çelik köprülerin hakediş yönetimi.</b>",
+  c2c:"Görünüş · çelik kafes açıklıklar · ölçeksiz",
+  c3t:"Kontrol Noktası 03 · Çanakkale · Limak — Malkara-Çanakkale Otoyolu",
+  c3h:"Sonra yol denizle karşılaştı — ve üstünden atladı.",
+  c3p:"<b>1915 Çanakkale Köprüsü</b>'nü besleyen otoyol — dünyanın en uzun orta açıklıklı asma köprüsü. Teknik ofisi sıfırdan kurdu: her raporlama sistemi, her saha takip çizelgesi ve toprak işleri, sanat yapıları, üstyapı master planı.",
+  c3c:"Görünüş · ana geçiş · ölçeksiz",
+  c4km:"SERVİS YOLU",
+  c4t:"2020 · Türkiye · Yol kapalı",
+  c4h:"Dürüst her yol haritası, servis yolunu da gösterir.",
+  c4p:"Ocak–Eylül 2020: KPSS'ye tam zamanlı hazırlık. Güzergâh dışında dokuz ay — <b>kayda işlenmiş, üstü boyanmamış.</b> Sonra yol yeniden açıldı.",
+  c4c:"Geçici trafik yönetimi · kendi kararıyla",
+  c5t:"Kontrol Noktası 04 · Aydın · Fernas — Aydın-Denizli Otoyolu (€1.14B)",
+  c5h:"Milyar euro'luk bir yol, tek bir grafiğe sığar.",
+  c5p:"Sekiz ay Planlama ve Maliyet Kontrol Şefi. Otoyolun tamamı — tüm ana imalatlar — <b>TILOS'ta zaman-mesafe master planı</b> olarak; artı projenin çalıştığı bütün raporlama sistemleri.",
+  c5c:"Zaman-mesafe diyagramı · tüm ana imalatlar",
+  c6t:"Kontrol Noktası 05 · Belgrad · Taşyapı Genel Merkez",
+  c6h:"Yeni ülke. Masada on yeni koridor.",
+  c6p:"Belgrad'dan üç yıl ihale ve proje yönetimi: <b>10+ ülkede uçtan uca ihale dosyaları — metraj ve maliyetlendirme</b>, claim/bütçe/planlama proje kontrolleri ve FIDIC Yellow Book 1999 sözleşme idaresi.",
+  c6c:"Güzergâh seçenekleri etüdü · hazırlanan ihaleler",
+  c7t:"Kontrol Noktası 06 · Kuzmin, Sırbistan · Taşyapı — Kuzmin–Sremska Rača (€345M)",
+  c7h:"Bugün: serim devam ediyor.",
+  c7p:"Sava köprüsüne uzanan canlı bir €345M otoyolda Teknik Ofis Şefi. Tüm hakedişler, tüm sözleşme idaresi, Primavera P6'da claim yönetim programları — <b>adına yazılı kesim hâlâ seriliyor.</b>",
+  c7pct:"DEVAM EDİYOR",
+  c7c:"Aşınma tabakası · Mart 2024'ten beri her gün",
+  c8t:"Kontrol Noktası 07 · Aynı yol, daha akıllı",
+  c8h:"Sonra yola okumayı öğretti.",
+  c8p:"Bir otoyol, toz ürettiği gibi evrak üretir. O da projenin <b>~24.000 FIDIC yazışması</b> üzerine <b>DCC — bir doküman zekâsı platformu</b> kurdu: hibrit pgvector arama, hak talebi zincirleme, Gemini asistan. Yayında. Her gün kullanılıyor. Hem de inşa ettiği yolun üstünde.",
+  c8u:"yazışma, saniyeler içinde aranabilir",
+  c8c:"RAG · pgvector · Gemini — as-built zekâ",
+  dt:"Güzergâh sonu · KM 172+300 → açık",
+  dh:"Yol devam ediyor.",
+  dp:"On yıl otoyol, köprü ve ihale — şimdi üstünde bir de yapay zekâ katmanı. Projeniz hem metraj cetvelini hem stack trace'i okuyabilen birine ihtiyaç duyuyorsa, şantiye ofisi bir tık uzakta.",
+  b1:"Şantiye ofisine git ↗",b2:"CV indir",b3:"Ona yaz",
+  ftProj:"PROJE",ftDrawn:"ÇİZEN",ftSheet:"PAFTA",ftRev:"REV",ftScale:"ÖLÇEK",ftDate:"TARİH"
+};
+let L="en";
+function setL(l){
+  L=l;const D=l==="tr"?TR:EN;
+  document.querySelectorAll("[data-i]").forEach(e=>{const v=D[e.dataset.i];if(typeof v==="string")e.innerHTML=v;});
+  document.documentElement.lang=l;
+  document.getElementById("lEN").setAttribute("aria-pressed",l==="en");
+  document.getElementById("lTR").setAttribute("aria-pressed",l==="tr");
+  try{localStorage.setItem("fs_lang",l==="tr"?"tr":"en")}catch(e){}
+}
+try{const s=localStorage.getItem("fs_lang");if(s==="tr")setL("tr");}catch(e){}
+
+/* ============ route drawing ============ */
+const track=document.getElementById("track");
+const planP=document.querySelector(".route .plan"),builtP=document.querySelector(".route .built");
+const routeSvg=document.querySelector("svg.route");
+let pathLen=0;
+const RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+function buildRoute(){
+  const tr=track.getBoundingClientRect(),top=tr.top+scrollY;
+  const cps=[...track.querySelectorAll(".cp")];
+  const gutter=innerWidth<=760?56:190;
+  const cx=gutter/2, amp=innerWidth<=760?14:38;
+  routeSvg.setAttribute("width",gutter+amp*2);
+  routeSvg.style.width=(gutter+amp*2)+"px";
+  const pts=[[cx,0]];
+  cps.forEach((cp,i)=>{
+    const r=cp.getBoundingClientRect();
+    const y=r.top+scrollY-top+70;
+    const x=cx+(i%2? -amp:amp)*0.9;
+    if(cp.hasAttribute("data-detour")){
+      pts.push([cx-amp,y-90],[cx+amp,y-30],[cx-amp,y+30],[cx,y+110]);
+    }else{
+      pts.push([x,y]);
+    }
+  });
+  pts.push([cx,track.offsetHeight]);
+  let d=`M ${pts[0][0]} ${pts[0][1]}`;
+  for(let i=1;i<pts.length;i++){
+    const [x0,y0]=pts[i-1],[x1,y1]=pts[i],dy=(y1-y0)*0.45;
+    d+=` C ${x0} ${y0+dy}, ${x1} ${y1-dy}, ${x1} ${y1}`;
+  }
+  routeSvg.setAttribute("viewBox",`0 0 ${gutter+amp*2} ${track.offsetHeight}`);
+  routeSvg.setAttribute("height",track.offsetHeight);
+  planP.setAttribute("d",d);builtP.setAttribute("d",d);
+  pathLen=builtP.getTotalLength();
+  builtP.style.strokeDasharray=pathLen;
+  paint();
+}
+let kmEl=document.getElementById("km");
+function paint(){
+  if(!pathLen)return;
+  const tr=track.getBoundingClientRect();
+  const p=Math.min(1,Math.max(0,(innerHeight*0.72-tr.top)/tr.height));
+  builtP.style.strokeDashoffset=RM?0:pathLen*(1-p);
+  const km=172.3*p;
+  kmEl.textContent=`KM ${Math.floor(km)}+${String(Math.floor((km%1)*1000)).padStart(3,"0")}`;
+}
+let tick=false;
+addEventListener("scroll",()=>{if(!tick){tick=true;requestAnimationFrame(()=>{paint();tick=false;});}},{passive:true});
+addEventListener("resize",()=>{clearTimeout(window.__rb);window.__rb=setTimeout(buildRoute,150);});
+addEventListener("load",buildRoute);
+buildRoute();
+
+/* reveals */
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target);
+    if(e.target.id==="cp8")count();
+  }
+}),{threshold:.25});
+document.querySelectorAll(".cp").forEach(c=>io.observe(c));
+
+/* 24k counter */
+let counted=false;
+function count(){
+  if(counted)return;counted=true;
+  const el=document.getElementById("cnt"),T=24000;
+  if(RM){el.textContent=T.toLocaleString("en-US").replace(/,/g," ");return;}
+  const t0=performance.now();
+  (function f(t){const p=Math.min(1,(t-t0)/1400),v=Math.round(T*(1-Math.pow(1-p,3)));
+    el.textContent=v.toLocaleString("en-US").replace(/,/g," ");
+    if(p<1)requestAnimationFrame(f);})(t0);
+}
+</script>
+</body>
+</html>

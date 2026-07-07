@@ -1,7 +1,6 @@
-const CACHE = 'fs-v94';
+const CACHE = 'fs-v95';
 const ASSETS = [
   '/',
-  'index.html',
   'CV_FS_2026.pdf',
   'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css',
   'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'

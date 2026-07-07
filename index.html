@@ -69,7 +69,7 @@
 <body>
 <style>
 :root{
-  --paper:#F6F5F1; --ink:#24272B; --mut:#6E7178; --line:#DBD9D0; --line2:#C9C7BD;
+  --paper:#F6F5F1; --ink:#24272B; --mut:#5B5E64; --line:#DBD9D0; --line2:#C9C7BD;
   --acc:#B36A00; --acc-ink:#8A5200;
   --work:#B36A00; --edu:#3F7D4E; --tender:#3E7CA6;
   --card:#FDFCF9; --stamp-ok:#B36A00; --stamp-wip:#8A8D93;
@@ -85,7 +85,7 @@
   }
 }
 :root[data-theme="light"]{
-  --paper:#F6F5F1; --ink:#24272B; --mut:#6E7178; --line:#DBD9D0; --line2:#C9C7BD;
+  --paper:#F6F5F1; --ink:#24272B; --mut:#5B5E64; --line:#DBD9D0; --line2:#C9C7BD;
   --acc:#B36A00; --acc-ink:#8A5200;
   --work:#B36A00; --edu:#3F7D4E; --tender:#3E7CA6;
   --card:#FDFCF9; --stamp-ok:#B36A00; --stamp-wip:#8A8D93;
@@ -109,7 +109,7 @@ body{
 }
 .mono{font-family:"IBM Plex Mono",ui-monospace,"SF Mono",monospace}
 a{color:var(--acc-ink)}
-a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,.rbar:focus-visible,.chip:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:2px}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,.rbar:focus-visible,.chip:focus-visible,.qchip:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:2px}
 .skip{position:absolute;left:12px;top:-48px;z-index:1000;background:var(--acc);color:#14181E;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:9px 16px;text-decoration:none;transition:top .2s}
 .skip:focus{top:12px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
@@ -377,8 +377,8 @@ html{scrollbar-color:var(--line2) transparent}
 .dim h2 .k{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border:1.2px solid var(--acc);color:var(--acc-ink);margin-right:12px;font-size:11px;border-radius:2px;vertical-align:middle}
 /* V1 chat chips */
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
-.chip{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.04em;background:var(--paper);border:1px solid var(--line2);color:var(--ink);padding:8px 12px;cursor:pointer;transition:border-color .2s,color .2s;border-radius:2px}
-.chip:hover{border-color:var(--acc);color:var(--acc-ink)}
+.qchip{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.04em;background:var(--paper);border:1px solid var(--line2);color:var(--ink);padding:8px 12px;cursor:pointer;transition:border-color .2s,color .2s;border-radius:2px}
+.qchip:hover{border-color:var(--acc);color:var(--acc-ink)}
 /* V7 social links */
 .links a[target]{transition:color .2s,border-color .2s}
 /* V10 sticky top bar */
@@ -398,7 +398,7 @@ html{scrollbar-color:var(--line2) transparent}
   .hang,.sadl{opacity:1;animation:none}
   .pt,.rbar{transition:none}
   .avail .dot{animation:none}
-  .chip,.stat,.stat::after{transition:none}
+  .chip,.qchip,.stat,.stat::after{transition:none}
   .detail.swap>*{animation:none}
   html{scroll-behavior:auto}
 }
@@ -494,7 +494,7 @@ html{scrollbar-color:var(--line2) transparent}
       <div class="stats rise dd5">
         <div class="stat"><div class="n">2016 →</div><div class="l" data-i="st1">In civil engineering</div></div>
         <div class="stat"><div class="n">€2B+</div><div class="l" data-i="st2">Project value worked on</div></div>
-        <div class="stat"><div class="n">10+</div><div class="l" data-i="st3">Countries tendered</div></div>
+        <div class="stat"><div class="n">10+</div><div class="l" data-i="st3">Countries tendered in</div></div>
         <div class="stat"><div class="n">5</div><div class="l" data-i="st4">Mega projects</div></div>
       </div>
 
@@ -525,7 +525,7 @@ html{scrollbar-color:var(--line2) transparent}
             </div>
             <div class="row">
               <button class="rbar" style="left:42.9%;width:5.9%" data-exp="2" data-loc="aydin" aria-label="Planning and Cost Control Chief, Fernas Aydın, 2021"></button>
-              <div class="rlbl" style="left:42.9%"><b data-i="exp3">Planning &amp; Cost Control Chief</b> · <span class="co">Fernas — Aydın, TR · €1.13B</span></div>
+              <div class="rlbl" style="left:42.9%"><b data-i="exp3">Planning &amp; Cost Control Chief</b> · <span class="co">Fernas — Aydın, TR · €1.14B</span></div>
             </div>
             <div class="row">
               <button class="rbar prep" style="left:32.5%;width:7.5%" data-exp="6" aria-label="Exam preparation, Türkiye, 2020"></button>
@@ -599,7 +599,7 @@ html{scrollbar-color:var(--line2) transparent}
               <circle class="pt pt-work" id="pt-istanbul" cx="414" cy="314" r="7"/><line class="leader" x1="409" y1="309" x2="386" y2="288"/><text class="pt-lbl" id="lbl-istanbul" x="300" y="284">İstanbul</text>
               <circle class="pt pt-work" id="pt-kocaeli" cx="427" cy="317" r="7"/><line class="leader" x1="432" y1="321" x2="458" y2="336"/><text class="pt-lbl" id="lbl-kocaeli" x="462" y="341">Kocaeli · $500M mtwy</text>
               <circle class="pt pt-work" id="pt-canakkale" cx="377" cy="331" r="7"/><line class="leader" x1="371" y1="335" x2="342" y2="352"/><text class="pt-lbl" id="lbl-canakkale" x="216" y="357">Çanakkale · 1915 Bridge</text>
-              <circle class="pt pt-work" id="pt-aydin" cx="398" cy="380" r="7"/><line class="leader" x1="393" y1="384" x2="368" y2="398"/><text class="pt-lbl" id="lbl-aydin" x="288" y="403">Aydın · €1.13B</text>
+              <circle class="pt pt-work" id="pt-aydin" cx="398" cy="380" r="7"/><line class="leader" x1="393" y1="384" x2="368" y2="398"/><text class="pt-lbl" id="lbl-aydin" x="288" y="403">Aydın · €1.14B</text>
             </g>
 
             <!-- north arrow -->
@@ -707,9 +707,9 @@ html{scrollbar-color:var(--line2) transparent}
   <div class="chat-h"><span>FS — <b data-i="chatT">AI ASSISTANT</b></span><button onclick="P.chat()" aria-label="Close chat">×</button></div>
   <div class="msgs" id="msgs" role="log" aria-live="polite"><div class="msg bot" data-i="chatGreet">Hello! I'm Furkan's AI assistant — ask me anything about his projects or experience.</div>
   <div class="chips" id="chips">
-    <button class="chip" data-i="q1" onclick="P.ask(this)">Experience in Serbia?</button>
-    <button class="chip" data-i="q2" onclick="P.ask(this)">Your AI projects</button>
-    <button class="chip" data-i="q3" onclick="P.ask(this)">FIDIC &amp; claims</button>
+    <button class="qchip" data-i="q1" onclick="P.ask(this)">Experience in Serbia?</button>
+    <button class="qchip" data-i="q2" onclick="P.ask(this)">Your AI projects</button>
+    <button class="qchip" data-i="q3" onclick="P.ask(this)">FIDIC &amp; claims</button>
   </div></div>
   <div class="c-inp">
     <input type="text" id="cinp" data-i-al="chatAL" data-i-ph="chatPh" placeholder="Ask something…" onkeypress="if(event.key==='Enter')P.send()">
@@ -745,7 +745,7 @@ html{scrollbar-color:var(--line2) transparent}
 
 <script>
 function onSubmit(t){P.sub(t)}
-function onErr(){}
+function onErr(){if(window.P&&P.formErr)P.formErr();}
 function esc(x){const d=document.createElement("div");d.textContent=x;return d.innerHTML}
 window.P=(function(){
   const API="https://portfolio-backend-hu1r.onrender.com/chat";
@@ -753,7 +753,7 @@ window.P=(function(){
     role:"İnşaat Mühendisi & Yapay Zekâ Çözüm Geliştiricisi",
     slogan:"<b>Beton</b> yolu ayakta tutar.<br><code>kod()</code> ne zaman biteceğini söyler.",
     cv:"CV İndir",
-    st1:"İnşaat mühendisliğinde",st2:"Üzerinde çalışılan proje değeri",st3:"Ülkede ihale",st4:"Mega proje",
+    st1:"İnşaat mühendisliğinde",st2:"Üzerinde çalışılan proje değeri",st3:"İhaleye girilen ülke",st4:"Mega proje",
     secA:"SAHA KAYDI — 2016 → BUGÜN",
     exp1:"Teknik Ofis Şefi",exp2:"İhale & Proje Yönetim Uzmanı",exp3:"Planlama & Maliyet Kontrol Şefi",
     exp4:"Teknik Ofis Şefi",exp5:"Planlama & Maliyet Mühendisi",exp6:"Şantiye Şefi",exp7:"Sınav Hazırlığı",
@@ -802,7 +802,7 @@ window.P=(function(){
     secA:"TERENSKI DOSIJE — 2016 → DANAS",
     exp1:"Šef Tehničke Službe",exp2:"Specijalista za Tendere i PM",exp3:"Šef Planiranja i Kontrole Troškova",
     exp4:"Šef Tehničke Službe",exp5:"Inženjer Planiranja i Troškova",exp6:"Šef Gradilišta",exp7:"Priprema za ispit",
-    secB:"PODRUČJE OPERACIJA — SITUACIONI PLAN",
+    secB:"PODRUČJE OPERACIJA — SITUACIONI PLAN",remote:"DETALJ — UČENJE NA DALJINU · BEZ RAZMERE",
     legW:"Posao i projekti",legE:"Obrazovanje",legT:"Pripremljeni tenderi",
     fbnote:"MAPA UŽIVO SE UČITAVA NA SAJTU — PRIKAZAN JE OFLAJN PLAN",
     secC:"KOMPETENCIJE — DVE DISCIPLINE, JEDAN STO",
@@ -847,7 +847,7 @@ window.P=(function(){
     secA:"FELDAKTE — 2016 → HEUTE",
     exp1:"Leiter Technisches Büro",exp2:"Spezialist Ausschreibung & PM",exp3:"Leiter Terminplanung & Kostenkontrolle",
     exp4:"Leiter Technisches Büro",exp5:"Termin- & Kostenplaner",exp6:"Bauleiter",exp7:"Prüfungsvorbereitung",
-    secB:"EINSATZGEBIET — LAGEPLAN",
+    secB:"EINSATZGEBIET — LAGEPLAN",remote:"DETAIL — FERNSTUDIUM · NICHT MASSSTÄBLICH",
     legW:"Arbeit & Projekte",legE:"Ausbildung",legT:"Ausschreibungen",
     fbnote:"LIVE-KARTE LÄDT AUF DER WEBSITE — OFFLINE-PLAN WIRD GEZEIGT",
     secC:"KOMPETENZEN — ZWEI DISZIPLINEN, EIN SCHREIBTISCH",
@@ -885,6 +885,7 @@ window.P=(function(){
   };
   const EN={
     detK:"DETAIL — A.",
+    st1:"In civil engineering",st2:"Project value worked on",st3:"Countries tendered in",st4:"Mega projects",
     exps:[
       {co:"Taşyapı — Kuzmin-Sremska Rača Highway (€345M) · Mar 2024 → present",b:["Managing all interim payment certificates (IPC) and contract administration.","Developing claim-management programs in Primavera P6 and delivering progress reports."]},
       {co:"Taşyapı — Belgrade HQ · Aug 2021 – Mar 2024",b:["Prepared end-to-end tender documents — BOQ and costing — for projects in 10+ countries.","Managed project controls (claims, budget, planning) and FIDIC Yellow Book 1999 administration."]},
@@ -968,7 +969,8 @@ window.P=(function(){
     b.addEventListener("blur",()=>hot(loc,false));
     b.addEventListener("click",()=>{sel=+b.dataset.exp;renderDetail();
       document.querySelectorAll(".pt.hot,.pt-lbl.hot").forEach(x=>x.classList.remove("hot"));
-      hot(loc,true);});
+      hot(loc,true);
+      if(innerWidth<=860)document.getElementById("detail").scrollIntoView({behavior:"smooth",block:"nearest"});});
   });
 
 
@@ -1025,6 +1027,7 @@ window.P=(function(){
     document.querySelector(".plot-wrap").classList.add("live");
     lm=L.map("lmap",{zoomSnap:.25,scrollWheelZoom:false});
     lmTile=L.tileLayer(curTheme()==="light"?MAP_LIGHT:MAP_DARK,{attribution:"&copy; CARTO"}).addTo(lm);
+    let tileOk=false;lmTile.on("load",()=>{tileOk=true;});setTimeout(()=>{if(!tileOk)document.querySelector(".plot-wrap").classList.remove("live");},6000);
     lmGroups={work:L.featureGroup(),edu:L.featureGroup(),tender:L.featureGroup()};
     const all=[];
     LOCS.forEach(o=>{
@@ -1071,13 +1074,14 @@ window.P=(function(){
   (async function(){
     const saved=localStorage.getItem("fs_lang");
     if(saved&&LANGS.includes(saved)){setLang(saved);return;}
+    setLang(browserLang());               /* paint immediately; refine via geo below */
     let l=null;
     try{
       const ctrl=new AbortController();const to=setTimeout(()=>ctrl.abort(),2500);
       const r=await fetch("https://ipapi.co/json/",{signal:ctrl.signal});clearTimeout(to);
       if(r.ok){const d=await r.json();const cc=(d.country_code||"").toUpperCase();if(cc)l=GEO_LANG[cc]||"en";}
     }catch(e){}
-    setLang(l||browserLang());
+    if(l&&l!==lang)setLang(l);
   })();
   setTimeout(warmBackend,1500);
   /* chat */
@@ -1089,13 +1093,13 @@ window.P=(function(){
     const c=document.getElementById("chips");if(c)c.remove();
     send();
   }
+  let chatOpener=null;
   function chat(){
     const w=document.getElementById("chatw");
+    const opening=!w.classList.contains("act");
     w.classList.toggle("act");
-    if(w.classList.contains("act")){
-      document.getElementById("cinp").focus();
-      warmBackend();
-    }
+    if(opening){chatOpener=document.activeElement;document.getElementById("cinp").focus();warmBackend();}
+    else if(chatOpener&&chatOpener.focus)chatOpener.focus();
   }
   async function send(){
     const inp=document.getElementById("cinp"),ms=document.getElementById("msgs"),txt=inp.value.trim();
@@ -1124,8 +1128,9 @@ window.P=(function(){
     sc.src="https://www.google.com/recaptcha/api.js";sc.async=true;sc.defer=true;
     document.head.appendChild(sc);
   }
-  function cont(e){if(e)e.preventDefault();loadCaptcha();document.getElementById("fst").style.display="none";document.getElementById("mod").classList.add("act");}
-  function cls(){document.getElementById("mod").classList.remove("act");}
+  let lastFocus=null;
+  function cont(e){if(e)e.preventDefault();loadCaptcha();document.getElementById("fst").style.display="none";lastFocus=document.activeElement;document.getElementById("mod").classList.add("act");setTimeout(()=>{const n=document.getElementById("fname");if(n)n.focus();},30);}
+  function cls(){document.getElementById("mod").classList.remove("act");if(lastFocus&&lastFocus.focus)lastFocus.focus();}
   function sub(tok){
     const d={fSending:T("fSending"),fOk:T("fOk"),fErr:T("fErr"),fSend:T("fSend")},f=document.getElementById("frm"),b=f.querySelector("button.frm-b"),st=document.getElementById("fst");
     b.disabled=true;b.textContent=d.fSending||"Sending…";st.style.display="none";
@@ -1143,9 +1148,13 @@ window.P=(function(){
     if(window.gtag)gtag("consent","update",{analytics_storage:g?"granted":"denied"});
     document.getElementById("cook").classList.remove("shw");
   }
+  function formErr(){const st=document.getElementById("fst");if(st){st.innerHTML=(T("fErr")||"Something went wrong.")+' — <a href="mailto:furkan@furkansenyuz.com">furkan@furkansenyuz.com</a>';st.style.color="#e05252";st.style.display="block";}const b=document.querySelector("#frm button.frm-b");if(b)b.disabled=false;}
+  function trapTab(e){const m=document.getElementById("mod");if(e.key!=="Tab"||!m.classList.contains("act"))return;const f=[...m.querySelectorAll('a[href],button:not([disabled]),input,textarea,select,[tabindex]:not([tabindex="-1"])')].filter(el=>el.offsetParent!==null);if(!f.length)return;const first=f[0],last=f[f.length-1];if(e.shiftKey&&document.activeElement===first){last.focus();e.preventDefault();}else if(!e.shiftKey&&document.activeElement===last){first.focus();e.preventDefault();}}
+  document.getElementById("mod").addEventListener("click",e=>{if(e.target.id==="mod")cls();});
+  document.addEventListener("keydown",e=>{if(e.key==="Escape"){if(document.getElementById("mod").classList.contains("act"))cls();else if(document.getElementById("chatw").classList.contains("act"))chat();}else trapTab(e);});
   if(localStorage.getItem("fs_consent")===null)document.getElementById("cook").classList.add("shw");
 
-  return{lang:()=>{const n=LANGS[(LANGS.indexOf(lang)+1)%LANGS.length];localStorage.setItem("fs_lang",n);setLang(n);},theme,chat,send,ask,cont,cls,sub,cons};
+  return{lang:()=>{const n=LANGS[(LANGS.indexOf(lang)+1)%LANGS.length];localStorage.setItem("fs_lang",n);setLang(n);},theme,chat,send,ask,cont,cls,sub,cons,formErr};
 })();
 </script>
 

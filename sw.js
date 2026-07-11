@@ -1,4 +1,4 @@
-const CACHE = 'fs-v106';
+const CACHE = 'fs-v107';
 const ASSETS = [
   '/',
   'CV_FS_2026.pdf',
@@ -35,8 +35,10 @@ self.addEventListener('fetch', e => {
       }).catch(() => caches.match(req).then(r => r || new Response('Offline')))
     );
   } else {
+    // A network error (not a fake 200) so failed scripts fire onerror instead of
+    // executing the fallback text and the offline plan can kick in.
     e.respondWith(
-      caches.match(req).then(r => r || fetch(req).catch(() => new Response('Offline')))
+      caches.match(req).then(r => r || fetch(req).catch(() => Response.error()))
     );
   }
 });

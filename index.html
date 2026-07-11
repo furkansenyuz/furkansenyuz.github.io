@@ -220,6 +220,9 @@ section{padding-top:clamp(48px,7vw,80px)}
 .rlbl{position:absolute;top:36px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10.5px;letter-spacing:.05em;color:var(--ink);white-space:nowrap}
 .rlbl b{font-weight:600}
 .rlbl .co{color:var(--mut)}
+.shint-a{position:relative;height:0;z-index:3}
+.shint{position:absolute;top:10px;left:10px;background:var(--card);border:1px solid var(--line2);color:var(--mut);font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;opacity:0;pointer-events:none;transition:opacity .45s}
+.shint.on{opacity:.95}
 
 /* detail panel */
 .detail{border:1.5px solid var(--ink);border-top:none;background:var(--card);padding:18px clamp(16px,3vw,28px) 20px}
@@ -507,6 +510,7 @@ html{scrollbar-color:var(--line2) transparent}
       <!-- A: EXPERIENCE -->
       <section id="record">
         <div class="dim"><h2><span class="k">A</span><span data-i="secA">FIELD RECORD — 2016 → PRESENT</span></h2><div class="ln"></div></div>
+        <div class="shint-a" aria-hidden="true"><span class="shint" id="schedHint" data-i="schedHint">← swipe back to 2016</span></div>
         <div class="sched-wrap" id="schedWrap">
           <div class="sched">
             <div class="grid-y">
@@ -681,6 +685,12 @@ html{scrollbar-color:var(--line2) transparent}
             <p data-i="p1">RAG platform over ~24,000 FIDIC project letters — hybrid pgvector search, claim threading and a Gemini chat assistant.</p></div>
             <div class="rst"><span class="chip ok" data-i="stDeployed">Issued</span></div>
           </div>
+          <div class="reg-r">
+            <span class="rno">FS-AI-02</span>
+            <div><div class="rt">Portfolio Sheet — This Website<span class="rtags" lang="en">Vanilla JS · Leaflet · PWA</span></div>
+            <p data-i="p2">This site — a hand-coded drawing-sheet portfolio: live AI assistant, offline SVG survey plot, four languages and PWA support.</p></div>
+            <div class="rst"><span class="chip ok" data-i="stDeployed">Issued</span></div>
+          </div>
         </div>
       </section>
 
@@ -781,6 +791,8 @@ window.P=(function(){
     secD:"YAPAY ZEKÂ PROJELERİ — PAFTA LİSTESİ",rgNo:"PAFTA NO",rgT:"PAFTA ADI",rgS:"DURUM",fbnote:"CANLI HARİTA FURKANSENYUZ.COM\u0027DA YÜKLENİR — ÇEVRİMDIŞI PLAN GÖSTERİLİYOR",
     stDeployed:"Yayında",
     p1:"~24.000 FIDIC proje yazışması üzerinde RAG platformu — hibrit pgvector arama, hak talebi (claim) zincirleme ve Gemini sohbet asistanı.",
+    p2:"Bu site — elle kodlanmış pafta arayüzlü portfolyo: canlı yapay zekâ asistanı, çevrimdışı SVG aplikasyon planı, dört dil ve PWA desteği.",
+    schedHint:"← 2016'ya kaydır",
     
     
     
@@ -828,6 +840,8 @@ window.P=(function(){
     secD:"AI PROJEKTI — REGISTAR CRTEŽA",rgNo:"BR. CRTEŽA",rgT:"NAZIV CRTEŽA",rgS:"STATUS",
     stDeployed:"Objavljen",
     p1:"RAG platforma nad ~24.000 FIDIC projektnih dopisa — hibridna pgvector pretraga, povezivanje odštetnih zahteva i Gemini chat asistent.",
+    p2:"Ovaj sajt — ručno kodiran portfolio u stilu tehničkog crteža: AI asistent uživo, oflajn SVG plan, četiri jezika i PWA podrška.",
+    schedHint:"← prevuci do 2016",
     
     
     
@@ -874,6 +888,8 @@ window.P=(function(){
     secD:"KI-PROJEKTE — ZEICHNUNGSREGISTER",rgNo:"ZCHNG-NR.",rgT:"BEZEICHNUNG",rgS:"STATUS",
     stDeployed:"Freigegeben",
     p1:"RAG-Plattform für ~24.000 FIDIC-Projektschreiben — hybride pgvector-Suche, Claim-Verkettung und ein Gemini-Chat-Assistent.",
+    p2:"Diese Website — ein handkodiertes Portfolio im Planblatt-Stil: Live-KI-Assistent, Offline-SVG-Lageplan, vier Sprachen und PWA-Unterstützung.",
+    schedHint:"← zurück zu 2016 wischen",
     
     
     
@@ -1070,9 +1086,17 @@ window.P=(function(){
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}}),{threshold:.4});
   document.querySelectorAll(".dim").forEach(d=>io.observe(d));
 
-  /* mobile: open the schedule at today (right edge) */
+  /* mobile: open the schedule at today (right edge), hint that 2016 is off-screen */
   const sw=document.getElementById("schedWrap");
-  if(sw.scrollWidth>sw.clientWidth)sw.scrollLeft=sw.scrollWidth;
+  if(sw.scrollWidth>sw.clientWidth){
+    sw.scrollLeft=sw.scrollWidth;
+    const sh=document.getElementById("schedHint");
+    const hide=()=>sh.classList.remove("on");
+    sh.classList.add("on");
+    ["pointerdown","wheel","touchstart"].forEach(ev=>sw.addEventListener(ev,hide,{once:true,passive:true}));
+    setTimeout(()=>sw.addEventListener("scroll",hide,{once:true,passive:true}),400);
+    setTimeout(hide,9000);
+  }
 
   function browserLang(){
     const u=(navigator.language||"en").toLowerCase();

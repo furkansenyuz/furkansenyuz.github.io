@@ -3,7 +3,7 @@
 <!--
   CV source — Furkan Şenyüz (drawing-sheet style, matches furkansenyuz.com)
   Edit this file, open in Chrome, then Print → Save as PDF (A4, margins: None,
-  background graphics ON) → replace CV_FS_2026.pdf. Current: REV I · 08.2026
+  background graphics ON) → replace CV_FS_2026.pdf. Current: REV J · 08.2026
   WEB VERSION — no contact info by design.
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,6 +21,11 @@
 *{margin:0;padding:0;box-sizing:border-box}
 @page{size:A4;margin:0}
 html,body{background:#888}
+/* print & PDF: pure white paper — no grid tint, nothing bleeding to the edge */
+@media print{
+  :root{--grid:transparent}
+  html,body{background:#fff}
+}
 .sheet{width:210mm;height:297mm;background:
   linear-gradient(var(--grid) 1px,transparent 1px),
   linear-gradient(90deg,var(--grid) 1px,transparent 1px),var(--paper);
@@ -184,7 +189,7 @@ html,body{background:#888}
     <div class="tb-c"><span class="tb-l">Project</span><span class="tb-v">Curriculum Vitae — F. Şenyüz</span></div>
     <div class="tb-c"><span class="tb-l">Drawn by</span><span class="tb-v">F. Şenyüz</span></div>
     <div class="tb-c"><span class="tb-l">Sheet</span><span class="tb-v">FS-CV-08 · 1/2</span></div>
-    <div class="tb-c"><span class="tb-l">Rev</span><span class="tb-v">I</span></div>
+    <div class="tb-c"><span class="tb-l">Rev</span><span class="tb-v">J</span></div>
     <div class="tb-c"><span class="tb-l">Scale</span><span class="tb-v">N.T.S.</span></div>
     <div class="tb-c"><span class="tb-l">Date</span><span class="tb-v">08.2026</span></div>
   </div>
@@ -262,7 +267,7 @@ html,body{background:#888}
     <div class="tb-c"><span class="tb-l">Project</span><span class="tb-v">Curriculum Vitae — F. Şenyüz</span></div>
     <div class="tb-c"><span class="tb-l">Drawn by</span><span class="tb-v">F. Şenyüz</span></div>
     <div class="tb-c"><span class="tb-l">Sheet</span><span class="tb-v">FS-CV-08 · 2/2</span></div>
-    <div class="tb-c"><span class="tb-l">Rev</span><span class="tb-v">I</span></div>
+    <div class="tb-c"><span class="tb-l">Rev</span><span class="tb-v">J</span></div>
     <div class="tb-c"><span class="tb-l">Scale</span><span class="tb-v">N.T.S.</span></div>
     <div class="tb-c"><span class="tb-l">Date</span><span class="tb-v">08.2026</span></div>
   </div>

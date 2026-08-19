@@ -1,4 +1,4 @@
-const CACHE = 'fs-v109';
+const CACHE = 'fs-v110';
 const ASSETS = [
   '/',
   'CV_FS_2026.pdf',

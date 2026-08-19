@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>og-card source — Furkan Şenyüz</title>
+<!--
+  SOURCE for og-card.png (1200×630 social share card).
+  Render: chrome --headless=new --screenshot=og-card.png --window-size=1200,630
+          --hide-scrollbars --virtual-time-budget=10000 og-card.html
+  Keep SHEET / DATE in the title block in sync with index.html's footer.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#14181E; --ink:#E9E7E0; --mut:#99A0A9; --line:#2A3139; --line2:#38414B;
+    --acc:#F5B324; --grid:rgba(233,231,224,.045);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1200px;height:630px;overflow:hidden}
+  body{
+    background:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px), var(--paper);
+    background-size:60px 60px,60px 60px,auto;
+    font-family:"IBM Plex Sans",sans-serif; color:var(--ink); position:relative;
+  }
+  .frame{position:absolute;inset:28px;border:1.5px solid var(--line2);pointer-events:none}
+  .reg{position:absolute;width:22px;height:22px}
+  .reg::before,.reg::after{content:"";position:absolute;background:var(--acc)}
+  .reg::before{left:50%;top:0;bottom:0;width:2px;transform:translateX(-50%)}
+  .reg::after{top:50%;left:0;right:0;height:2px;transform:translateY(-50%)}
+  .reg.tl{top:10px;left:10px}.reg.tr{top:10px;right:10px}
+  .reg.bl{bottom:10px;left:10px}.reg.br{bottom:10px;right:10px}
+  .txt{position:absolute;left:105px;top:168px}
+  .n1{font-size:88px;font-weight:700;line-height:1.0;letter-spacing:.01em}
+  .n2{font-size:88px;font-weight:300;line-height:1.0;letter-spacing:.01em;margin-top:10px}
+  .role{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:24px;letter-spacing:.28em;color:var(--acc);margin-top:46px;white-space:nowrap}
+  .url{font-family:"IBM Plex Mono",monospace;font-size:20px;letter-spacing:.15em;color:var(--mut);margin-top:22px}
+  .port{position:absolute;right:105px;top:192px;width:246px;height:246px;border-radius:50%;
+    object-fit:cover;border:7px solid #F4F2EC;background:#F4F2EC}
+  .tb{position:absolute;left:28px;right:28px;bottom:28px;height:62px;border-top:1.5px solid var(--line2);
+    display:grid;grid-template-columns:1fr 150px 105px 118px}
+  .tb-c{padding:9px 0 0 22px;border-left:1.5px solid var(--line2);min-width:0}
+  .tb-c:first-child{border-left:none}
+  .tb-l{display:block;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.22em;color:var(--mut);text-transform:uppercase}
+  .tb-v{display:block;font-family:"IBM Plex Mono",monospace;font-size:17px;letter-spacing:.1em;margin-top:5px;white-space:nowrap}
+  .tb-v.acc{color:var(--acc)}
+</style>
+</head>
+<body>
+  <div class="frame"></div>
+  <span class="reg tl"></span><span class="reg tr"></span><span class="reg bl"></span><span class="reg br"></span>
+  <div class="txt">
+    <div class="n1">FURKAN</div>
+    <div class="n2">ŞENYÜZ</div>
+    <div class="role">CIVIL ENGINEER &amp; AI ENGINEER</div>
+    <div class="url">furkansenyuz.com</div>
+  </div>
+  <img class="port" src="profile.jpg" alt="">
+  <div class="tb">
+    <div class="tb-c"><span class="tb-l">Project</span><span class="tb-v">PORTFOLIO — ENGINEERING × AI</span></div>
+    <div class="tb-c"><span class="tb-l">Sheet</span><span class="tb-v acc">FS-2026-08</span></div>
+    <div class="tb-c"><span class="tb-l">Scale</span><span class="tb-v acc">N.T.S.</span></div>
+    <div class="tb-c"><span class="tb-l">Date</span><span class="tb-v">08.2026</span></div>
+  </div>
+</body>
+</html>

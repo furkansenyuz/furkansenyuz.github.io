@@ -222,7 +222,6 @@ section{padding-top:clamp(48px,7vw,80px)}
 
 /* detail panel */
 .detail{border:1.5px solid var(--ink);border-top:none;background:var(--card);padding:18px clamp(16px,3vw,28px) 20px}
-.detail .dk{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--acc-ink);margin-bottom:8px}
 .detail h3{font-size:1.05rem;font-weight:700}
 .detail .dmeta{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;color:var(--mut);letter-spacing:.06em;margin:2px 0 10px}
 .detail ul{list-style:none}
@@ -235,11 +234,10 @@ section{padding-top:clamp(48px,7vw,80px)}
 .plot-wrap{border:1.5px solid var(--ink);position:relative;background:var(--card)}
 #lmap{display:none;height:500px;background:var(--card);position:relative;z-index:0}
 .plot-wrap.live #lmap{display:block}
-.plot-wrap.live .plot-scroll,.plot-wrap.live .coord,.plot-wrap.live .fbnote{display:none}
+.plot-wrap.live .plot-scroll,.plot-wrap.live .coord{display:none}
 .plot-wrap.live .legend .lw i{background:#F5B324}
 .plot-wrap.live .legend .le i{background:#6FBF84}
 .plot-wrap.live .legend .lt i{background:#71B6DF;border:none}
-.fbnote{margin-left:auto;font-size:9.5px;color:var(--mut);letter-spacing:.1em}
 .plot-scroll{overflow-x:auto}
 .plot-scroll>svg{display:block;width:100%;height:auto}
 .land{fill:var(--land);stroke:var(--lndln);stroke-width:.8}
@@ -492,7 +490,7 @@ html{scrollbar-color:var(--line2) transparent}
 
       <!-- A: EXPERIENCE -->
       <section id="record">
-        <div class="dim"><h2><span class="k">A</span><span data-i="secA">FIELD RECORD — 2016 → PRESENT</span></h2><div class="ln"></div></div>
+        <div class="dim"><h2><span class="k">A</span><span data-i="secA">EXPERIENCE — 2016 → PRESENT</span></h2><div class="ln"></div></div>
         <div class="sched-wrap" id="schedWrap">
           <div class="sched">
             <div class="grid-y">
@@ -624,7 +622,6 @@ html{scrollbar-color:var(--line2) transparent}
             <span class="lw"><i></i><span data-i="legW">Work &amp; projects</span></span>
             <span class="le"><i></i><span data-i="legE">Education</span></span>
             <span class="lt"><i></i><span data-i="legT">Tenders prepared</span></span>
-            <span class="fbnote" data-i="fbnote">LIVE MAP LOADS ON FURKANSENYUZ.COM — OFFLINE PLAN SHOWN</span>
           </div>
         </div>
       </section>
@@ -769,7 +766,7 @@ window.P=(function(){
     
     cv:"CV İndir",
     st1:"İnşaat mühendisliğinde",st2:"Üzerinde çalışılan proje değeri",st3:"İhaleye girilen ülke",st4:"Mega proje",
-    secA:"SAHA KAYDI — 2016 → BUGÜN",
+    secA:"DENEYİM — 2016 → BUGÜN",
     exp1:"Proje Yönetim Ofisi Şefi",exp2:"İhale & Proje Yönetim Uzmanı",exp3:"Planlama & Maliyet Kontrol Şefi",
     exp4:"Teknik Ofis Şefi",exp5:"Planlama & Maliyet Mühendisi",exp6:"Şantiye Şefi",
     secB:"OPERASYON SAHASI",
@@ -778,7 +775,7 @@ window.P=(function(){
     capF:"SAHA / İNŞAAT",capD:"DİJİTAL / YAPAY ZEKÂ",
     sk1:"Metraj & maliyet analizi otomasyonu",sk2:"RAG & LLM entegrasyonu (Gemini)",sk3:"Raporlama panoları & Microsoft AX",
     sk4:"Mega proje planlama",sk5:"Uluslararası pazar & risk analizi",sk6:"Sözleşme yönetimi & uyuşmazlık çözümü",
-    secD:"YAPAY ZEKÂ PROJELERİ",rgNo:"NO",rgT:"PROJE",rgS:"DURUM",fbnote:"CANLI HARİTA FURKANSENYUZ.COM\u0027DA YÜKLENİR — ÇEVRİMDIŞI PLAN GÖSTERİLİYOR",
+    secD:"YAPAY ZEKÂ PROJELERİ",rgNo:"NO",rgT:"PROJE",rgS:"DURUM",
     stDaily:"Günlük kullanımda",
     p1:"~24.000 FIDIC proje yazışması üzerinde RAG platformu — hibrit pgvector araması, hak talebi (claim) zincirleme ve Gemini sohbet asistanı.",
     p2:"Tedarikçi faturalarını kantar ve saha kayıtlarıyla çapraz kontrol eder — miktar ve fiyat uyuşmazlıklarını otomatik işaretler.",
@@ -802,7 +799,6 @@ window.P=(function(){
     mTitle:"İLETİŞİM",fName:"İsim",fEmail:"E-posta",fMsg:"Mesaj",fSend:"Mesaj gönder",fSending:"Gönderiliyor…",
     fOk:"İletildi — 24 saat içinde dönerim.",fErr:"Bir şeyler ters gitti.",
     cookieText:"Çerezler yalnızca anonim ziyaret analizi için kullanılır.",accept:"Kabul et",decline:"Reddet",
-    detK:"DETAY — A.",
     exps:[
       {co:"Taşyapı — Kuzmin-Sremska Rača Otoyolu (€345M) · Mar 2024 → bugün",b:["Tüm hakedişlerin (IPC), sözleşme yönetiminin ve ilerleme raporlamasının yürütülmesi.","Süre uzatımı (EOT) ve maliyet taleplerinin (claim) hazırlanması — Primavera P6'da destekleyici iş programlarıyla."]},
       {co:"Taşyapı — Belgrad Genel Merkez · Ağu 2021 – Mar 2024",b:["10+ ülkede uçtan uca ihale dosyaları: metraj (BOQ) ve maliyetlendirme.","Proje kontrolleri — claim, bütçe, planlama — ve FIDIC Yellow Book 1999 sözleşme idaresi."]},
@@ -817,12 +813,11 @@ window.P=(function(){
     
     cv:"Preuzmi CV",contactBtn:"Kontaktirajte me",
     st1:"U građevinarstvu",st2:"Vrednost obrađenih projekata",st3:"Zemalja — tenderi",st4:"Mega projekti",
-    secA:"TERENSKI DOSIJE — 2016 → DANAS",
+    secA:"ISKUSTVO — 2016 → DANAS",
     exp1:"Šef Kancelarije za Upravljanje Projektima",exp2:"Specijalista za Tendere i PM",exp3:"Šef Planiranja i Kontrole Troškova",
     exp4:"Šef Tehničke Službe",exp5:"Inženjer Planiranja i Troškova",exp6:"Šef Gradilišta",
     secB:"PODRUČJE OPERACIJA",remote:"DETALJ — UČENJE NA DALJINU · BEZ RAZMERE",
     legW:"Posao i projekti",legE:"Obrazovanje",legT:"Pripremljeni tenderi",
-    fbnote:"MAPA UŽIVO SE UČITAVA NA SAJTU — PRIKAZAN JE OFLAJN PLAN",
     secC:"KOMPETENCIJE",
     capF:"TEREN / GRAĐEVINA",capD:"DIGITALNO / AI",
     sk1:"Automatizacija predmera i analize troškova",sk2:"RAG i LLM integracija (Gemini)",sk3:"Izveštajne table i Microsoft AX",
@@ -850,7 +845,6 @@ window.P=(function(){
     mTitle:"KONTAKT",fName:"Ime",fEmail:"E-pošta",fMsg:"Poruka",fSend:"Pošalji poruku",fSending:"Slanje…",
     fOk:"Poslato — odgovoriću u roku od 24h.",fErr:"Došlo je do greške.",
     cookieText:"Kolačići se koriste samo za anonimnu analitiku poseta.",accept:"Prihvati",decline:"Odbij",
-    detK:"DETALJ — A.",
     exps:[
       {co:"Tasyapi — autoput Kuzmin–Sremska Rača (€345M) · mart 2024 → danas",b:["Upravljanje privremenim situacijama (IPC), administracija ugovora i izveštavanje o napretku.","Priprema zahteva za produženje roka (EOT) i troškovnih zahteva, uz prateće terminske planove u Primaveri P6."]},
       {co:"Tasyapi — Beograd, sedište · avg 2021 – mart 2024",b:["Kompletna tenderska dokumentacija (predmer, kalkulacije) za projekte u 10+ zemalja.","Kontrola projekata i administracija ugovora po FIDIC Yellow Book 1999."]},
@@ -865,12 +859,11 @@ window.P=(function(){
     
     cv:"Lebenslauf herunterladen",contactBtn:"Kontakt aufnehmen",
     st1:"Im Bauwesen",st2:"Bearbeitetes Projektvolumen",st3:"Länder — Ausschreibungen",st4:"Großprojekte",
-    secA:"FELDAKTE — 2016 → HEUTE",
+    secA:"BERUFSERFAHRUNG — 2016 → HEUTE",
     exp1:"Leiter Projektmanagement-Büro",exp2:"Spezialist Ausschreibung & PM",exp3:"Leiter Terminplanung & Kostenkontrolle",
     exp4:"Leiter Technisches Büro",exp5:"Termin- & Kostenplaner",exp6:"Bauleiter",
     secB:"EINSATZGEBIET",remote:"DETAIL — FERNSTUDIUM · NICHT MASSSTÄBLICH",
     legW:"Arbeit & Projekte",legE:"Ausbildung",legT:"Ausschreibungen",
-    fbnote:"LIVE-KARTE LÄDT AUF DER WEBSITE — OFFLINE-PLAN WIRD GEZEIGT",
     secC:"KOMPETENZEN",
     capF:"FELD / BAU",capD:"DIGITAL / KI",
     sk1:"Automatisierung von Mengen- & Kostenanalysen",sk2:"RAG- & LLM-Integration (Gemini)",sk3:"Dashboards & Microsoft AX",
@@ -898,7 +891,6 @@ window.P=(function(){
     mTitle:"KONTAKT",fName:"Name",fEmail:"E-Mail",fMsg:"Nachricht",fSend:"Nachricht senden",fSending:"Senden…",
     fOk:"Gesendet — Antwort innerhalb von 24h.",fErr:"Etwas ist schiefgelaufen.",
     cookieText:"Cookies werden nur für anonyme Besucheranalyse verwendet.",accept:"Akzeptieren",decline:"Ablehnen",
-    detK:"DETAIL — A.",
     exps:[
       {co:"Tasyapi — Autobahn Kuzmin–Sremska Rača (€345M) · März 2024 → heute",b:["Abwicklung aller Abschlagszahlungen (IPC), Vertragsadministration und Fortschrittsberichte.","Erstellung von Bauzeit- (EOT) und Mehrkostennachträgen, gestützt auf Terminpläne in Primavera P6."]},
       {co:"Tasyapi — Belgrad, Zentrale · Aug 2021 – März 2024",b:["Komplette Ausschreibungsunterlagen (LV, Kalkulation) für Projekte in 10+ Ländern.","Projektsteuerung und Vertragsadministration nach FIDIC Yellow Book 1999."]},
@@ -909,7 +901,6 @@ window.P=(function(){
     ]
   };
   const EN={
-    detK:"DETAIL — A.",
     st1:"In civil engineering",st2:"Project value worked on",st3:"Countries tendered in",st4:"Mega projects",
     exps:[
       {co:"Taşyapı — Kuzmin-Sremska Rača Highway (€345M) · Mar 2024 → present",b:["Managing all interim payment certificates (IPC), contract administration and progress reporting.","Preparing extension-of-time (EOT) and cost claims, with supporting schedules in Primavera P6."]},
@@ -970,9 +961,8 @@ window.P=(function(){
   function renderDetail(){
     const d=D(),e=(d.exps||EN.exps)[sel];
     const role=T("exp"+(sel+1))||document.querySelectorAll(".rlbl b")[sel].textContent;
-    const rows=[...document.querySelectorAll(".row .rbar")],vi=rows.findIndex(b=>+b.dataset.exp===sel),num=vi>=0?vi+1:sel+1;
     document.getElementById("detail").innerHTML=
-      `<div class="dk">${d.detK}${num}</div><h3>${role}</h3><div class="dmeta">${e.co}</div>`+
+      `<h3>${role}</h3><div class="dmeta">${e.co}</div>`+
       `<ul>${e.b.map(x=>`<li>${x}</li>`).join("")}</ul>`;
     const dl=document.getElementById("detail");
     dl.classList.remove("swap");void dl.offsetWidth;dl.classList.add("swap");
@@ -1176,7 +1166,7 @@ window.P=(function(){
     if(window.gtag)gtag("consent","update",{analytics_storage:g?"granted":"denied"});
     document.getElementById("cook").classList.remove("shw");
   }
-  function formErr(){const st=document.getElementById("fst");if(st){st.innerHTML=(T("fErr")||"Something went wrong.")+' — <a href="mailto:furkan@furkansenyuz.com">furkan@furkansenyuz.com</a>';st.style.color="#e05252";st.style.display="block";}const b=document.querySelector("#frm button.frm-b");if(b)b.disabled=false;}
+  function formErr(){const st=document.getElementById("fst");if(st){st.innerHTML=(T("fErr")||"Something went wrong.")+' — <a href="https://www.linkedin.com/in/furkansenyuz" target="_blank" rel="noopener">LinkedIn</a>';st.style.color="#e05252";st.style.display="block";}const b=document.querySelector("#frm button.frm-b");if(b)b.disabled=false;}
   function trapTab(e){const m=document.getElementById("mod");if(e.key!=="Tab"||!m.classList.contains("act"))return;const f=[...m.querySelectorAll('a[href],button:not([disabled]),input,textarea,select,[tabindex]:not([tabindex="-1"])')].filter(el=>el.offsetParent!==null);if(!f.length)return;const first=f[0],last=f[f.length-1];if(e.shiftKey&&document.activeElement===first){last.focus();e.preventDefault();}else if(!e.shiftKey&&document.activeElement===last){first.focus();e.preventDefault();}}
   document.getElementById("mod").addEventListener("click",e=>{if(e.target.id==="mod")cls();});
   document.addEventListener("keydown",e=>{if(e.key==="Escape"){if(document.getElementById("mod").classList.contains("act"))cls();else if(document.getElementById("chatw").classList.contains("act"))chat();}else trapTab(e);});

@@ -234,7 +234,7 @@ section{padding-top:clamp(48px,7vw,80px)}
 
 /* ---------- survey plot ---------- */
 .plot-wrap{border:1.5px solid var(--ink);position:relative;background:var(--card)}
-#lmap{display:none;height:500px;background:var(--card)}
+#lmap{display:none;height:500px;background:var(--card);position:relative;z-index:0}
 .plot-wrap.live #lmap{display:block}
 .plot-wrap.live .plot-scroll,.plot-wrap.live .coord,.plot-wrap.live .fbnote{display:none}
 .plot-wrap.live .legend .lw i{background:#F5B324}
@@ -1000,7 +1000,7 @@ window.P=(function(){
     document.documentElement.setAttribute("data-theme",ORDER[(ORDER.indexOf(curTheme())+1)%ORDER.length]);
     syncThemeBtn();
     if(lm){
-      const nt=L.tileLayer(curTheme()==="light"?MAP_LIGHT:MAP_DARK,{attribution:"&copy; CARTO"}).addTo(lm);
+      const nt=L.tileLayer(curTheme()==="light"?MAP_LIGHT:MAP_DARK,{attribution:MAP_ATTR}).addTo(lm);
       nt.once("load",()=>{if(lmTile&&lmTile!==nt)lm.removeLayer(lmTile);lmTile=nt;});
       lm.invalidateSize();
     }
@@ -1051,8 +1051,12 @@ window.P=(function(){
   function vbXY(e){const r=svgEl.getBoundingClientRect();return[(e.clientX-r.left)/r.width*1000,(e.clientY-r.top)/r.height*460];}
 
   /* live Leaflet map — same as furkansenyuz.com; falls back to the drawn plan offline */
-  const MAP_DARK="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png";
-  const MAP_LIGHT="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png";
+  /* CARTO raster tiles need a free API key since Aug 2026 — without it every tile is an
+     "API KEY REQUIRED" placeholder. Key: https://carto.com/basemaps/apikey/ (non-commercial, free) */
+  const CARTO_KEY="__CARTO_KEY__";
+  const MAP_DARK="https://basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key="+CARTO_KEY;
+  const MAP_LIGHT="https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key="+CARTO_KEY;
+  const MAP_ATTR='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>';
   const LOCS=[
     {k:"kuzmin",t:"Kuzmin",lat:45.02,lng:19.40,ty:"work",d:"Tasyapi Construction"},
     {k:"belgrade",t:"Belgrade (HQ)",lat:44.78,lng:20.44,ty:"work",d:"Tasyapi Construction"},
@@ -1083,7 +1087,7 @@ window.P=(function(){
     if(!window.L||lm)return;
     document.querySelector(".plot-wrap").classList.add("live");
     lm=L.map("lmap",{zoomSnap:.25,scrollWheelZoom:false});
-    lmTile=L.tileLayer(curTheme()==="light"?MAP_LIGHT:MAP_DARK,{attribution:"&copy; CARTO"}).addTo(lm);
+    lmTile=L.tileLayer(curTheme()==="light"?MAP_LIGHT:MAP_DARK,{attribution:MAP_ATTR}).addTo(lm);
     let tileOk=false;lmTile.on("load",()=>{tileOk=true;});setTimeout(()=>{if(!tileOk)document.querySelector(".plot-wrap").classList.remove("live");},6000);
     lmGroups={work:L.featureGroup(),edu:L.featureGroup(),tender:L.featureGroup()};
     const all=[],MCOL={work:"#F5B324",edu:"#6FBF84",tender:"#71B6DF"};

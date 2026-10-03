@@ -214,7 +214,6 @@ section{padding-top:clamp(48px,7vw,80px)}
   border:none;cursor:pointer;padding:0;transition:opacity .2s,transform .2s;
 }
 .rbar:hover{opacity:1;transform:scaleY(1.15)}
-.rbar.prep{background:var(--stamp-wip);opacity:.7}
 .rbar[aria-pressed="true"]{opacity:1;outline:1.5px solid var(--ink);outline-offset:2px}
 .rbar.now::after{content:"";position:absolute;right:-9px;top:3px;border:4px solid transparent;border-left:9px solid var(--work)}
 .rlbl{position:absolute;top:36px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10.5px;letter-spacing:.05em;color:var(--ink);white-space:nowrap}
@@ -466,7 +465,6 @@ html{scrollbar-color:var(--line2) transparent}
       <div class="hero">
         <div>
           <h1 class="hname rise dd2">Furkan<span>Şenyüz</span></h1>
-          <p class="role rise dd3" data-i="role">Civil Engineer &amp; AI Engineer</p>
           <div class="links rise dd5">
             <a class="cta" href="#" onclick="P.cont(event)" data-i="contactBtn">Let's connect</a>
             <a class="cta cv2" href="CV_FS_2026.pdf" target="_blank" rel="noopener" data-i="cv">Download CV</a>
@@ -534,10 +532,6 @@ html{scrollbar-color:var(--line2) transparent}
               <div class="rlbl" style="left:42.9%"><b data-i="exp3">Planning &amp; Cost Control Chief</b> · <span class="co">Fernas — Aydın, TR · €1.14B</span></div>
             </div>
             <div class="row">
-              <button class="rbar prep" style="left:32.5%;width:7.5%" data-exp="6" aria-label="Exam preparation, Türkiye, 2020"></button>
-              <div class="rlbl" style="left:32.5%"><b data-i="exp7">Exam Preparation</b> · <span class="co">Türkiye · 2020</span></div>
-            </div>
-            <div class="row">
               <button class="rbar" style="left:28.8%;width:3.4%" data-exp="3" data-loc="canakkale" aria-label="Technical Office Chief, Limak, 1915 Çanakkale Bridge, 2019"></button>
               <div class="rlbl" style="left:23.5%"><b data-i="exp4">Technical Office Chief</b> · <span class="co">Limak — 1915 Çanakkale Bridge</span></div>
             </div>
@@ -556,7 +550,7 @@ html{scrollbar-color:var(--line2) transparent}
 
       <!-- B: MAP -->
       <section id="ops">
-        <div class="dim"><h2><span class="k">B</span><span data-i="secB">AREA OF OPERATIONS — SETTING-OUT PLAN</span></h2><div class="ln"></div></div>
+        <div class="dim"><h2><span class="k">B</span><span data-i="secB">AREA OF OPERATIONS</span></h2><div class="ln"></div></div>
         <div class="plot-wrap">
           <div id="lmap" role="application" aria-label="Interactive map of work, education and tender locations"></div>
           <div class="plot-scroll"><svg viewBox="0 0 1000 460" role="img" aria-label="Survey plot of work, education and tender locations across Europe and Central Asia">
@@ -649,7 +643,7 @@ html{scrollbar-color:var(--line2) transparent}
 
       <!-- C: CAPABILITIES -->
       <section id="caps">
-        <div class="dim"><h2><span class="k">C</span><span data-i="secC">CAPABILITIES — TWO DISCIPLINES, ONE DESK</span></h2><div class="ln"></div></div>
+        <div class="dim"><h2><span class="k">C</span><span data-i="secC">CAPABILITIES</span></h2><div class="ln"></div></div>
         <div class="caps">
           <div class="cap">
             <h3><span>◼</span> <span data-i="capF">FIELD / CONSTRUCTION</span></h3>
@@ -663,8 +657,8 @@ html{scrollbar-color:var(--line2) transparent}
             <h3><span>◻</span> <span data-i="capD">DIGITAL / AI</span></h3>
             <ul>
               <li><div class="sk">Python &amp; SQL</div><div class="sd" data-i="sk1">Automating BOQ &amp; cost analysis</div></li>
-              <li><div class="sk">ML &amp; AI APIs</div><div class="sd" data-i="sk2">Predictive models for claims</div></li>
-              <li><div class="sk">Power BI &amp; ERP</div><div class="sd" data-i="sk3">Data-driven decision making</div></li>
+              <li><div class="sk">ML &amp; AI APIs</div><div class="sd" data-i="sk2">RAG &amp; LLM integration (Gemini)</div></li>
+              <li><div class="sk">Power BI &amp; ERP</div><div class="sd" data-i="sk3">Dashboards &amp; Microsoft AX</div></li>
             </ul>
           </div>
         </div>
@@ -672,45 +666,45 @@ html{scrollbar-color:var(--line2) transparent}
 
       <!-- D: PROJECTS -->
       <section id="builds">
-        <div class="dim"><h2><span class="k">D</span><span data-i="secD">AI PROJECTS — DRAWING REGISTER</span></h2><div class="ln"></div></div>
+        <div class="dim"><h2><span class="k">D</span><span data-i="secD">AI PROJECTS</span></h2><div class="ln"></div></div>
         <div class="dreg">
-          <div class="dreg-h"><span data-i="rgNo">DWG NO</span><span data-i="rgT">DRAWING TITLE</span><span data-i="rgS" style="text-align:right">STATUS</span></div>
+          <div class="dreg-h"><span data-i="rgNo">NO</span><span data-i="rgT">PROJECT</span><span data-i="rgS" style="text-align:right">STATUS</span></div>
           <div class="reg-r">
             <span class="rno">FS-AI-01</span>
             <div><div class="rt">DCC — Document Intelligence Platform<span class="rtags" lang="en">RAG · Gemini · pgvector</span></div>
             <p data-i="p1">RAG platform over ~24,000 FIDIC project letters — hybrid pgvector search, claim threading and a Gemini chat assistant.</p></div>
-            <div class="rst"><span class="chip ok" data-i="stDeployed">Issued</span></div>
+            <div class="rst"><span class="chip ok" data-i="stDaily">In daily use</span></div>
           </div>
           <div class="reg-r">
             <span class="rno">FS-AI-02</span>
             <div><div class="rt">Invoice Audit System<span class="rtags" lang="en">Python · SQL</span></div>
-            <p data-i="p2">Cross-checks supplier invoices against weighbridge and site records — flags quantity and price mismatches automatically. In daily use.</p></div>
-            <div class="rst"><span class="chip ok" data-i="stDeployed">Issued</span></div>
+            <p data-i="p2">Cross-checks supplier invoices against weighbridge and site records — flags quantity and price mismatches automatically.</p></div>
+            <div class="rst"><span class="chip ok" data-i="stDaily">In daily use</span></div>
           </div>
           <div class="reg-r">
             <span class="rno">FS-AI-03</span>
             <div><div class="rt">IPC × RFI Check<span class="rtags" lang="en">Python · Excel</span></div>
             <p data-i="p3">Validates interim payment certificate (IPC) quantities against approved RFIs before submission.</p></div>
-            <div class="rst"><span class="chip ok" data-i="stDeployed">Issued</span></div>
+            <div class="rst"></div>
           </div>
           <div class="reg-r">
             <span class="rno">FS-AI-04</span>
             <div><div class="rt">Tender Brief Analyzer<span class="rtags" lang="en">LLM · RAG</span></div>
             <p data-i="p4">Reads full tender dossiers and produces page-referenced, decision-ready participation briefs.</p></div>
-            <div class="rst"><span class="chip ok" data-i="stDeployed">Issued</span></div>
+            <div class="rst"></div>
           </div>
           <div class="reg-r">
             <span class="rno">FS-AI-05</span>
             <div><div class="rt">BOQ &amp; Unit Price Analyzer<span class="rtags" lang="en">Python · Excel</span></div>
             <p data-i="p5">Automated unit-rate build-ups and BOQ pricing analysis for tender costing.</p></div>
-            <div class="rst"><span class="chip ok" data-i="stDeployed">Issued</span></div>
+            <div class="rst"></div>
           </div>
           <div class="reg-r">
             <span class="rno">FS-AI-06</span>
             <div><div class="rt">Concrete Strength Prediction<span class="rtags" lang="en">scikit-learn · SHAP</span></div>
             <p data-i="p6">ML model predicting concrete compressive strength from mix design, with a TS EN 206-1 compliance layer.</p>
             <p><a href="https://furkansenyuz.com/beton-dayanimi-tahmini/demo/" target="_blank" rel="noopener">Live demo</a> · <a href="https://github.com/furkansenyuz/beton-dayanimi-tahmini" target="_blank" rel="noopener">GitHub</a> · <a href="https://furkansenyuz.medium.com/e0b5353eb6be" target="_blank" rel="noopener">Medium</a></p></div>
-            <div class="rst"><span class="chip ok" data-i="stDeployed">Issued</span></div>
+            <div class="rst"></div>
           </div>
         </div>
       </section>
@@ -722,13 +716,12 @@ html{scrollbar-color:var(--line2) transparent}
           <div class="cred"><span class="yr">2026 →</span><span class="ti" data-i="e1">Machine Learning Specialization</span><span class="org">Stanford / Andrew Ng</span></div>
           <div class="cred"><span class="yr">2026</span><span class="ti" data-i="e12">Data Science &amp; Machine Learning Bootcamp</span><span class="org">Türkiye AI Academy · Huawei HSD</span></div>
           <div class="cred"><span class="yr">2026</span><span class="ti" data-i="e10">AI &amp; Machine Learning — Data Analysis School</span><span class="org">YÖK · Marmara / ODTÜ / İTÜ / Boğaziçi</span></div>
-          <div class="cred"><span class="yr">2026</span><span class="ti" data-i="e11">AI &amp; Productivity Tools — Data Analysis School</span><span class="org">YÖK · Marmara / ODTÜ / İTÜ / Boğaziçi</span></div>
-          <div class="cred"><span class="yr">2026</span><span class="ti" data-i="e2">Python for Everybody (5-course)</span><span class="org">University of Michigan</span></div>
-          <div class="cred"><span class="yr">2023</span><span class="ti" data-i="e3">Project Management Expertise · 66h</span><span class="org">İTÜ</span></div>
+          <div class="cred"><span class="yr">2026</span><span class="ti" data-i="e2">Python for Everybody</span><span class="org">University of Michigan</span></div>
+          <div class="cred"><span class="yr">2026</span><span class="ti" data-i="e7">The Arbitration of Int. Disputes</span><span class="org">Leiden University</span></div>
+          <div class="cred"><span class="yr">2023</span><span class="ti" data-i="e3">Project Management Expertise</span><span class="org">İTÜ</span></div>
           <div class="cred"><span class="yr">2023</span><span class="ti" data-i="e4">Int. Construction Contracts &amp; Claims</span><span class="org">İTÜ</span></div>
           <div class="cred"><span class="yr">2019</span><span class="ti" data-i="e5">TILOS Linear Project Management</span><span class="org">Grid Group</span></div>
           <div class="cred"><span class="yr">2018</span><span class="ti" data-i="e6">Oracle Primavera P6 Advanced</span><span class="org">Akım Müh. / Oracle Partner</span></div>
-          <div class="cred"><span class="yr">Cert.</span><span class="ti" data-i="e7">The Arbitration of Int. Disputes</span><span class="org">Leiden University</span></div>
           <div class="cred"><span class="yr">2011–16</span><span class="ti" data-i="e9">BSc Civil Engineering — honor student</span><span class="org">Muğla SKU</span></div>
         </div>
       </section>
@@ -795,24 +788,23 @@ function esc(x){const d=document.createElement("div");d.textContent=x;return d.i
 window.P=(function(){
   const API="https://portfolio-backend-hu1r.onrender.com/chat";
   const TR={
-    role:"İnşaat Mühendisi & Yapay Zekâ Mühendisi",
     
     cv:"CV İndir",
     st1:"İnşaat mühendisliğinde",st2:"Üzerinde çalışılan proje değeri",st3:"İhaleye girilen ülke",st4:"Mega proje",
     ftProj:"PROJE",ftDrawn:"ÇİZEN",ftSheet:"PAFTA",ftRev:"REV",ftScale:"ÖLÇEK",ftDate:"TARİH",
     secA:"SAHA KAYDI — 2016 → BUGÜN",
     exp1:"Proje Yönetim Ofisi Şefi",exp2:"İhale & Proje Yönetim Uzmanı",exp3:"Planlama & Maliyet Kontrol Şefi",
-    exp4:"Teknik Ofis Şefi",exp5:"Planlama & Maliyet Mühendisi",exp6:"Şantiye Şefi",exp7:"Sınav Hazırlığı",
-    secB:"OPERASYON SAHASI — APLİKASYON PLANI",
+    exp4:"Teknik Ofis Şefi",exp5:"Planlama & Maliyet Mühendisi",exp6:"Şantiye Şefi",
+    secB:"OPERASYON SAHASI",
     remote:"DETAY — UZAKTAN EĞİTİM · ÖLÇEKSİZ",legW:"İş & projeler",legE:"Eğitim",legT:"Hazırlanan ihaleler",
-    secC:"YETKİNLİKLER — İKİ DİSİPLİN, TEK MASA",
+    secC:"YETKİNLİKLER",
     capF:"SAHA / İNŞAAT",capD:"DİJİTAL / YAPAY ZEKÂ",
-    sk1:"Metraj & maliyet analizi otomasyonu",sk2:"Hak talepleri için tahmin modelleri",sk3:"Veri odaklı karar verme",
+    sk1:"Metraj & maliyet analizi otomasyonu",sk2:"RAG & LLM entegrasyonu (Gemini)",sk3:"Raporlama panoları & Microsoft AX",
     sk4:"Mega proje planlama",sk5:"Uluslararası pazar & risk analizi",sk6:"Sözleşme yönetimi & uyuşmazlık çözümü",
-    secD:"YAPAY ZEKÂ PROJELERİ — PAFTA LİSTESİ",rgNo:"PAFTA NO",rgT:"PAFTA ADI",rgS:"DURUM",fbnote:"CANLI HARİTA FURKANSENYUZ.COM\u0027DA YÜKLENİR — ÇEVRİMDIŞI PLAN GÖSTERİLİYOR",
-    stDeployed:"Yayında",
+    secD:"YAPAY ZEKÂ PROJELERİ",rgNo:"NO",rgT:"PROJE",rgS:"DURUM",fbnote:"CANLI HARİTA FURKANSENYUZ.COM\u0027DA YÜKLENİR — ÇEVRİMDIŞI PLAN GÖSTERİLİYOR",
+    stDaily:"Günlük kullanımda",
     p1:"~24.000 FIDIC proje yazışması üzerinde RAG platformu — hibrit pgvector araması, hak talebi (claim) zincirleme ve Gemini sohbet asistanı.",
-    p2:"Tedarikçi faturalarını kantar ve saha kayıtlarıyla çapraz kontrol eder — miktar ve fiyat uyuşmazlıklarını otomatik işaretler. Günlük kullanımda.",
+    p2:"Tedarikçi faturalarını kantar ve saha kayıtlarıyla çapraz kontrol eder — miktar ve fiyat uyuşmazlıklarını otomatik işaretler.",
     p3:"Hakediş (IPC) metrajlarını idareye sunulmadan önce onaylı RFI'larla doğrular.",
     p4:"İhale dosyasının tamamını okuyup sayfa atıflı, karar vermeye hazır katılım özetleri üretir.",
     p5:"İhale maliyetlendirmesi için otomatik birim fiyat oluşturma ve BOQ fiyat analizi.",
@@ -822,7 +814,7 @@ window.P=(function(){
     
     
     secE:"EĞİTİM & SERTİFİKALAR",
-    e1:"Makine Öğrenimi Uzmanlığı",e10:"Yapay Zekâ ve Makine Öğrenmesi — Veri Analizi Okulu",e11:"Yapay Zekâ ve Kolaylaştırıcı Araçlar — Veri Analizi Okulu",e2:"Herkes için Python (5 kurs)",e3:"Proje Yönetim Uzmanlığı · 66s",
+    e1:"Makine Öğrenimi Uzmanlığı",e10:"Yapay Zekâ ve Makine Öğrenmesi — Veri Analizi Okulu",e2:"Herkes için Python",e3:"Proje Yönetim Uzmanlığı",
     e4:"Uluslararası İnşaat Sözleşmeleri & Hak Talepleri",e5:"TILOS Doğrusal Proje Yönetimi",e6:"Oracle Primavera P6 İleri Seviye",
     e7:"Uluslararası Uyuşmazlık Tahkimi",e9:"Lisans İnşaat Müh. — onur öğrencisi",e12:"Veri Bilimi ve Makine Öğrenmesi Bootcamp",
     
@@ -835,36 +827,34 @@ window.P=(function(){
     cookieText:"Çerezler yalnızca anonim ziyaret analizi için kullanılır.",accept:"Kabul et",decline:"Reddet",
     detK:"DETAY — A.",
     exps:[
-      {co:"Taşyapı — Kuzmin-Sremska Rača Otoyolu (€345M) · Mar 2024 → bugün",b:["Tüm hakedişlerin (IPC) ve sözleşme yönetiminin yürütülmesi.","Primavera P6'da hak talebi (claim) yönetim programları ve ilerleme raporları.","Claim dosyalarının hazırlanması — süre uzatımı (EOT) ve maliyet talepleri."]},
-      {co:"Taşyapı — Belgrad Genel Merkez · Ağu 2021 – Mar 2024",b:["10+ ülkede uçtan uca ihale dosyaları: metraj (BOQ) ve maliyetlendirme.","Proje kontrolleri — claim, bütçe, planlama — ve FIDIC Yellow Book 1999 sözleşme idaresi.","FIDIC projeleri için claim dosyalarının hazırlanması — süre uzatımı ve maliyet talepleri."]},
+      {co:"Taşyapı — Kuzmin-Sremska Rača Otoyolu (€345M) · Mar 2024 → bugün",b:["Tüm hakedişlerin (IPC), sözleşme yönetiminin ve ilerleme raporlamasının yürütülmesi.","Süre uzatımı (EOT) ve maliyet taleplerinin (claim) hazırlanması — Primavera P6'da destekleyici iş programlarıyla."]},
+      {co:"Taşyapı — Belgrad Genel Merkez · Ağu 2021 – Mar 2024",b:["10+ ülkede uçtan uca ihale dosyaları: metraj (BOQ) ve maliyetlendirme.","Proje kontrolleri — claim, bütçe, planlama — ve FIDIC Yellow Book 1999 sözleşme idaresi."]},
       {co:"Fernas — Aydın-Denizli Otoyolu (€1.14B) · Oca – Ağu 2021",b:["Tüm ana imalatların master iş programı TILOS'ta oluşturuldu.","Projenin tüm raporlama sistemleri kuruldu."]},
       {co:"Limak — Malkara-Çanakkale Otoyolu, 1915 Çanakkale Köprüsü dahil · Ağu – Ara 2019",b:["Teknik ofis sıfırdan kuruldu — tüm raporlama ve saha takip sistemleri.","Toprak işleri, sanat yapıları ve üstyapı için master plan hazırlandı."]},
-      {co:"Limak — Kuzey Marmara Otoyolu ($500M) · Oca 2018 – Ağu 2019",b:["Kritik imalatlar (tüneller, prefabrik kirişler) için detay programlar ve kaynak analizi.","Microsoft AX (ERP) ile birim maliyet, metraj ve kârlılık hesapları.","Tüm çelik köprü imalatlarının hakediş yönetimi."]},
-      {co:"Mat Yapı — 10.000 m² konut, 100 daire · İstanbul · Ara 2016 – Oca 2018",b:["Tüm saha operasyonları; Kazanılmış Değer Yönetimi (EVM) ile performans takibi.","10 m derinliğindeki kazı için şev stabilite planının tasarımı."]},
-      {co:"Bağımsız çalışma · Türkiye · Oca – Eyl 2020",b:["KPSS'ye (Kamu Personeli Seçme Sınavı) tam zamanlı hazırlık."]}
+      {co:"Limak — Kuzey Marmara Otoyolu ($500M) · Oca 2018 – Ağu 2019",b:["Kritik imalatlar (tüneller, prefabrik kirişler) için detay programlar ve kaynak analizi.","Microsoft AX (ERP) ile birim maliyet, metraj ve kârlılık hesapları.","Tüm çelik köprülerin hakediş yönetimi."]},
+      {co:"Mat Yapı — 10.000 m² konut, 100 daire · İstanbul · Ara 2016 – Oca 2018",b:["Tüm saha operasyonları; Kazanılmış Değer Yönetimi (EVM) ile performans takibi.","10 m derinliğindeki kazı için şev stabilite planının tasarımı."]}
     ]
   };
   const SR={
     q1:"Iskustvo u Srbiji?",q2:"AI projekti",q3:"FIDIC i odštetni zahtevi",chatAL:"Postavite pitanje AI asistentu",
-    role:"Građevinski Inženjer & AI Inženjer",
     
     cv:"Preuzmi CV",contactBtn:"Kontaktirajte me",
     st1:"U građevinarstvu",st2:"Vrednost obrađenih projekata",st3:"Zemalja — tenderi",st4:"Mega projekti",
     ftProj:"PROJEKAT",ftDrawn:"CRTAO",ftSheet:"LIST",ftRev:"REV",ftScale:"RAZMERA",ftDate:"DATUM",
     secA:"TERENSKI DOSIJE — 2016 → DANAS",
     exp1:"Šef Kancelarije za Upravljanje Projektima",exp2:"Specijalista za Tendere i PM",exp3:"Šef Planiranja i Kontrole Troškova",
-    exp4:"Šef Tehničke Službe",exp5:"Inženjer Planiranja i Troškova",exp6:"Šef Gradilišta",exp7:"Priprema za ispit",
-    secB:"PODRUČJE OPERACIJA — SITUACIONI PLAN",remote:"DETALJ — UČENJE NA DALJINU · BEZ RAZMERE",
+    exp4:"Šef Tehničke Službe",exp5:"Inženjer Planiranja i Troškova",exp6:"Šef Gradilišta",
+    secB:"PODRUČJE OPERACIJA",remote:"DETALJ — UČENJE NA DALJINU · BEZ RAZMERE",
     legW:"Posao i projekti",legE:"Obrazovanje",legT:"Pripremljeni tenderi",
     fbnote:"MAPA UŽIVO SE UČITAVA NA SAJTU — PRIKAZAN JE OFLAJN PLAN",
-    secC:"KOMPETENCIJE — DVE DISCIPLINE, JEDAN STO",
+    secC:"KOMPETENCIJE",
     capF:"TEREN / GRAĐEVINA",capD:"DIGITALNO / AI",
-    sk1:"Automatizacija predmera i analize troškova",sk2:"Prediktivni modeli za odštetne zahteve",sk3:"Odlučivanje zasnovano na podacima",
+    sk1:"Automatizacija predmera i analize troškova",sk2:"RAG i LLM integracija (Gemini)",sk3:"Izveštajne table i Microsoft AX",
     sk4:"Planiranje mega projekata",sk5:"Analiza međunarodnog tržišta i rizika",sk6:"Upravljanje ugovorima i sporovima",
-    secD:"AI PROJEKTI — REGISTAR CRTEŽA",rgNo:"BR. CRTEŽA",rgT:"NAZIV CRTEŽA",rgS:"STATUS",
-    stDeployed:"Objavljen",
+    secD:"AI PROJEKTI",rgNo:"BR.",rgT:"PROJEKAT",rgS:"STATUS",
+    stDaily:"U dnevnoj upotrebi",
     p1:"RAG platforma nad ~24.000 FIDIC projektnih dopisa — hibridna pgvector pretraga, povezivanje odštetnih zahteva i Gemini chat asistent.",
-    p2:"Unakrsna provera faktura dobavljača sa vagarskim i gradilišnim evidencijama — automatski označava neslaganja u količinama i cenama. U svakodnevnoj upotrebi.",
+    p2:"Unakrsna provera faktura dobavljača sa vagarskim i gradilišnim evidencijama — automatski označava neslaganja u količinama i cenama.",
     p3:"Proverava količine privremenih situacija (IPC) u odnosu na odobrene RFI-je pre podnošenja.",
     p4:"Čita kompletan tenderski dosije i pravi izveštaje spremne za odlučivanje, sa referencama na stranice.",
     p5:"Automatsko formiranje jediničnih cena i analiza predmera (BOQ) za tendersku kalkulaciju.",
@@ -874,10 +864,10 @@ window.P=(function(){
     
     
     secE:"OBRAZOVANJE I SERTIFIKATI",
-    e1:"Specijalizacija mašinskog učenja",e2:"Python za sve (5 kurseva)",e3:"Ekspertiza upravljanja projektima · 66h",
+    e1:"Specijalizacija mašinskog učenja",e2:"Python za sve",e3:"Ekspertiza upravljanja projektima",
     e4:"Međunarodni građevinski ugovori i odštetni zahtevi",e5:"TILOS linearno planiranje",e6:"Oracle Primavera P6 — napredni",
     e7:"Arbitraža međunarodnih sporova",e9:"Građevinarstvo — diploma sa pohvalom",
-    e10:"AI i mašinsko učenje — Škola analize podataka",e11:"AI i alati produktivnosti — Škola analize podataka",e12:"Bootcamp — nauka o podacima i mašinsko učenje",
+    e10:"AI i mašinsko učenje — Škola analize podataka",e12:"Bootcamp — nauka o podacima i mašinsko učenje",
     chatT:"AI ASISTENT",
     chatGreet:"Zdravo! Ja sam Furkanov AI asistent — pitajte me o njegovim projektima ili iskustvu.",
     chatPh:"Pitajte nešto…",chatErr:"⚠️ Veštačka inteligencija se budi — pošaljite ponovo za nekoliko sekundi ili koristite kontakt formu.",
@@ -886,36 +876,34 @@ window.P=(function(){
     cookieText:"Kolačići se koriste samo za anonimnu analitiku poseta.",accept:"Prihvati",decline:"Odbij",
     detK:"DETALJ — A.",
     exps:[
-      {co:"Tasyapi — autoput Kuzmin–Sremska Rača (€345M) · mart 2024 → danas",b:["Upravljanje privremenim situacijama (IPC) i administracija ugovora.","Programi upravljanja odštetnim zahtevima u Primaveri P6 i izveštaji o napretku.","Priprema odštetnih zahteva (claim) — produženje rokova (EOT) i troškovni zahtevi."]},
-      {co:"Tasyapi — Beograd, sedište · avg 2021 – mart 2024",b:["Kompletna tenderska dokumentacija (predmer, kalkulacije) za projekte u 10+ zemalja.","Kontrola projekata i administracija ugovora po FIDIC Yellow Book 1999.","Priprema odštetnih zahteva za FIDIC projekte — rokovi i troškovi."]},
+      {co:"Tasyapi — autoput Kuzmin–Sremska Rača (€345M) · mart 2024 → danas",b:["Upravljanje privremenim situacijama (IPC), administracija ugovora i izveštavanje o napretku.","Priprema zahteva za produženje roka (EOT) i troškovnih zahteva, uz prateće terminske planove u Primaveri P6."]},
+      {co:"Tasyapi — Beograd, sedište · avg 2021 – mart 2024",b:["Kompletna tenderska dokumentacija (predmer, kalkulacije) za projekte u 10+ zemalja.","Kontrola projekata i administracija ugovora po FIDIC Yellow Book 1999."]},
       {co:"Fernas — autoput Aydin–Denizli (€1,14 mlrd) · jan – avg 2021",b:["Master terminski plan svih glavnih radova izrađen u TILOS-u.","Uspostavljeni svi sistemi projektnog izveštavanja."]},
       {co:"Limak — autoput Malkara–Čanakkale, uklj. most 1915 Čanakkale · avg – dec 2019",b:["Tehnička služba uspostavljena od nule — izveštavanje i praćenje gradilišta.","Master plan za zemljane radove, objekte i kolovoznu konstrukciju."]},
       {co:"Limak — Severnomarmarski autoput ($500M) · jan 2018 – avg 2019",b:["Detaljni planovi za kritične radove — tuneli, prefabrikovani nosači.","Jedinične cene, količine i marže u Microsoft AX (ERP).","Privremene situacije za sve čelične mostove."]},
-      {co:"Mat Yapi — 10.000 m² stambeno, 100 stanova · Istanbul · dec 2016 – jan 2018",b:["Vođenje svih radova uz praćenje po Earned Value Management (EVM).","Projekat stabilnosti kosine za iskop dubine 10 m."]},
-      {co:"Samostalno učenje · Turska · jan – sep 2020",b:["Priprema za KPSS — turski ispit za izbor javnih službenika, u punom radnom vremenu."]}
+      {co:"Mat Yapi — 10.000 m² stambeno, 100 stanova · Istanbul · dec 2016 – jan 2018",b:["Vođenje svih radova uz praćenje po Earned Value Management (EVM).","Projekat stabilnosti kosine za iskop dubine 10 m."]}
     ]
   };
   const DE={
     q1:"Erfahrung in Serbien?",q2:"KI-Projekte",q3:"FIDIC & Nachträge",chatAL:"Stellen Sie dem KI-Assistenten eine Frage",
-    role:"Bauingenieur & KI-Ingenieur",
     
     cv:"Lebenslauf herunterladen",contactBtn:"Kontakt aufnehmen",
     st1:"Im Bauwesen",st2:"Bearbeitetes Projektvolumen",st3:"Länder — Ausschreibungen",st4:"Großprojekte",
     ftProj:"PROJEKT",ftDrawn:"GEZEICHNET",ftSheet:"BLATT",ftRev:"REV",ftScale:"MASSSTAB",ftDate:"DATUM",
     secA:"FELDAKTE — 2016 → HEUTE",
     exp1:"Leiter Projektmanagement-Büro",exp2:"Spezialist Ausschreibung & PM",exp3:"Leiter Terminplanung & Kostenkontrolle",
-    exp4:"Leiter Technisches Büro",exp5:"Termin- & Kostenplaner",exp6:"Bauleiter",exp7:"Prüfungsvorbereitung",
-    secB:"EINSATZGEBIET — LAGEPLAN",remote:"DETAIL — FERNSTUDIUM · NICHT MASSSTÄBLICH",
+    exp4:"Leiter Technisches Büro",exp5:"Termin- & Kostenplaner",exp6:"Bauleiter",
+    secB:"EINSATZGEBIET",remote:"DETAIL — FERNSTUDIUM · NICHT MASSSTÄBLICH",
     legW:"Arbeit & Projekte",legE:"Ausbildung",legT:"Ausschreibungen",
     fbnote:"LIVE-KARTE LÄDT AUF DER WEBSITE — OFFLINE-PLAN WIRD GEZEIGT",
-    secC:"KOMPETENZEN — ZWEI DISZIPLINEN, EIN SCHREIBTISCH",
+    secC:"KOMPETENZEN",
     capF:"FELD / BAU",capD:"DIGITAL / KI",
-    sk1:"Automatisierung von Mengen- & Kostenanalysen",sk2:"Prädiktive Modelle für Nachträge",sk3:"Datengestützte Entscheidungen",
+    sk1:"Automatisierung von Mengen- & Kostenanalysen",sk2:"RAG- & LLM-Integration (Gemini)",sk3:"Dashboards & Microsoft AX",
     sk4:"Terminplanung von Großprojekten",sk5:"Int. Markt- & Risikoanalyse",sk6:"Vertragsmanagement & Streitbeilegung",
-    secD:"KI-PROJEKTE — ZEICHNUNGSREGISTER",rgNo:"ZCHNG-NR.",rgT:"BEZEICHNUNG",rgS:"STATUS",
-    stDeployed:"Freigegeben",
+    secD:"KI-PROJEKTE",rgNo:"NR.",rgT:"PROJEKT",rgS:"STATUS",
+    stDaily:"Täglich im Einsatz",
     p1:"RAG-Plattform für ~24.000 FIDIC-Projektschreiben — hybride pgvector-Suche, Claim-Verkettung und ein Gemini-Chat-Assistent.",
-    p2:"Gleicht Lieferantenrechnungen mit Wiege- und Baustellendaten ab — markiert Mengen- und Preisabweichungen automatisch. Im täglichen Einsatz.",
+    p2:"Gleicht Lieferantenrechnungen mit Wiege- und Baustellendaten ab — markiert Mengen- und Preisabweichungen automatisch.",
     p3:"Prüft IPC-Mengen vor Einreichung gegen freigegebene RFIs.",
     p4:"Liest komplette Ausschreibungsunterlagen und erzeugt entscheidungsreife Kurzberichte mit Seitenverweisen.",
     p5:"Automatisierte Einheitspreisermittlung und LV-Preisanalyse für die Angebotskalkulation.",
@@ -925,10 +913,10 @@ window.P=(function(){
     
     
     secE:"AUSBILDUNG & ZERTIFIKATE",
-    e1:"Spezialisierung Maschinelles Lernen",e2:"Python für Alle (5 Kurse)",e3:"Projektmanagement-Expertise · 66h",
+    e1:"Spezialisierung Maschinelles Lernen",e2:"Python für Alle",e3:"Projektmanagement-Expertise",
     e4:"Int. Bauverträge & Nachtragsmanagement",e5:"TILOS Lineare Terminplanung",e6:"Oracle Primavera P6 — Fortgeschritten",
     e7:"Schiedsgerichtsbarkeit bei int. Streitigkeiten",e9:"Bauingenieurwesen — mit Auszeichnung",
-    e10:"KI & Maschinelles Lernen — Schule für Datenanalyse",e11:"KI & Produktivitätstools — Schule für Datenanalyse",e12:"Data-Science- & Machine-Learning-Bootcamp",
+    e10:"KI & Maschinelles Lernen — Schule für Datenanalyse",e12:"Data-Science- & Machine-Learning-Bootcamp",
     chatT:"KI-ASSISTENT",
     chatGreet:"Hallo! Ich bin Furkans KI-Assistent — fragen Sie mich alles über seine Projekte oder Erfahrung.",
     chatPh:"Fragen Sie etwas…",chatErr:"⚠️ Die KI wacht auf — bitte in ein paar Sekunden erneut senden oder das Kontaktformular nutzen.",
@@ -937,13 +925,12 @@ window.P=(function(){
     cookieText:"Cookies werden nur für anonyme Besucheranalyse verwendet.",accept:"Akzeptieren",decline:"Ablehnen",
     detK:"DETAIL — A.",
     exps:[
-      {co:"Tasyapi — Autobahn Kuzmin–Sremska Rača (€345M) · März 2024 → heute",b:["Abwicklung aller Abschlagszahlungen (IPC) sowie Vertragsadministration.","Nachtragsmanagement-Programme in Primavera P6 und Fortschrittsberichte.","Erstellung von Nachtragsdossiers — Bauzeitverlängerung (EOT) und Mehrkosten."]},
-      {co:"Tasyapi — Belgrad, Zentrale · Aug 2021 – März 2024",b:["Komplette Ausschreibungsunterlagen (LV, Kalkulation) für Projekte in 10+ Ländern.","Projektsteuerung und Vertragsadministration nach FIDIC Yellow Book 1999.","Erstellung von Nachtragsdossiers für FIDIC-Projekte — Bauzeit- und Kostennachträge."]},
+      {co:"Tasyapi — Autobahn Kuzmin–Sremska Rača (€345M) · März 2024 → heute",b:["Abwicklung aller Abschlagszahlungen (IPC), Vertragsadministration und Fortschrittsberichte.","Erstellung von Bauzeit- (EOT) und Mehrkostennachträgen, gestützt auf Terminpläne in Primavera P6."]},
+      {co:"Tasyapi — Belgrad, Zentrale · Aug 2021 – März 2024",b:["Komplette Ausschreibungsunterlagen (LV, Kalkulation) für Projekte in 10+ Ländern.","Projektsteuerung und Vertragsadministration nach FIDIC Yellow Book 1999."]},
       {co:"Fernas — Autobahn Aydin–Denizli (€1,14 Mrd.) · Jan – Aug 2021",b:["Master-Terminplan aller Hauptgewerke in TILOS erstellt.","Alle Projektberichtssysteme aufgebaut."]},
       {co:"Limak — Autobahn Malkara–Çanakkale, inkl. 1915-Çanakkale-Brücke · Aug – Dez 2019",b:["Technisches Büro von Grund auf aufgebaut — Berichtswesen und Baustellenverfolgung.","Master-Plan für Erdbau, Bauwerke und Oberbau."]},
       {co:"Limak — Nordmarmara-Autobahn ($500M) · Jan 2018 – Aug 2019",b:["Detailterminpläne für kritische Gewerke — Tunnel, Fertigteilträger.","Einheitspreise, Mengen und Margen in Microsoft AX (ERP).","Abschlagszahlungen für alle Stahlbrücken."]},
-      {co:"Mat Yapi — 10.000 m² Wohnbau, 100 Einheiten · Istanbul · Dez 2016 – Jan 2018",b:["Gesamte Baustellenorganisation mit Earned-Value-Management (EVM).","Böschungssicherungsplan für eine 10 m tiefe Baugrube."]},
-      {co:"Eigenstudium · Türkei · Jan – Sep 2020",b:["Vollzeit-Vorbereitung auf die KPSS — die türkische Auswahlprüfung für den öffentlichen Dienst."]}
+      {co:"Mat Yapi — 10.000 m² Wohnbau, 100 Einheiten · Istanbul · Dez 2016 – Jan 2018",b:["Gesamte Baustellenorganisation mit Earned-Value-Management (EVM).","Böschungssicherungsplan für eine 10 m tiefe Baugrube."]}
     ]
   };
   const EN={
@@ -951,13 +938,12 @@ window.P=(function(){
     st1:"In civil engineering",st2:"Project value worked on",st3:"Countries tendered in",st4:"Mega projects",
     ftProj:"PROJECT",ftDrawn:"DRAWN BY",ftSheet:"SHEET",ftRev:"REV",ftScale:"SCALE",ftDate:"DATE",
     exps:[
-      {co:"Taşyapı — Kuzmin-Sremska Rača Highway (€345M) · Mar 2024 → present",b:["Managing all interim payment certificates (IPC) and contract administration.","Developing claim-management programs in Primavera P6 and delivering progress reports.","Preparing claim files — extension-of-time (EOT) and cost claims with full substantiation."]},
-      {co:"Taşyapı — Belgrade HQ · Aug 2021 – Mar 2024",b:["Prepared end-to-end tender documents — BOQ and costing — for projects in 10+ countries.","Managed project controls (claims, budget, planning) and FIDIC Yellow Book 1999 administration.","Prepared claim files for FIDIC projects — EOT and cost claims."]},
+      {co:"Taşyapı — Kuzmin-Sremska Rača Highway (€345M) · Mar 2024 → present",b:["Managing all interim payment certificates (IPC), contract administration and progress reporting.","Preparing extension-of-time (EOT) and cost claims, with supporting schedules in Primavera P6."]},
+      {co:"Taşyapı — Belgrade HQ · Aug 2021 – Mar 2024",b:["Prepared end-to-end tender documents — BOQ and costing — for projects in 10+ countries.","Managed project controls (claims, budget, planning) and FIDIC Yellow Book 1999 administration."]},
       {co:"Fernas — Aydın-Denizli Motorway (€1.14B) · Jan – Aug 2021",b:["Created the master plan for all major works in TILOS.","Established all project reporting systems."]},
       {co:"Limak — Malkara-Çanakkale Motorway, incl. 1915 Çanakkale Bridge · Aug – Dec 2019",b:["Built the technical office from scratch — all reporting and site-tracking systems.","Created the master plan for earthworks, structures and pavement."]},
-      {co:"Limak — Northern Marmara Motorway ($500M) · Jan 2018 – Aug 2019",b:["Detailed schedules for critical works — tunnels, prefabricated beams — with resource analysis.","Unit costs, material requirements and margins in Microsoft AX (ERP).","Managed progress payments for all steel bridge constructions."]},
-      {co:"Mat Yapı — 10,000 m² residential, 100 units · Istanbul · Dec 2016 – Jan 2018",b:["Ran all site operations with Earned Value Management (EVM) tracking.","Designed the slope-stability plan for a 10 m deep excavation."]},
-      {co:"Independent study · Türkiye · Jan – Sep 2020",b:["Full-time preparation for the KPSS — Türkiye's public-personnel selection examination."]}
+      {co:"Limak — Northern Marmara Motorway ($500M) · Jan 2018 – Aug 2019",b:["Detailed schedules for critical works — tunnels, prefabricated beams — with resource analysis.","Unit costs, material requirements and margins in Microsoft AX (ERP).","Managed progress payments for all steel bridges."]},
+      {co:"Mat Yapı — 10,000 m² residential, 100 units · Istanbul · Dec 2016 – Jan 2018",b:["Ran all site operations with Earned Value Management (EVM) tracking.","Designed the slope-stability plan for a 10 m deep excavation."]}
     ]
   };
   document.querySelectorAll("[data-i]").forEach(el=>{EN[el.dataset.i]=el.innerHTML});

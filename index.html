@@ -1052,10 +1052,12 @@ window.P=(function(){
 
   /* live Leaflet map — same as furkansenyuz.com; falls back to the drawn plan offline */
   /* CARTO raster tiles need a free API key since Aug 2026 — without it every tile is an
-     "API KEY REQUIRED" placeholder. Key: https://carto.com/basemaps/apikey/ (non-commercial, free) */
-  const CARTO_KEY="__CARTO_KEY__";
-  const MAP_DARK="https://basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key="+CARTO_KEY;
-  const MAP_LIGHT="https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key="+CARTO_KEY;
+     "API KEY REQUIRED" placeholder. Get one at https://carto.com/basemaps/apikey/ (non-commercial,
+     free), restrict it to furkansenyuz.com in the CARTO dashboard, and paste it between the quotes. */
+  const CARTO_KEY="";
+  const KQ=CARTO_KEY?"?key="+CARTO_KEY:"";
+  const MAP_DARK="https://basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"+KQ;
+  const MAP_LIGHT="https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"+KQ;
   const MAP_ATTR='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>';
   const LOCS=[
     {k:"kuzmin",t:"Kuzmin",lat:45.02,lng:19.40,ty:"work",d:"Tasyapi Construction"},
